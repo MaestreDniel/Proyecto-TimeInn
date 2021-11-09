@@ -1,0 +1,35 @@
+header{
+    display: flex;
+    background-color: red;
+
+}
+img#logo {
+
+    width: 70px;
+    margin-top: 11px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+nav#paginas{
+    margin-left: 312px;
+    margin-right: 160px;
+    margin-top: 10px;
+}
+
+input#search{
+    width: 120px;
+height: 20px;
+margin-top: 30px;
+}
+button#buscar{
+    background-image: url("/src/images/buscar.png");
+    object-fit: cover;
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+}
+img#user{
+    margin: 20px;
+    width: 50px; 
+    height: 50px;
+}
