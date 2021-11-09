@@ -1,44 +1,114 @@
 body {
-    background-image: none;
-    font-family: sans-serif;
-    margin: 0;
+  background-image: none;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  background-image: url("../images/fondoHeader.jpg");
+  background-size: cover;
 }
 
 footer {
-    display: flex;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(68,68,68,1) 90%);
-    font-size: 1.6vw;
-    font-weight: bold;
-    padding: 1vw;
-    color: white;
-    align-items: center;
-    max-height: 80px;
+  display: flex;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(68, 68, 68, 1) 90%
+  );
+  font-size: 1.6vw;
+  font-weight: bold;
+  padding: 1vw;
+  color: white;
+  align-items: center;
+  max-height: 80px;
 }
 
 #follow {
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer div {
-    padding: 1vw;
-    text-align: center;
+  padding: 1vw;
+  text-align: center;
 }
 
 footer div:hover {
-    background-color: rgb(68, 68, 68);
+  background-color: rgb(68, 68, 68);
 }
 
 footer div:active {
-    background-color: rgb(122, 122, 122);
+  background-color: rgb(122, 122, 122);
 }
 
 footer div img {
-    width: 6vw;
-    height: 6vw;
-    max-height: 50px;
-    max-width: 50px;
+  width: 6vw;
+  height: 6vw;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+h1#NombrePagina {
+  color: darkred;
+  margin-left: 150px;
+}
+
+img#logo {
+  width: 70px;
+  margin-top: 11px;
+
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: 10px;
+}
+
+nav#paginas {
+  margin-left: 312px;
+  margin-right: 160px;
+  margin-top: 40px;
+}
+
+input#search {
+  width: 120px;
+  height: 20px;
+  margin-top: 30px;
+}
+
+button#buscar {
+  width: 20px;
+  height: 20px;
+  margin-top: 30px;
+}
+
+button#user {
+  margin: 20px;
+  background-size: cover;
+  margin-left: 200px;
+  width: 40px;
+  height: 30px;
+}
+
+div#noticia {
+  float: left;
+  background-color: blue;
+  display: grid;
+}
+
+main {
+  background-color: greenyellow;
+  float: left;
+}
+
+aside#secciones {
+  float: right;
+  background-color: green;
+}
+
+div#cuerpo {
+  display: flex;
 }
