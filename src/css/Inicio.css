@@ -4,6 +4,10 @@ header{
     background-image: url("../images/fondoHeader.jpg");
     background-size: cover;
 }
+h1#NombrePagina{
+    color: darkred;
+    margin-left: 150px;
+}
 img#logo {
     width: 70px;
     margin-top: 11px;
@@ -12,6 +16,7 @@ img#logo {
     display: flex;
     margin-left: 10px;
 }
+
 nav#paginas{
     margin-left: 312px;
     margin-right: 160px;
@@ -19,7 +24,7 @@ nav#paginas{
 }
 
 input#search{
-    width: 120px;
+width: 120px;
 height: 20px;
 margin-top: 30px;
 }
@@ -30,9 +35,10 @@ button#buscar{
 }
 button#user{
     margin: 20px;
-    
-  
     background-size: cover;
+    margin-left: 200px;
+    width: 40px;
+    height: 30px;
 }
 div#noticia{
     float: left;
@@ -40,17 +46,12 @@ div#noticia{
     display: grid;
 }
 main{
+    background-color: greenyellow;
     float: left;
-    background-color:green;
 }
 aside#secciones{
-float: left;
-}
-div#calendario{
-
-}
-button#fanshop{
-
+float: right;
+background-color: green;
 }
 
 div#cuerpo{
