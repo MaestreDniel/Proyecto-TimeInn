@@ -111,9 +111,16 @@ main{
 
 }
 div#video{
-  display: grid;
-margin: 2%;
+
 }
+div#eventos{
+
+}
+div#event{
+  
+}
+
+
 footer {
   display: flex;
   background: rgb(0, 0, 0);
