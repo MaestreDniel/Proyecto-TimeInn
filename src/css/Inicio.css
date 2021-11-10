@@ -106,6 +106,14 @@ div#noticia{
     margin: 3%;
 }
 
+
+main{
+
+}
+div#video{
+  display: grid;
+margin: 2%;
+}
 footer {
   display: flex;
   background: rgb(0, 0, 0);
