@@ -10,6 +10,73 @@ header {
   background-size: cover;
 }
 
+
+
+h1#NombrePagina {
+  color: darkred;
+  margin-left: 150px;
+}
+
+img#logo {
+  width: 70px;
+  margin-top: 11px;
+
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: 10px;
+}
+
+nav#paginas {
+  margin-left: 250px;
+  margin-right: 160px;
+  margin-top: 40px;
+}
+
+input#search {
+  width: 120px;
+  height: 20px;
+  margin-top: 30px;
+}
+button#buscar {
+  width: 20px;
+  height: 20px;
+  margin-top: 30px;
+}
+button#user {
+  margin: 20px;
+  background-size: cover;
+  margin-left: 200px;
+  width: 40px;
+  height: 30px;
+}
+div#cuerpo {
+  display: flex;
+}
+
+div#news{
+  display: flex;
+  width: 250px;
+  height: 100%;
+  background-color: blue;
+  overflow: hidden;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+
+}
+div#noticia{
+  margin-top: 5px;
+  margin-left: 5px;
+  display: flex;
+    align-items: flex-start;
+    overflow:hidden;
+    background-color: aquamarine;
+    margin: 3%;
+}
+
+
+
+
 footer {
   display: flex;
   background: rgb(0, 0, 0);
@@ -51,45 +118,4 @@ footer div img {
   height: 6vw;
   max-height: 50px;
   max-width: 50px;
-}
-
-h1#NombrePagina {
-  color: darkred;
-  margin-left: 150px;
-}
-
-img#logo {
-  width: 70px;
-  margin-top: 11px;
-
-  margin-bottom: 10px;
-  display: flex;
-  margin-left: 10px;
-}
-
-nav#paginas {
-  margin-left: 312px;
-  margin-right: 160px;
-  margin-top: 40px;
-}
-
-input#search {
-  width: 120px;
-  height: 20px;
-  margin-top: 30px;
-}
-button#buscar {
-  width: 20px;
-  height: 20px;
-  margin-top: 30px;
-}
-button#user {
-  margin: 20px;
-  background-size: cover;
-  margin-left: 200px;
-  width: 40px;
-  height: 30px;
-}
-div#cuerpo {
-  display: flex;
 }
