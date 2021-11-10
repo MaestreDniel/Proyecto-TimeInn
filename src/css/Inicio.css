@@ -40,18 +40,13 @@ button#user{
     width: 40px;
     height: 30px;
 }
-div#noticia{
-    float: left;
-    background-color: blue;
-    display: grid;
+div.noticia{
+    
 }
 main{
-    background-color: greenyellow;
-    float: left;
 }
-aside#secciones{
-float: right;
-background-color: green;
+aside.secciones{
+ 
 }
 
 div#cuerpo{
