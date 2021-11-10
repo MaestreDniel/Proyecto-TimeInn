@@ -59,38 +59,37 @@ h1#NombrePagina {
 }
 
 img#logo {
-    width: 70px;
-    margin-top: 11px;
-    
-    margin-bottom: 10px;
-    display: flex;
-    margin-left: 10px;
+  width: 70px;
+  margin-top: 11px;
+
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: 10px;
 }
 
-nav#paginas{
-    margin-left: 312px;
-    margin-right: 160px;
-    margin-top: 40px;
+nav#paginas {
+  margin-left: 312px;
+  margin-right: 160px;
+  margin-top: 40px;
 }
 
-input#search{
-width: 120px;
-height: 20px;
-margin-top: 30px;
+input#search {
+  width: 120px;
+  height: 20px;
+  margin-top: 30px;
 }
-button#buscar{
-    width: 20px;
-    height: 20px;
-    margin-top: 30px;
+button#buscar {
+  width: 20px;
+  height: 20px;
+  margin-top: 30px;
 }
-button#user{
-    margin: 20px;
-    background-size: cover;
-    margin-left: 200px;
-    width: 40px;
-    height: 30px;
-} 
-div#cuerpo{
-    display: flex;
-   
+button#user {
+  margin: 20px;
+  background-size: cover;
+  margin-left: 200px;
+  width: 40px;
+  height: 30px;
+}
+div#cuerpo {
+  display: flex;
 }
