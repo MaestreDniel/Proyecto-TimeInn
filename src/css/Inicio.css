@@ -1,66 +1,22 @@
+:root {
+  /* Voy a aprovechar las variables de css y el root para determinar una paleta de colores
+  cualquier cambio de color se puede hacer cómodamente tocando aquí */
+  --main-color-footer: rgba(0, 0, 0, 1) 10%;
+  --alternate-color-footer: rgba(68, 68, 68, 1) 90%;
+}
+
 body {
   background-image: none;
   font-family: sans-serif;
   margin: 0;
 }
+
 /*HEADER*/
 header {
   display: flex;
   background-image: url("../images/fondoHeader.jpg");
   background-size: cover;
   max-height: 80px;
-}
-
-footer {
-  display: flex;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(68, 68, 68, 1) 90%
-  );
-  font-size: 1.6vw;
-  font-weight: bold;
-  padding: 1vw;
-  color: white;
-  align-items: center;
-  max-height: 80px;
-}
-
-#follow {
-  width: 40vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer div {
-  padding: 1vw;
-  text-align: center;
-}
-
-footer div:hover {
-  background-color: rgb(68, 68, 68);
-  max-height: 70px;
-}
-
-footer div:active {
-  background-color: rgb(122, 122, 122);
-  max-height: 70px;
-}
-
-footer div img {
-  width: 5vw;
-  height: 5vw;
-  max-height: 50px;
-  max-width: 50px;
-}
-
-div#NombrePagina {
-  color: darkred;
-  padding: 1.5vh;
-  background-color: rgb(0 0 0 / 50%);
-  font-size: 3rem;
 }
 
 img#logo {
@@ -199,8 +155,8 @@ footer {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(68, 68, 68, 1) 90%
+    var(--main-color-footer),
+    var(--alternate-color-footer)
   );
   font-size: 1.6vw;
   font-weight: bold;
@@ -224,15 +180,17 @@ footer div {
 
 footer div:hover {
   background-color: rgb(68, 68, 68);
+  max-height: 70px;
 }
 
 footer div:active {
   background-color: rgb(122, 122, 122);
+  max-height: 70px;
 }
 
 footer div img {
-  width: 6vw;
-  height: 6vw;
+  width: 5vw;
+  height: 5vw;
   max-height: 50px;
   max-width: 50px;
 }
