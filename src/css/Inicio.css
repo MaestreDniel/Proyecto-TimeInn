@@ -3,7 +3,7 @@ body {
   font-family: sans-serif;
   margin: 0;
 }
-
+/*HEADER*/
 header {
   display: flex;
   background-image: url("../images/fondoHeader.jpg");
@@ -101,11 +101,34 @@ input#search {
   width: 7vw;
   height: 7vw;
 }
+/*FIN HEADER*/
+
+/*CUERPO*/
+div#cuerpo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/*NOTICIAS*/
+div#news {
+  order: -1;
+  display: flex;
+  width: 25vw;
+  height: 100%;
+  background-color: blue;
+  overflow: hidden;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+}
 
 div#noticia {
-  float: left;
-  background-color: blue;
-  display: grid;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  background-color: #4d3cfa;
+  margin: 3%;
 }
 
 aside#secciones {
@@ -118,6 +141,98 @@ aside#secciones {
   width: 100%;
 }
 
-div#cuerpo {
+/*MAIN CENTRO*/
+main {
+  order: 0;
   display: flex;
+  height: 31px;
+  flex-direction: column;
+}
+
+div#video {
+}
+
+img#imgEvent {
+  margin: 2vh;
+  width: 6vw;
+  height: 8vh;
+}
+
+div#eventos {
+  display: flex;
+  justify-content: space-around;
+}
+
+div#event {
+}
+
+/*ASIDE DERECHA*/
+aside {
+  order: 1;
+  display: grid;
+  float: right;
+  height: 85vh;
+  background-color: #391ee3;
+  width: 26vw;
+}
+
+div#calendario {
+  display: grid;
+  background-color: #391ee3;
+}
+
+button#fanshop {
+  background-image: url("../images/Fan_Shop.png");
+  background-size: cover;
+  width: 26vw;
+  height: 38vh;
+  margin: -12vh -13vw;
+  position: relative;
+  top: 20%;
+  left: 50%;
+}
+/*FIN CENTRO*/
+
+/*FOOTER*/
+footer {
+  display: flex;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(68, 68, 68, 1) 90%
+  );
+  font-size: 1.6vw;
+  font-weight: bold;
+  padding: 1vw;
+  color: white;
+  align-items: center;
+  max-height: 80px;
+}
+
+#follow {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer div {
+  padding: 1vw;
+  text-align: center;
+}
+
+footer div:hover {
+  background-color: rgb(68, 68, 68);
+}
+
+footer div:active {
+  background-color: rgb(122, 122, 122);
+}
+
+footer div img {
+  width: 6vw;
+  height: 6vw;
+  max-height: 50px;
+  max-width: 50px;
 }
