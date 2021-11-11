@@ -89,6 +89,13 @@ main{
 div#video{
 
 }
+img#imgEvent{
+  margin: 2vh;
+  width: 6vw;
+  height: 8vh;
+
+}
+
 div#eventos{
   display: flex;
   justify-content: space-around;
@@ -118,8 +125,8 @@ div#calendario{
 button#fanshop{
   background-image: url("../images/Fan_Shop.png");
   background-size: cover;
-  width: 27vw;
-  height: 41vh;
+  width: 26vw;
+height: 38vh;
   margin: -12vh -13vw;
   position: relative;
   top: 20%;
