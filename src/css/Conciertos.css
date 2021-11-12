@@ -65,6 +65,7 @@ div#cuerpo{
     order: -1;
     width: 370px;
     height: 480px;
+    position:sticky;
   }
 
 /*CONCIERTOS*/
