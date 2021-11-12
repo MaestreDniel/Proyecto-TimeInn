@@ -1,2 +1,4 @@
-//TODO: ....dsfasdfadsfasd .DONE Jeroni
-//TODO: dsfadsfdsav. DONE Daniel
+//Con esta funcion cambiamos los eventos
+function editEvent(){
+    
+}

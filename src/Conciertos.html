@@ -24,6 +24,7 @@
             <button id="user"><img id="user" src="images/user.png" alt="" width="30px" height="20px"></button>
     </div>
       </header>
+    <div id="cuerpo">
     <div id="destacado">
         <img src="images/ConcertoDestacado.webp" alt="">
     </div>
@@ -31,6 +32,13 @@
         <div class="concert">
             <img src="images/scorpions.jpg" width="50vh" height="50vh" alt="">
             <div class="infoConcert">
+                
+                <h2>Concierto Scorpions</h2>
+                <p>Nombre del Grupo </p>
+                <p>Fecha</p>
+                <p>Lugar del Concierto</p>
+                <p>Precio</p>
+                <button class="">+INFO</button>
 
             </div>
             <button class="editConcert">Editar</button>
@@ -39,7 +47,27 @@
         <div class="concert">
             <img src="images/scorpions.jpg" width="50vh" height="50vh" alt="">
             <div class="infoConcert">
-
+                
+                <h2>Cocnierto Scorpions</h2>
+                <p>Nombre del Grupo </p>
+                <p>Fecha</p>
+                <p>Lugar del Concierto</p>
+                <p>Precio</p>
+                <button class="">+INFO</button>
+            </div>
+            
+            <button class="editConcert">Editar</button>
+            <button class="delConcert">Borrar</button>
+        </div>
+        <div class="concert">
+            <img src="images/scorpions.jpg" width="50vh" height="50vh" alt="">
+            <div class="infoConcert">
+                <h2>Cocnierto Scorpions</h2>
+                <p>Nombre del Grupo </p>
+                <p>Fecha</p>
+                <p>Lugar del Concierto</p>
+                <p>Precio</p>
+                <button class="">+INFO</button>
             </div>
             <button class="editConcert">Editar</button>
             <button class="delConcert">Borrar</button>
@@ -47,26 +75,44 @@
         <div class="concert">
             <img src="images/scorpions.jpg" width="50vh" height="50vh" alt="">
             <div class="infoConcert">
-
+                <h2>Cocnierto Scorpions</h2>
+            
+                <p>Nombre del Grupo </p>
+                <p>Fecha</p>
+                <p>Lugar del Concierto</p>
+                <p>Precio</p>
+                </p>
+                <button class="">+INFO</button>
             </div>
-            <button class="editConcert">Editar</button>
-            <button class="delConcert">Borrar</button>
-        </div>
-        <div class="concert">
-            <img src="images/scorpions.jpg" width="50vh" alt="">
-            <div class="infoConcert">
-
-            </div>
-            <button class="editConcert">Editar</button>
+            <button onclick="editEvent()" class="editConcert">Editar</button>
             <button class="delConcert">Borrar</button>
         </div>
         
+<!--SI QUIERO EDITAR UN EVENTO VENGO AQUI Y SE CAMIBA-->
+<div id="editEvent">
+    <div class="concert">
+        <form action="">
+        <input type="file">
+        <div class="infoConcert">
+           <h2><input type="text"></h2> 
+        
+            <p><input type="text" name="" id=""> </p>
+            <p><input type="text" name="Fecha" id=""></p>
+            <p><input type="text" name="Lugar" id=""></p>
+            <p><input type="text" name="Precio" id=""></p>
+            </p>
+            <button id="cambioEvent">Cambiar</button>
+        </div>
+     
+    </form>
+</div>
+
     </main>
     <aside id="secciones">
         <div id="calendario"></div>
         <div id="fashop"></div>
     </aside>
-    
+</div>
     <footer>
         <div id="follow"><img src="images/thumbs-up-solid.svg"><div>Síguenos en nuestras redes sociales</div></div>
         <div><img src="images/instagram_icon.png">Instagram</div>
@@ -76,5 +122,8 @@
         <div><a href="Conciertos.html">Enlace</a></div>
     </footer>
     <script src="js/Conciertos.js"></script>
+
+
+
 </body>
 </html>
