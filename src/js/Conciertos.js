@@ -1,40 +1,39 @@
-
 export const conciertos=[
     {
     titulo: 'Concierto scorpions',
     grupo:'Scorpions',
-    fecha:'',
-    precio: +'€'   
+    fecha:'24-25 Junio 2022',
+    lugar:''   
 },
 {
     titulo: 'Muse Live Festival',
     grupo: 'Muse',
-    fecha:'',
-    precio: +'€'
+    fecha:'24-25-26 Junio 2022',
+    lugar:''
 },
 {
     titlo:'FSO Fénix La Gira',
     grupo:'Fenix',
     fecha:'',
-    precio: +'€'
+    lugar:''
 },
 {
-    titlo:'FSO Fénix La Gira',
-    grupo:'Fenix',
-    fecha:'',
-    precio: +'€'
+    titlo:'Rio Babel, C. Tangana',
+    grupo:'C.Tangana',
+    fecha:'30-1-2 Julio 2022',
+    lugar:'Madrid'
 },
 {
     titlo:'Justice World Tour, Justin Bieber',
     grupo:'Justin Bieber',
-    fecha:'',
-    precio: +'€'
+    fecha:'10 de Septiembre 2022',
+    lugar:'Estadio Unico de la Plata'
 },
 {
-    titlo:'FSO Fénix La Gira',
-    grupo:'Fenix',
-    fecha:'',
-    precio: +'€'
+    titlo:'Nicks Masons Saugerful of Secrets, Pink Floyd',
+    grupo:'Pink Floyd',
+    fecha:'9-10 de Julio 2022',
+    lugar:'Madrid y Barcelona'
 }
 ]
 
@@ -94,8 +93,11 @@ switch(numEvent){
     case 5:
         document.getElementById("concierto5").style.display="none";
         break;
+    case 6:
+         document.getElementById("concierto6").style.display="none";
+         break;
     default:
-        alert("Solo hay 5 conciertos");
+        alert("Solo hay 6 conciertos");
         break;
     
 
