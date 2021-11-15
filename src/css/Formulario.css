@@ -1,6 +1,6 @@
 div#formulario{
     background-image: url("../images/fondoFormulario.PNG");
-    
+    background-size: cover;
     width: 100%;
 max-width: 500px;
 margin: 0 auto;
@@ -9,7 +9,32 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
+
+h1{
+    color: #0ee4d7;
+    background-color: #13374a;
+    height: 5vh;
+    text-align: center;
+    width: 25vw;
+}
+
 h2{
-    color:#d51805;
-    font-size: 30px;
+    color: #11445b;
+    font-size: cover;
+    background-color: #f10cd1;
+    width: 5vw;
+    height: 4vh;
+    text-align: center;
+}
+
+input{
+    color: #f10cd1;
+    background-color: #11445b;
+    width: 10vw;
+    height: 3vh;
+    text-align: center;
+}
+button{
+    background-color: #118b49;
+    color: #08f74f;
 }

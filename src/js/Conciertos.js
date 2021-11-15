@@ -1,3 +1,43 @@
+
+export const conciertos=[
+    {
+    titulo: 'Concierto scorpions',
+    grupo:'Scorpions',
+    fecha:'',
+    precio: +'€'   
+},
+{
+    titulo: 'Muse Live Festival',
+    grupo: 'Muse',
+    fecha:'',
+    precio: +'€'
+},
+{
+    titlo:'FSO Fénix La Gira',
+    grupo:'Fenix',
+    fecha:'',
+    precio: +'€'
+},
+{
+    titlo:'FSO Fénix La Gira',
+    grupo:'Fenix',
+    fecha:'',
+    precio: +'€'
+},
+{
+    titlo:'Justice World Tour, Justin Bieber',
+    grupo:'Justin Bieber',
+    fecha:'',
+    precio: +'€'
+},
+{
+    titlo:'FSO Fénix La Gira',
+    grupo:'Fenix',
+    fecha:'',
+    precio: +'€'
+}
+]
+
 //FUncion para editar eventos
 function editEvent(){
 //Preguntamos al usuario cual quiere editar
@@ -16,11 +56,11 @@ function editEvent(){
         newEvent.style.display ="block";
         break;
         case 3:
-        document.getElementById("concierto2").style.display="none";
+        document.getElementById("concierto3").style.display="none";
         newEvent.style.display ="block";
         break;
         case 4:
-        document.getElementById("concierto2").style.display="none";
+        document.getElementById("concierto4").style.display="none";
         newEvent.style.display ="block";
         break;
         default:
@@ -29,13 +69,13 @@ function editEvent(){
         
     
     }
-    
+}
 
 //Funcion para eliminar Eventos
 function eliminarEvent(){
 //Preguntamos al usuario cual quiere eliminar
 
-    var numEvent=parseInt( prompt("Que numero de concierto quieres eliminar"));
+    var numEvent=parseInt(prompt("Que numero de concierto quieres eliminar"));
 
     //Dependiendo de que numero pase el por el prompt desaparecera un evento u otro
 switch(numEvent){
@@ -46,16 +86,33 @@ switch(numEvent){
     document.getElementById("concierto2").style.display="none";
     break;
     case 3:
-    document.getElementById("concierto2").style.display="none";
+    document.getElementById("concierto3").style.display="none";
     break;
     case 4:
-    document.getElementById("concierto2").style.display="none";
+    document.getElementById("concierto4").style.display="none";
     break;
+    case 5:
+        document.getElementById("concierto5").style.display="none";
+        break;
     default:
-        alert("Solo hay 4 conciertos");
+        alert("Solo hay 5 conciertos");
         break;
     
 
 }
 }
-}
+
+
+/*GOOGLE MAPS*/
+var map;
+  	 function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+		  center: {lat: 43.5293, lng: -5.6773},
+          zoom: 13,
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 43.542194, lng: -5.676875},
+          map: map,
+	  title: 'Acuario de Gijón'
+        });
+      }
