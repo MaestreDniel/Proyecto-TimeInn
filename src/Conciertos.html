@@ -37,9 +37,12 @@
 
 <!--MAIN CONCIERTOS-->
     <main id="conciertos">
+        <br>
+<button id="newConcert" onclick="añadirConcierto()"><i class="fas fa-plus-circle"></i></button>
 
 <!--Concierto1-->
         <div class="concert" id="concierto1">
+            <br>
             <a href="https://www.the-scorpions.com/"><img src="images/scorpions.jpg" width="150vw" height="200vh" alt=""></a>
     
             <div class="infoConcert">
@@ -51,7 +54,7 @@
             </div>
 
             <div id="edicion">
-            <button id="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>
             <button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>
         </div>
         </div>
@@ -69,7 +72,7 @@
             </div>
 
             <div id="edicion">
-            <button id="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button id="editConcert" onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>
             <button class="delConcert" onclick="eliminarEvent()"><i class="fas fa-trash-alt"></i></button>
         </div>
         </div>
@@ -88,7 +91,7 @@
             </div>
 
            <div id="edicion">
-            <button id="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>
             <button class="delConcert" onclick="eliminarEvent()"><i class="fas fa-trash-alt"></i></button>
         </div>
         </div>
@@ -176,7 +179,7 @@
         <div id="fashop"></div>
     </aside>
 <!--Formulario Busqueda-->
-    <div id="formularioBusqueda" hidden>
+    <div id="formularioBusqueda" >
         <form action="">
             <h1>BUSQUEDA AVANZADA</h1>
             <label ><h2> Grupo </h2></label><input type="text">    
@@ -189,7 +192,7 @@
     </div>
 
 <!--Formulario Nuevo Cocierto-->
-<div id="formularioNew" hidden>
+<div id="formularioNew" >
     <form action="">
         <h1>CREA UN NUEVO CONCIERTO</h1>
         <label>Imagen Concierto</label><input type="file">
