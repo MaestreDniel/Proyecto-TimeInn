@@ -273,7 +273,7 @@ footer {
   padding: 1vw;
   color: white;
   align-items: center;
-  height: 7vw;
+  height: 15vw;
 }
 
 #follow {
@@ -284,6 +284,15 @@ footer {
   align-items: center;
 }
 
+#social{
+  display: flex;
+}
+p#copyrigh{
+
+}
+.fa-copyright{
+  font-size: 1rem;
+}
 footer div {
   margin: 1vw 2vw 1vw 2vw;
   text-align: center;
@@ -301,4 +310,16 @@ footer div:active {
 
 footer i {
   font-size: 3.5vw;
+}
+
+
+a#url{
+  color: #cb7b08;
+  font-size: 3.5vh;
+
+}
+div#url{
+  color: blue;
+  display: grid;
+  margin-top: -3vh;
 }
