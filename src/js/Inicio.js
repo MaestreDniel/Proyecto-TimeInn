@@ -62,12 +62,12 @@ const Events = {
           descripcion: 'Venid al gran festival de la musica en Mallorca'
       },
       {
-          foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
+          foto: '<img class="imgEvent" src="images/event2.PNG" alt="No se pudo mostrar">',
           nombre: 'The BPM Festival',
           descripcion: 'Gran Festival de BPM en Ibiza'
       },
       {
-          foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
+          foto: '<img class="imgEvent" src="images/event3.PNG" alt="No se pudo mostrar">',
           nombre: 'Madrid Popfest 2022',
           descripcion: 'Buena fiesta del Mejor Pop en Madrid'
       }

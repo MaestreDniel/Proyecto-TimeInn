@@ -85,6 +85,7 @@ function imprimirConcierto(){
     txt += '</div>'
     txt += '</div>'
   }
+  
   document.getElementById("conciertos").innerHTML = txt;
 
 }
