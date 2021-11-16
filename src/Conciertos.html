@@ -1,4 +1,4 @@
-
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,38 +7,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/Conciertos.css" />
-</head>
+    <script src="https://kit.fontawesome.com/2fd3a31e7c.js" crossorigin="anonymous"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script></head>
 <body>
-    <header>
 
-      
-        <img id="logo" src="images/Logo Music4Events.png" alt="">
-        <h1 id="Nombre Pagina"> </h1>
-          <nav id="paginas">
-              <button>Inicio</button>
-              <button>Conciertos</button>
-              <button>Grupos</button>
-              <button>Estilos</button>
-          </nav>
-          <input id ="search" type="search"> <button id="buscar"></button></input>
-          <img id="user" src="images/user.png" alt="" ">
-  
-    </header>
-    <div id="destacado"></div>
+<!--HEADER-->
+    <header>
+        <div id="cabecera"></div>
+       <img id="logo" src="images/Logo Music4Events.png" alt="">
+          <h1 id="NombrePagina">Music4Events</h1>
+            <nav id="paginas">
+                <button>Inicio</button> 
+                <button>Conciertos</button>
+                <button onclick="mostrarFormulario()">Grupos</button>
+                <button onclick="mostrarFormulario()">Estilos</button>
+            </nav>
+            <input id ="search" type="search"> <button id="buscar"></button></input>
+            <button id="user"><img id="user" src="images/user.png" alt="" width="30px" height="20px"></button>
+    </div>
+      </header>
+<!--CUERPO-->
+    <div id="cuerpo">
+
+<!--DESTACAD0-->
+    <div id="destacado">
+        <img src="images/ConcertoDestacado.webp" style="position: sticky;" alt="">
+    </div>
+
+<!--MAIN CONCIERTOS-->
+    <main id="conciertos">
+
+<!--Concierto1-->
+        <div class="concert" id="concierto1">
+            <a href="https://www.the-scorpions.com/"><img src="images/scorpions.jpg" width="150vw" height="200vh" alt=""></a>
+    
+            <div class="infoConcert">
+                <h2>1. Concierto Scorpions</h2>
+                <h3>Nombre del Grupo </h3>
+                <h3>Fecha</h3>    
+                <h3>Precio</h3>
+              
+            </div>
+
+            <div id="edicion">
+            <button id="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        </div>
+
+<!--Concierto2-->
+        <div class="concert" id="concierto2">
+            <a href="https://stageverse.muse.mu/?ref=https://www.google.com/"><img src="images/concierto2.png" width="150vw" height="200vh" alt=""></a>
+            
+            <div class="infoConcert">
+                <h2>2. Concierto Scorpions</h2>
+                <h3>Nombre del Grupo </h3>
+                <h3>Fecha</h3>
+                <h3>Precio</h3>
+                
+            </div>
+
+            <div id="edicion">
+            <button id="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button class="delConcert" onclick="eliminarEvent()"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        </div>
+
+
+<!--Concierto3-->
+        <div class="concert" id="concierto3" >
+            <a href="https://filmsymphony.es/"> <img src="images/concierto3.png" width="150vw" height="200vh" alt=""></a>   
+            
+            <div class="infoConcert">
+                <h2>3. Cocnierto Scorpions</h2>
+                <h3>Nombre del Grupo </h3>
+                <h3>Fecha</h3>
+                <h3>Precio</h3>
+                
+            </div>
+
+           <div id="edicion">
+            <button id="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button class="delConcert" onclick="eliminarEvent()"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        </div>
+        
+<!--Concierto4-->
+        <div class="concert" id="concierto4">
+            <a href="https://ctangana.com/"><img src="images/concierto4.png" width="150vw" height="200vh" alt=""></a>
+            
+            <div class="infoConcert">
+                <h2>4. Cocnierto Scorpions</h2>
+                <h3>Scorpions</h3>
+                <h3>Fecha</h3>
+                <h3>Precio</h3>
+                
+            </div>
+
+           <div id="edicion">
+            <button onclick="editEvent()" i="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button class="delConcert" onclick="eliminarEvent()"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        </div>
+        
+<!--Concierto5-->
+        <div class="concert" id="concierto4">
+            <a href="https://www.justinbiebermusic.com/"><img src="images/concierto5.png" width="150vw" height="200vh" alt=""></a>
+            
+            <div class="infoConcert">
+                <h2>4. Justice World Tour</h2>
+                <h3>Justin Bieber</h3>
+                <h3>10 de Septiembre 2022</h3>
+                <h3>Precio</h3>
+               
+            </div>
+
+           <div id="edicion">
+            <button onclick="editEvent()" i="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button class="delConcert" onclick="eliminarEvent()"><i class="fas fa-trash-alt"></i></button>
+        </div>  
+        </div>
+        
+
+        <!--Concierto6-->
+        <div class="concert" id="concierto6">
+            <a href="https://www.pinkfloyd.com/home.php"><img src="images/concierto6.png" width="150vw" height="200vh" alt=""></a>
+            
+            <div class="infoConcert">
+                <h2>4. Nicks Mason's Saugerful of Secrets, Pink Floyd</h2>
+                <h3>Pink Floyd</h3>
+                <h3>9-10 de Julio de 2022</h3>
+                <h3>Madrid:10    de julio
+                    Barcelona:9 de julio
+                </h3>
+                
+            </div>
+
+           <div id="edicion">
+            <button onclick="editEvent()" i="editConcert"><i class="fas fa-pencil-alt"></i></button>
+            <button class="delConcert" onclick="eliminarEvent()"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        </div>
+        
+
+<!--SI QUIERO EDITAR UN EVENTO VENGO AQUI Y SE CAMIBA-->
+<div id="editEvent">
+    <div class="concert" id="concierto1">
+        <form action="">
+        <input type="file">
+        <div class="infoConcert">
+           <h2><input name="Evento" type="text"></h2> 
+        
+            <p><input type="text" name="Grupo" id=""> </p>
+            <p><input type="text" name="Fecha" id=""></p>
+            <p><input type="text" name="Lugar" id=""></p>
+            <p><input type="text" name="Precio" id=""></p>
+            </p>
+            <button id="cambioEvent">Cambiar</button>
+        </div>
+     
+    </form>
+</div>
+
+    </main>
     <aside id="secciones">
         <div id="calendario"></div>
         <div id="fashop"></div>
     </aside>
-    <main id="condiertos">
-        <div id="con1"></div>
-        <div id="con2"></div>
-        <div id="con3"></div>
-        <div id="con4"></div>
-        
-    </main>
+<!--Formulario-->
+    <div id="formulario" hidden>
+        <form action="">
+            <h1>BUSQUEDA AVANZADA</h1>
+            <label ><h2> Grupo </h2></label><input type="text">    
+            <label><h2>Estilo</h2></label><input type="text">
+            <label><h2>Cantante</h2></label><input type="text">
+            <label><h2>Fecha</h2></label><input type="date">
+            <button type="reset">RESET</button>
+            <button type="submit" >BUSCAR</button>
+        </form>
+    </div>
+</div>
     <footer>
-        
+        <div id="follow"><img src="images/thumbs-up-solid.svg"><div>Síguenos en nuestras redes sociales</div></div>
+        <div><img src="images/instagram_icon.png">Instagram</div>
+        <div><img src="images/twitter-icon.png">Twitter</div>
+        <div><img src="images/Facebook_icon.png">Facebook</div>
+        <div><img src="images/YouTube-icon.png">YouTube</div>
+        <div><a href="Conciertos.html">Enlace</a></div>
     </footer>
     <script src="js/Conciertos.js"></script>
+
+
+
 </body>
 </html>
