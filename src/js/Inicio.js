@@ -74,18 +74,6 @@ const Events = {
   ]
 }
 
-//TODO:Formulario de Busqueda 
-function mostrarFormulario() {
-  var formulario = document.getElementById("formulario");
-  formulario.style.display = block;
-  var evento = document.getElementById("eventos");
-  evento.style.display = block;
-}
-
-//Datapicker
-/* $(function () {
-  $("#datepicker").datepicker();
-}); */
 
 function imprimirNews() {
   let txt = "";
@@ -120,4 +108,18 @@ imprimirEventos();
 
 /* document.getElementById("follow").addEventListener("click", function () {
   imprimirNews();
+}); */
+
+
+//TODO:Formulario de Busqueda 
+function mostrarFormulario() {
+  var formulario = document.getElementById("formulario");
+  formulario.style.display = block;
+  var evento = document.getElementById("eventos");
+  evento.style.display = block;
+}
+
+//Datapicker
+/* $(function () {
+  $("#datepicker").datepicker();
 }); */

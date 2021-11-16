@@ -1,3 +1,94 @@
+//TODO:Objeto Conciertos
+//A continuacion creamos los objetos para los Conciertos que seran 6 en total
+ const Concert = {
+   conciertos:[  {
+     /**
+      * Cada objeto tendra un div donde ira metido un id para poder manipularlo 
+      * el link que cuando pulsemos la imagen nos eviara a la pagina oficial del grupo
+      * una imagen del poster del concierto
+      * Los titulos de los conciertos los cuales estan enumerados para ser mas faciles para crear, ediar y eliminar
+      * El nombre del grupo o cantante
+      * Las fechas de los eventos 
+      * FInalmente donde es el concierto
+      */
+    div:'<div class="concert" id="concierto1">',
+    link:' <a href="https://www.the-scorpions.com/">',
+    foto:'<img class="imgEvent" src="images/concierto1.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+    titulo: "1.Concierto scorpions",
+    grupo: "Scorpions",
+    fecha: "24-25 Junio 2022",
+    lugar: "",
+  },
+  {
+    div:'<div class="concert" id="concierto2">',
+    link:'<a href="https://stageverse.muse.mu/?ref=https://www.google.com/">',
+    foto:'<img class="imgEvent" src="images/concierto2.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+    titulo: "2.Muse Live Festival",
+    grupo: "Muse",
+    fecha: "24-25-26 Junio 2022",
+    lugar: "",
+  },
+  {
+    div:'<div class="concert" id="concierto3">',
+    link:' <a href="https://filmsymphony.es/">',
+    foto:'<img class="imgEvent" src="images/concierto3.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+    titulo: "3.FSO Fénix La Gira",
+    grupo: "Fenix",
+    fecha: "safdasd",
+    lugar: "dfas",
+  },
+  {
+    div:'<div class="concert" id="concierto4">',
+    link:'<a href="https://ctangana.com/">',
+    foto:'<img class="imgEvent" src="images/concierto4.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+    titulo: "4.Rio Babel, C. Tangana",
+    grupo: "C.Tangana",
+    fecha: "30-1-2 Julio 2022",
+    lugar: "Madrid",
+  },
+  {
+    div:'<div class="concert" id="concierto5">',
+    link:'<a href="https://www.justinbiebermusic.com/">',
+    foto:'<img class="imgEvent" src="images/concierto5.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+    titulo: "5.Justice World Tour, Justin Bieber",
+    grupo: "Justin Bieber",
+    fecha: "10 de Septiembre 2022",
+    lugar: "Estadio Unico de la Plata",
+  },
+  { 
+    div:'<div class="concert" id="concierto6">',
+    link:'<a href="https://www.pinkfloyd.com/home.php">',
+    foto:'<img class="imgEvent" src="images/concierto6.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+    titulo: "6.Nicks Masons Saugerful of Secrets, Pink Floyd",
+    grupo: "Pink Floyd",
+    fecha: "9-10 de Julio 2022",
+    lugar: "Madrid y Barcelona",
+  },
+]
+}
+
+
+function imprimirConcierto(){
+  let txt ="";
+  for(let i in Concert.conciertos){
+    txt +=  Concert.conciertos[i].div;
+    txt +=  Concert.conciertos[i].link  + Concert.conciertos[i].foto+"</a>";
+    txt += '<div class="infoConcert">';
+    txt += "<h2>"+ Concert.conciertos[i].titulo +"</h2>";
+    txt += "<h3>"+ Concert.conciertos[i].grupo +"</h3>";
+    txt += "<h3>"+ Concert.conciertos[i].fecha +"</h3>";
+    txt += "<h3>"+ Concert.conciertos[i].lugar +"</h3>";
+    txt += '</div>';
+    txt += '<div id="edicion">';
+    txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
+    txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
+    txt += '</div>'
+    txt += '</div>'
+  }
+  document.getElementById("conciertos").innerHTML = txt;
+
+}
+imprimirConcierto();
 //TODO: Editar Eventos
 //FUncion para editar eventos
 function editEvent() {
@@ -79,45 +170,3 @@ function añadirConcierto(){
 $(function () {
   $("#datepicker").datepicker();
 });
-
-//TODO:Objeto Conciertos
-//A continuacion creamos los objetos para los Conciertos que seran 6 en total
-export const conciertos = [
-    {
-      titulo: "Concierto scorpions",
-      grupo: "Scorpions",
-      fecha: "24-25 Junio 2022",
-      lugar: "",
-    },
-    {
-      titulo: "Muse Live Festival",
-      grupo: "Muse",
-      fecha: "24-25-26 Junio 2022",
-      lugar: "",
-    },
-    {
-      titlo: "FSO Fénix La Gira",
-      grupo: "Fenix",
-      fecha: "",
-      lugar: "",
-    },
-    {
-      titlo: "Rio Babel, C. Tangana",
-      grupo: "C.Tangana",
-      fecha: "30-1-2 Julio 2022",
-      lugar: "Madrid",
-    },
-    {
-      titlo: "Justice World Tour, Justin Bieber",
-      grupo: "Justin Bieber",
-      fecha: "10 de Septiembre 2022",
-      lugar: "Estadio Unico de la Plata",
-    },
-    {
-      titlo: "Nicks Masons Saugerful of Secrets, Pink Floyd",
-      grupo: "Pink Floyd",
-      fecha: "9-10 de Julio 2022",
-      lugar: "Madrid y Barcelona",
-    },
-  ];
-  
