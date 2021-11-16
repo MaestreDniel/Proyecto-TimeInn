@@ -1,3 +1,5 @@
+
+//TODO:Objeto News
 export const News=[
     {
      titular: 'El festival Iruña Rock 2022 anuncia su cartel completo',
@@ -41,6 +43,8 @@ export const News=[
        }
 ]
 
+
+//TODO:Objeto principal Events
 export const principalEvents=[
     {
         nombre:'Mallorca Live Festival',
@@ -56,7 +60,7 @@ export const principalEvents=[
     }
 ]
 
-
+//TODO:Formulario de Busqueda 
 function mostrarFormulario(){
     var formulario = document.getElementById("formulario");
     formulario.style.display = block;

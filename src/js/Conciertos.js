@@ -1,3 +1,5 @@
+
+//TODO:Objeto Conciertos
 //A continuacion creamos los objetos para los Conciertos que seran 6 en total
 export const conciertos=[
     {
@@ -38,7 +40,7 @@ export const conciertos=[
 }
 ]
 
-
+//TODO: Editar Eventos
 //FUncion para editar eventos
 function editEvent(){
 //Preguntamos al usuario cual quiere editar
@@ -72,6 +74,8 @@ function editEvent(){
     }
 }
 
+
+//TODO: Eliminar Eventos
 //Funcion para eliminar Eventos
 function eliminarEvent(){
 //Preguntamos al usuario cual quiere eliminar
@@ -107,21 +111,7 @@ switch(numEvent){
 }
 
 
-/*GOOGLE MAPS*/
-var map;
-  	 function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-		  center: {lat: 43.5293, lng: -5.6773},
-          zoom: 13,
-        });
-        var marker = new google.maps.Marker({
-          position: {lat: 43.542194, lng: -5.676875},
-          map: map,
-	  title: 'Acuario de Gijón'
-        });
-      }
-
-//TODO:
+//TODO:Formulario Busqueda
 //Cuando pulsamos el boton de Grupos o estilos salta el formulario
       function mostrarFormulario(){
         var formulario = document.getElementById("formularioBusqueda");
