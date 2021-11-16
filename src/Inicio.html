@@ -9,12 +9,14 @@
     <script src="https://kit.fontawesome.com/2fd3a31e7c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!--HEADER-->
     <header>
   
       <div id="cabecera"></div>
      <img id="logo" src="images/Logo Music4Events.png" alt="">
         <h1 id="NombrePagina">Music4Events</h1>
-          <nav id="paginas">
+<!--NAV Paginas-->  
+        <nav id="paginas">
               <button>Inicio</button>
               <button>Conciertos</button>
               <button onclick="mostrarFormulario()">Grupos</button>
@@ -24,7 +26,9 @@
           <button id="user"><img id="user" src="images/user.png" alt="" width="30px" height="20px"></button>
   </div>
     </header>
+<!--Cuerpo-->
     <div id="cuerpo">
+<!--NEWS-->
     <div id="news">
               <div id="noticia">
             <img src="" alt="" width="50px" height="50px">
@@ -63,6 +67,7 @@
             <button id="delNot">Borrar</button>
         </div>
     </div>
+<!--ASIDE-->    
     <aside>
         <div id="calendario">
             <input type="date">
@@ -74,6 +79,8 @@
             <button id="fanshop"></button>
         </div>
     </aside>
+
+<!--MAIN-->    
     <main>
         <div id="eventos">
 
@@ -95,14 +102,14 @@
                             <button>+INFO</button>
                         </div>   
         </div>
-    <!--FOrmulario-->
+<!--FOrmulario-->
         <div id="formulario" hidden>
             <form action="">
                 <h1>BUSQUEDA AVANZADA</h1>
                 <label ><h2> Grupo </h2></label><input type="text">    
                 <label><h2>Estilo</h2></label><input type="text">
                 <label><h2>Cantante</h2></label><input type="text">
-                <label><h2>Fecha</h2></label><input type="date">
+                <label><h2>Fecha</h2></label><input type="date" id="datapicker">
                 <button type="reset">RESET</button>
                 <button type="submit" >BUSCAR</button>
             </form>
@@ -113,7 +120,9 @@
         </div>
     </main>
 </div>
-    <footer>
+
+<!--FOOTER-->
+<footer>
         <div id="follow"><img src="images/thumbs-up-solid.svg"><div>Síguenos en nuestras redes sociales</div></div>
         <div><img src="images/instagram_icon.png">Instagram</div>
         <div><img src="images/twitter-icon.png">Twitter</div>

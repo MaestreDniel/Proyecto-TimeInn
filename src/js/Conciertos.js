@@ -121,10 +121,20 @@ var map;
         });
       }
 
+//TODO:
 //Cuando pulsamos el boton de Grupos o estilos salta el formulario
       function mostrarFormulario(){
-        var formulario = document.getElementById("formulario");
+        var formulario = document.getElementById("formularioBusqueda");
         formulario.style.display = block;
         var evento = document.getElementById("secciones");
         evento.style.display= block;
         }
+
+//TODO:DATAPICKER para elegir fecha
+//Datapicker
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+
+

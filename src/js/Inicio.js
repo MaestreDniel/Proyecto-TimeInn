@@ -62,4 +62,9 @@ function mostrarFormulario(){
     formulario.style.display = block;
     var evento = document.getElementById("eventos");
     evento.style.display= block;
-    }
+}
+
+//Datapicker
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );
