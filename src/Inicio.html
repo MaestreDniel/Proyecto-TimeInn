@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TimeInn - Inicio</title>
     <link rel="stylesheet" type="text/css" href="css/Inicio.css" />
-    <script src="https://kit.fontawesome.com/2fd3a31e7c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7521fefac0.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--HEADER-->
@@ -36,71 +39,79 @@
                 <h4>Titulo Noticia</h4>
             <p>Esto es la descrpcion de la noticia</p>
             </div>
-            <button id="editNot">Editar</button>
-            <button id="delNot">Borrar</button>
-        </div>
-        <div id="noticia">
-            <img src="" alt="" width="50px" height="50px">
-            <div id="info">
-                <h4>Titulo Noticia</h4>
-            <p>Esto es la descrpcion de la noticia</p>
+            <div class="noticia">
+                <img src="images/noticias.png" alt="No se pudo mostrar la imagen en tu navegador">
+                <div class="info">
+                    <h4>Título Noticia</h4>
+                    <p>Esto es la descripción de la noticia. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
+                        quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
+                    <button id="editNot"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="delNot"><i class="fas fa-trash-alt"></i></button>
+                </div>
             </div>
-            <button id="editNot">Editar</button>
-            <button id="delNot">Borrar</button>
-        </div>
-        <div id="noticia">
-            <img src="" alt="" width="50px" height="50px">
-            <div id="info">
-                <h4>Titulo Noticia</h4>
-            <p>Esto es la descrpcion de la noticia</p>
+            <div class="noticia">
+                <img src="images/noticias.png" alt="No se pudo mostrar la imagen en tu navegador">
+                <div class="info">
+                    <h4>Título Noticia</h4>
+                    <p>Esto es la descripción de la noticia. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
+                        quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
+                    <button id="editNot"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="delNot"><i class="fas fa-trash-alt"></i></button>
+                </div>
+                
             </div>
-            <button id="editNot">Editar</button>
-            <button id="delNot">Borrar</button>
-        </div>
-        <div id="noticia">
-            <img src="" alt="" width="50px" height="50px">
-            <div id="info">
-                <h4>Titulo Noticia</h4>
-            <p>Esto es la descrpcion de la noticia</p>
+            <div class="noticia">
+                <img src="images/noticias.png" alt="No se pudo mostrar la imagen en tu navegador">
+                <div class="info">
+                    <h4>Título Noticia</h4>
+                    <p>Esto es la descripción de la noticia. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
+                        quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
+                    <button id="editNot"><i class="fas fa-pencil-alt"></i></button>
+                    <button class="delNot"><i class="fas fa-trash-alt"></i></button>
+                </div>
             </div>
-            <button id="editNot">Editar</button>
-            <button id="delNot">Borrar</button>
         </div>
     </div>
 <!--ASIDE-->    
     <aside>
         <div id="calendario">
             <input type="date">
-            <div id="fecha">
-            </div>
+            <div id="fecha"></div>
         </div>
         <br>
         <div id="fanshop">
-            <button id="fanshop"></button>
+            <img src="images/Fan_Shop.png">
         </div>
     </aside>
 
 <!--MAIN-->    
     <main>
         <div id="eventos">
-
-            <div id="event" style="order: -1;">
-                <img id="imgEvent" src="images/event1.PNG" width="5vh" height="5vh" alt="">
-                <h4>EVENTO</h4>
-                <button>+INFO</button>
+            <div class="degradadoizq"></div>
+            <div class="event">
+                <img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">
+                <p><span>Evento</span></p>
+                <i class="fas fa-info-circle"></i>
             </div>
-
-                <div id="event"style="order: 0;" >
-                    <img id="imgEvent" src="images/event1.PNG"  width="10vh" height="10vh" alt="">
-                        <h4>EVENTO</h4>
-                        <button>+INFO</button>
-                    </div>
-
-                    <div  id="event" style="order: 1;">
-                        <img id="imgEvent" src="images/event1.PNG" width="10vh" height="5vh" alt="">
-                            <h4>EVENTO</h4>
-                            <button>+INFO</button>
-                        </div>   
+            <div class="event">
+                <img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">
+                <p><span>Evento</span></p>
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="event">
+                <img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">
+                <p><span>Evento</span></p>
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="event">
+                <img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">
+                <p><span>Evento</span></p>
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="degradadoder"></div>
         </div>
 <!--FOrmulario-->
         <div id="formulario" hidden>
@@ -115,8 +126,16 @@
             </form>
         </div>
         <div id="video">
-            <iframe width="400" height="300" src="https://www.youtube.com/embed/G9kz-tag04U" title="YouTube video player" 
+            <iframe src="https://www.youtube.com/embed/G9kz-tag04U" title="YouTube video player" 
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="central">PARTE CENTRAL DE LA PÁGINA. AÑADIR CONTENIDO.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
+                quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
+                quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
+                quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
         </div>
     </main>
 </div>
@@ -130,7 +149,6 @@
         <div><img src="images/YouTube-icon.png">YouTube</div>
         <div><a href="Conciertos.html">Enlace</a></div>
     </footer>
-
     <script src="js/Inicio.js"></script>
 </body>
 </html>

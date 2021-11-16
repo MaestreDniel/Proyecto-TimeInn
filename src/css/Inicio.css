@@ -1,142 +1,261 @@
+:root {
+  /* Voy a aprovechar las variables de css y el root para determinar una paleta de colores.
+  El 2 es el tono principal de cada uno */
+
+  /* Color primario */
+  --rgba-primary-0: rgba(0, 0, 0, 1);
+  --rgba-primary-1: rgba(1, 45, 62, 1);
+  --rgba-primary-2: rgba(4, 74, 100, 1);
+  --rgba-primary-3: rgba(35, 98, 121, 1);
+  --rgba-primary-4: rgba(78, 86, 88, 1);
+  --rgba-primary-4-transpar: rgba(78, 86, 88, 0.8);
+
+  /* Color secundario 1 */
+
+  --rgba-secondary-1-0: rgba(0, 0, 0, 1);
+  --rgba-secondary-1-1: rgba(99, 73, 0, 1);
+  --rgba-secondary-1-2: rgba(160, 118, 0, 1);
+  --rgba-secondary-1-3: rgba(194, 156, 49, 1);
+  --rgba-secondary-1-4: rgba(141, 136, 124, 1);
+
+  /* Color secundario 2 */
+
+  --rgba-secondary-2-0: rgba(0, 0, 0, 1);
+  --rgba-secondary-2-1: rgba(99, 7, 0, 1);
+  --rgba-secondary-2-2: rgba(160, 12, 0, 1);
+  --rgba-secondary-2-3: rgba(194, 60, 49, 1);
+  --rgba-secondary-2-4: rgba(141, 125, 124, 1);
+}
+
 body {
-  background-image: none;
-  font-family: sans-serif;
+  background-image: url(../images/fondoescenario.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0;
 }
+
 /*HEADER*/
 header {
   display: flex;
   background-image: url("../images/fondoHeader.jpg");
   background-size: cover;
-}
-
-
-h1#NombrePagina {
-  color: darkred;
-  margin-left: 150px;
+  max-height: 80px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  justify-content: space-evenly;
+  z-index: 1;
 }
 
 img#logo {
-  width: 70px;
-  margin-top: 11px;
-
-  margin-bottom: 10px;
-  display: flex;
-  margin-left: 10px;
+  width: 8vw;
+  height: 8vw;
+  max-width: 80px;
+  max-height: 80px;
 }
 
 nav#paginas {
-  margin-left: 250px;
-  margin-right: 160px;
-  margin-top: 40px;
+  display: flex;
+  font-size: 2vw;
+  align-items: end;
+}
+
+nav#paginas div {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin-right: 2vw;
+}
+
+nav#paginas div:hover {
+  background-color: var(--rgba-primary-4);
+}
+
+nav i {
+  font-size: 100%;
+  background-color: white;
+  padding: 1% 1% 1% 1%;
+  margin-left: 2vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: white;
 }
 
 input#search {
-  width: 120px;
-  height: 20px;
-  margin-top: 30px;
+  width: 10vw;
+  margin-right: 5px;
 }
-button#buscar {
-  width: 20px;
-  height: 20px;
-  margin-top: 30px;
-}
-button#user {
-  margin: 20px;
-  background-size: cover;
-  margin-left: 200px;
-  width: 40px;
-  height: 30px;
-}
+
 /*FIN HEADER*/
 
 /*CUERPO*/
-div#cuerpo{
-  display: flex;
-align-items: flex-start;
-justify-content: center;
+div#cuerpo {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
 }
 
 /*NOTICIAS*/
-div#news{
-  order:-1;
+div#news {
+  order: -1;
   display: flex;
-  width: 25vw;
+  width: 100%;
   height: 100%;
-  background-color: blue;
   overflow: hidden;
   flex-direction: column;
-  align-content: space-around;
-  justify-content: space-around;
-
-}
-div#noticia{
-  display: flex;
-    align-items: flex-start;
-    overflow:hidden;
-    background-color: #4d3cfa;
-    margin: 3%;
 }
 
+div.noticia {
+  display: block;
+  background-color: var(--rgba-primary-4);
+}
+
+.noticia img {
+  width: 100%;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.noticia .info {
+  margin: 10px;
+}
+
+.info i {
+  font-size: 1.5vw;
+}
+
+.info i:hover,
+#eventos .event i:hover {
+  color: var(--rgba-secondary-2-2);
+}
+
+#fanshop img {
+  width: 100%;
+}
 
 /*MAIN CENTRO*/
-main{
-  order: 0;
+main {
+  display: block;
+}
+
+/* div#video {
+} */
+
+img.imgEvent {
+  width: 15vw;
+  border-radius: 10px 10px 0px 0px;
+}
+
+#eventos {
   display: flex;
-  height: 31px;
-  flex-direction: column;
-}
-div#video{
-
-}
-img#imgEvent{
-  margin: 2vh;
-  width: 6vw;
-  height: 8vh;
-
+  justify-content: space-between;
+  overflow-x: scroll;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-div#eventos{
-  display: flex;
-  justify-content: space-around;
-}
-div#event{
-  
+#eventos .degradadoizq {
+  position: sticky;
+  padding: 5%;
+  left: 0;
+  width: 15%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
+#eventos .degradadoder {
+  position: sticky;
+  padding: 5%;
+  right: 0;
+  width: 15%;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+#eventos .event {
+  background-color: white;
+  margin: 1vw 2vw 1vw 2vw;
+  box-shadow: 10px 10px 14px var(--rgba-primary-0);
+  border-radius: 10px;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+#eventos .event:hover {
+  box-shadow: 10px 10px 14px var(--rgba-secondary-2-2);
+}
+
+#eventos p span {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  padding: 1vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+
+#eventos i {
+  font-size: 2vw;
+  margin-bottom: 5%;
+}
+
+#central {
+  text-align: center;
+  background-color: var(--rgba-primary-4-transpar);
+  font-size: 2vw;
+  padding: 1vw;
+  color: white;
+}
+
+#video {
+  text-align: center;
+}
+
+iframe {
+  width: 90%;
+  height: 25vw;
+}
 
 /*ASIDE DERECHA*/
 aside {
+  display: inline;
   order: 1;
-  display: grid;
-  float: right;
-  height: 85vh;
-  background-color: #391ee3;
-  width: 26vw;
+  height: 100%;
+  background-color: black;
+  width: 100%;
 }
 
-
-div#calendario{
+div#calendario {
   display: grid;
-  background-color: #391ee3;
 }
 
+#fanshop {
+  width: 100%;
+}
 
-button#fanshop{
-  background-image: url("../images/Fan_Shop.png");
-  background-size: cover;
-  width: 26vw;
-height: 38vh;
-  margin: -12vh -13vw;
-  position: relative;
-  top: 20%;
-  left: 50%;
+#fanshop img {
+  width: 100%;
+  height: 100%;
 }
 /*FIN CENTRO*/
 
-
 /*Formulario*/
-div#formulario{
+div#formulario {
   display: none;
 }
 
@@ -146,40 +265,40 @@ footer {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(68, 68, 68, 1) 90%
+    var(--rgba-primary-0) 10%,
+    var(--rgba-primary-4) 90%
   );
   font-size: 1.6vw;
   font-weight: bold;
   padding: 1vw;
   color: white;
   align-items: center;
-  max-height: 80px;
+  height: 7vw;
 }
 
 #follow {
-  width: 40vw;
+  width: 15vw;
+  margin: 0vw 20vw 0vw 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 footer div {
-  padding: 1vw;
+  margin: 1vw 2vw 1vw 2vw;
   text-align: center;
+  height: 5vw;
+  transition: height 0.15s ease-in-out;
 }
 
 footer div:hover {
-  background-color: rgb(68, 68, 68);
+  height: 4vw;
 }
 
 footer div:active {
-  background-color: rgb(122, 122, 122);
+  color: var(--rgba-secondary-1-4);
 }
 
-footer div img {
-  width: 6vw;
-  height: 6vw;
-  max-height: 50px;
-  max-width: 50px;
+footer i {
+  font-size: 3.5vw;
 }
