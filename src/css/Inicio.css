@@ -134,6 +134,12 @@ height: 38vh;
 }
 /*FIN CENTRO*/
 
+
+/*Formulario*/
+div#formulario{
+  display: none;
+}
+
 /*FOOTER*/
 footer {
   display: flex;

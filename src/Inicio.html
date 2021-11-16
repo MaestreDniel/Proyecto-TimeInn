@@ -17,8 +17,8 @@
           <nav id="paginas">
               <button>Inicio</button>
               <button>Conciertos</button>
-              <button>Grupos</button>
-              <button>Estilos</button>
+              <button onclick="mostrarFormulario()">Grupos</button>
+              <button onclick="mostrarFormulario()">Estilos</button>
           </nav>
           <input id ="search" type="search"> <button id="buscar"></button></input>
           <button id="user"><img id="user" src="images/user.png" alt="" width="30px" height="20px"></button>
@@ -67,7 +67,6 @@
         <div id="calendario">
             <input type="date">
             <div id="fecha">
-
             </div>
         </div>
         <br>
@@ -95,6 +94,18 @@
                             <h4>EVENTO</h4>
                             <button>+INFO</button>
                         </div>   
+        </div>
+    <!--FOrmulario-->
+        <div id="formulario" >
+            <form action="">
+                <h1>BUSQUEDA AVANZADA</h1>
+                <label ><h2> Grupo </h2></label><input type="text">    
+                <label><h2>Estilo</h2></label><input type="text">
+                <label><h2>Cantante</h2></label><input type="text">
+                <label><h2>Fecha</h2></label><input type="date">
+                <button type="reset">RESET</button>
+                <button type="submit" >BUSCAR</button>
+            </form>
         </div>
         <div id="video">
             <iframe width="400" height="300" src="https://www.youtube.com/embed/G9kz-tag04U" title="YouTube video player" 

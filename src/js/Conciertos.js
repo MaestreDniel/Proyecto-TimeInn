@@ -1,3 +1,4 @@
+//A continuacion creamos los objetos para los Conciertos que seran 6 en total
 export const conciertos=[
     {
     titulo: 'Concierto scorpions',
@@ -36,6 +37,7 @@ export const conciertos=[
     lugar:'Madrid y Barcelona'
 }
 ]
+
 
 //FUncion para editar eventos
 function editEvent(){
@@ -118,3 +120,11 @@ var map;
 	  title: 'Acuario de Gijón'
         });
       }
+
+//Cuando pulsamos el boton de Grupos o estilos salta el formulario
+      function mostrarFormulario(){
+        var formulario = document.getElementById("formulario");
+        formulario.style.display = block;
+        var evento = document.getElementById("secciones");
+        evento.style.display= block;
+        }
