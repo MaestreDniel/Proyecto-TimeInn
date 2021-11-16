@@ -224,6 +224,8 @@ img.imgEvent {
 
 #video {
   text-align: center;
+  position: sticky;
+  top: 12vh;
 }
 
 iframe {
@@ -246,6 +248,8 @@ div#calendario {
 
 #fanshop {
   width: 100%;
+  position: sticky;
+  top: 12vh;
 }
 
 #fanshop img {
