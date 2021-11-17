@@ -74,6 +74,26 @@ const Events = {
   ]
 }
 
+const EventDes ={
+    destacado:[{
+        foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
+        nombre: 'Mallorca Live Festival',
+        descripcion: 'Venid al gran festival de la musica en Mallorca'
+    }
+    ]
+}
+
+function eventoDestacado(){
+    let txt = "";
+    for(let i in EventDes.destacado){
+        txt += EventDes.destacado[i].foto;
+        txt += "<h4>" + EventDes.destacado[i].titular + "</h4>";
+        txt += "<p>" + EventDes.destacado[i].descripcion + "</p>";
+    }
+    document.getElementById("eventDes").innerHTML = txt;
+}
+
+eventoDestacado()
 
 function imprimirNews() {
   let txt = "";
