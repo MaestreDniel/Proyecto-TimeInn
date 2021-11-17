@@ -242,6 +242,14 @@ aside {
   width: 100%;
 }
 
+div#eventDes{
+  margin-top: 10%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 32vh;
+}
+
 div#calendario {
   display: grid;
 }

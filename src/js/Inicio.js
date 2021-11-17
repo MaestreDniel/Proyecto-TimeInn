@@ -76,7 +76,7 @@ const Events = {
 
 const EventDes ={
     destacado:[{
-        foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
+        foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
         nombre: 'Mallorca Live Festival',
         descripcion: 'Venid al gran festival de la musica en Mallorca'
     }
@@ -85,11 +85,15 @@ const EventDes ={
 
 function eventoDestacado(){
     let txt = "";
+    txt += '<div class="degradadoizq"></div>';
     for(let i in EventDes.destacado){
+
+        txt += '<div class="event">';
         txt += EventDes.destacado[i].foto;
-        txt += "<h4>" + EventDes.destacado[i].titular + "</h4>";
-        txt += "<p>" + EventDes.destacado[i].descripcion + "</p>";
+        txt += '<p><span>' + EventDes.destacado[i].nombre + '</span></p>';    
+        txt += '<i class="fas fa-info-circle"></i>' + '</div>';
     }
+    txt += '<div class="degradadoder"></div>';
     document.getElementById("eventDes").innerHTML = txt;
 }
 
@@ -116,7 +120,7 @@ function imprimirEventos() {
   for (let i in Events.eventos) {
       txt += '<div class="event">';
       txt += Events.eventos[i].foto;
-      txt += '<p><span>' + Events.eventos[i].nombre + '</span></p>';
+      txt += '<p><span>' + Events.eventos[i].nombre + '</span></p>';    
       txt += '<i class="fas fa-info-circle"></i>' + '</div>';
   }
   txt += '<div class="degradadoder"></div>';
