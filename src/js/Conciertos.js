@@ -72,7 +72,7 @@ const Concert = {
 function imprimirConcierto(){
   let txt ="";
   txt +="<br>"
-  txt += '<button style="margin: 1%; id="addConcert"  onclick="addEvent()"><i class="far fa-plus-square"></i></button>';
+  txt += '<button  id="addConcert"  onclick="añadirConcierto()"><i class="far fa-plus-square"></i></button>';
   for(let i in Concert.conciertos){
     txt +=  Concert.conciertos[i].div;
     txt +=  Concert.conciertos[i].link  + Concert.conciertos[i].foto+"</a>";
@@ -182,9 +182,6 @@ function mostrarFormulario() {
 }
 
 
-//TODO: Nuevo Concierto Formulario
-function añadirConcierto(){
-    document.getElementById("formularioNew").style.display = "block";
 /* Es el botón de go back to top, que saldrá en el momento
 que el usuario hace scroll 100px hacia abajo desde el tope de la página */
 
@@ -193,7 +190,7 @@ buttop = document.getElementById("top");
 window.onscroll = function () {
     scrollFunction()
 };
-}
+
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         buttop.style.display = "block";
@@ -251,3 +248,9 @@ function eventoDestacado() {
 }
 
 eventoDestacado();
+
+
+
+//TODO: Nuevo Concierto Formulario
+function añadirConcierto(){
+  document.getElementById("newConcierto").style.display = "block";}

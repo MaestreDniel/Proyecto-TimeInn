@@ -299,3 +299,41 @@ div#formularioNew {
   background-color: var(--rgba-secondary-2-3);
   bottom: 2vh;
 }
+
+
+
+/*FORMULARIO BUSQUEDA*/
+/*Nuevo COncierto*/
+div#newConcierto {
+  background-color: rgba(1, 45, 62, 1);
+  background-size: cover;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 7vh;
+  z-index: 1;
+}
+
+label#newConcierto {
+  font-size: cover;
+ color: #083ef1;
+  font-size: 5vh;
+  text-align: center;
+  
+}
+
+
+input.newConcierto {
+  background-color: #3b9ac7;
+  width: 10vw;
+  height: 3vh;
+  text-align: center;
+  color: rgba(39, 42, 43, 0.8);
+}
+input#add {
+  background-color: #0c85bd;
+}
