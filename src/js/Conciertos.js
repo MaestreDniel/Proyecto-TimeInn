@@ -1,4 +1,5 @@
-//TODO:Objeto Conciertos
+//TODO:Objeto Conciertos.DONE
+
 //A continuacion creamos los objetos para los Conciertos que seran 6 en total
  const Concert = {
    conciertos:[  {
@@ -67,7 +68,7 @@
 ]
 }
 
-
+//TODO:Imprimir Concierto.DONE
 function imprimirConcierto(){
   let txt ="";
   txt +="<br>"
@@ -93,6 +94,9 @@ function imprimirConcierto(){
 
 }
 imprimirConcierto();
+
+
+
 //TODO: Editar Eventos
 //FUncion para editar eventos
 function editEvent() {
@@ -125,7 +129,12 @@ function editEvent() {
   }
 }
 
-//TODO: Eliminar Eventos
+
+
+
+
+
+//TODO: Eliminar Eventos.DONE
 //Funcion para eliminar Eventos
 function eliminarEvent(){
   //Preguntamos al usuario cual quiere eliminar
@@ -158,23 +167,31 @@ function eliminarEvent(){
   }
 }
 
+
+
 //TODO:Busqueda Formulario 
 //Cuando pulsamos el boton de Grupos o estilos salta el formulario
 function mostrarFormulario() {
     document.getElementById("formularioBusqueda").style.display = block;
     document.getElementById("secciones").style.display = block;
 }
+
+
 //TODO: Nuevo Concierto Formulario
 function añadirConcierto(){
     document.getElementById("formularioNew").style.display = "block";
 }
 
-//TODO:DATAPICKER para elegir fecha
+
+
+//TODO:DATAPICKER para elegir fecha.DONE
 //Datapicker
 $(function () {
   $("#datepicker").datepicker();
 });
 
+
+//TODO:EventoDestacado.DONE
 const EventDes ={
   destacado:[{
       foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',

@@ -1,4 +1,4 @@
-//TODO:Objeto News
+//TODO:Objeto News. DONE
 const News = {
   noticias: [{
           foto: '<img src="images/noticias.png" alt="No se pudo mostrar la imagen en tu navegador"></img>',
@@ -54,7 +54,7 @@ const News = {
 }
 
 
-//TODO:Objeto principal Events
+//TODO:Objeto principal Events.DONE
 const Events = {
   eventos: [{
           foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
@@ -89,6 +89,7 @@ const Events = {
   ]
 }
 
+//TODO:Evento Destacado. DONE
 const EventDes ={
     destacado:[{
         foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
@@ -98,6 +99,7 @@ const EventDes ={
     ]
 }
 
+//TODO:Imprimir Destacado. DONE
 function eventoDestacado(){
     let txt = "";
     txt += '<div class="degradadoizq"></div>';
@@ -114,6 +116,9 @@ function eventoDestacado(){
 
 eventoDestacado()
 
+
+
+//TODO:Imprimir Noticias. DONE
 function imprimirNews() {
   let txt = "";
   for (let i in News.noticias) {
@@ -129,6 +134,8 @@ function imprimirNews() {
   document.getElementById("news").innerHTML = txt;
 }
 
+
+//TODO:Imprimir Noticias. DONE
 function imprimirEventos() {
   let txt = "";
   txt += '<div class="degradadoizq"></div>';
@@ -168,5 +175,5 @@ function mostrarFormulario() {
 
 //TODO:COOKIE SUSCRIPCION
 function setCookie(name,cvalue,expires){
-    
+
 }
