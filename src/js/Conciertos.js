@@ -92,6 +92,7 @@ function imprimirConcierto(){
   document.getElementById("conciertos").innerHTML = txt;
 
 }
+
 imprimirConcierto();
 //TODO: Editar Eventos
 //FUncion para editar eventos
@@ -163,6 +164,28 @@ function eliminarEvent() {
   }
 }
 
+/* Es el botón de go back to top, que saldrá en el momento
+que el usuario hace scroll 100px hacia abajo desde el tope de la página */
+
+buttop = document.getElementById("top");
+
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        buttop.style.display = "block";
+    } else {
+        buttop.style.display = "none";
+    }
+}
+
+// Vuelve arriba al ser clicado
+function backToTop() {
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE y Opera
+}
 
 //TODO:Formulario Busqueda
 //Cuando pulsamos el boton de Grupos o estilos salta el formulario

@@ -245,12 +245,12 @@ aside {
   width: 100%;
 }
 
-div#eventDes{
+div#eventDes {
   margin-top: 10%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 32vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 32vh;
 }
 
 div#calendario {
@@ -267,9 +267,6 @@ div#calendario {
   width: 100%;
   height: 100%;
 }
-
-
-
 
 /*FIN CENTRO*/
 
@@ -360,8 +357,12 @@ footer i {
 }
 
 @keyframes boton {
-  from {bottom: 1vh;}
-  to {bottom: 4vh;}
+  from {
+    bottom: 1vh;
+  }
+  to {
+    bottom: 4vh;
+  }
 }
 
 #top:hover {

@@ -200,10 +200,11 @@ imprimirEventos();
     imprimirNews();
 }); */
 
-//Get the button:
+/* Es el botón de go back to top, que saldrá en el momento
+que el usuario hace scroll 100px hacia abajo desde el tope de la página */
+
 buttop = document.getElementById("top");
 
-// When the user scrolls down 100px from the top of the document, show the button
 window.onscroll = function () {
     scrollFunction()
 };
@@ -216,10 +217,10 @@ function scrollFunction() {
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// Vuelve arriba al ser clicado
 function backToTop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE y Opera
 }
 
 imprimirNews();
