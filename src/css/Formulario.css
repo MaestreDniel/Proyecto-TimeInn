@@ -30,7 +30,7 @@
 
 /*Nuevo COncierto*/
 div#newConcierto {
-  background-color: rgba(35, 98, 121, 1);
+  background-color: rgba(1, 45, 62, 1);
   background-size: cover;
   width: 100%;
   max-width: 500px;
@@ -39,24 +39,29 @@ div#newConcierto {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 7vh;
 }
 
-label.newConcierto {
+label#newConcierto {
   font-size: cover;
-  background-color: rgba(35, 98, 121, 1);
+ color: #083ef1;
   font-size: 5vh;
   text-align: center;
+  
 }
 
+
 input.newConcierto {
-  background-color: #11445b;
+  background-color: #3b9ac7;
   width: 10vw;
   height: 3vh;
   text-align: center;
+  color: rgba(39, 42, 43, 0.8);
 }
-button#newConcierto {
-  background-color: #118b49;
+input#add {
+  background-color: #0c85bd;
 }
+
 
 
 
