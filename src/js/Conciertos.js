@@ -68,11 +68,13 @@ const Concert = {
 }
 
 
-function imprimirConcierto() {
-  let txt = "";
-  for (let i in Concert.conciertos) {
-    txt += Concert.conciertos[i].div;
-    txt += Concert.conciertos[i].link + Concert.conciertos[i].foto + "</a>";
+function imprimirConcierto(){
+  let txt ="";
+  txt +="<br>"
+  txt += '<button style="margin: 1%; id="addConcert"  onclick="addEvent()"><i class="far fa-plus-square"></i></button>';
+  for(let i in Concert.conciertos){
+    txt +=  Concert.conciertos[i].div;
+    txt +=  Concert.conciertos[i].link  + Concert.conciertos[i].foto+"</a>";
     txt += '<div class="infoConcert">';
     txt += "<h2>" + Concert.conciertos[i].titulo + "</h2>";
     txt += "<h3>" + Concert.conciertos[i].grupo + "</h3>";
@@ -81,6 +83,7 @@ function imprimirConcierto() {
     txt += '</div>';
     txt += '<div id="edicion">';
     txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
+    
     txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
     txt += '</div>'
     txt += '</div>'
