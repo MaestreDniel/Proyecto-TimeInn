@@ -61,36 +61,3 @@ button#newConcierto {
 
 
 
-/*FORMULARIO SUSCRIPCION*/
-form#sub{
-    background-image: url("../images/fondoLogin.PNG")  ;
-    background-size: contain  ;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-div.login{
-    display: flex;
-    font-size: 5vh;
-    width: 52vh;
-    color: rgba(160, 12, 0, 1);
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-
-input.sub{
-    margin-left: 2%;
-    background-color: rgba(99, 73, 0, 1);
-
-height: 4vh;
-font-size: 6vh;
-width: 21vh;
-color:   rgba(99, 7, 0, 1);
-
-}
