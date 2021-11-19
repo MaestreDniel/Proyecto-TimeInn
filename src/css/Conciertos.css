@@ -106,10 +106,10 @@ div#cuerpo {
 div#destacado {
   display: flex;
   order: -1;
-  width: 370px;
+  width: 328px;
   height: 480px;
   position: sticky;
-  top: 0;
+  top: 1vh;
 }
 
 /*CONCIERTOS*/
@@ -119,7 +119,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: space-around;
 }
 
 main#conciertos {
@@ -166,14 +168,40 @@ button#newConcert {
 }
 
 /*ASIDE*/
+/*ASIDE DERECHA*/
 aside {
+  display: inline;
   order: 1;
-  display: grid;
-  float: right;
-  height: 100vh;
-  background-color: #391ee3;
-  width: 26vw;
+  height: 100%;
+  background-color: black;
+  width: 50%;
 }
+
+div#eventDes{
+  margin-top: 10%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 32vh;
+}
+
+div#calendario {
+  display: grid;
+}
+
+div#fanshop {
+  width: 100%;
+  position: sticky;
+  top: 12vh;
+}
+
+#fanshop img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
 
 /*FOOTER*/
 footer {

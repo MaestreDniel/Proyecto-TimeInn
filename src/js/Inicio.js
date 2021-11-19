@@ -108,34 +108,60 @@ const News = {
 const Events = {
     eventos: [{
             foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
-            nombre: 'Mallorca Live Festival',
+            nombre: '1.Mallorca Live Festival',
             descripcion: 'Venid al gran festival de la musica en Mallorca'
         },
         {
-            foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
-            nombre: 'The BPM Festival',
+            foto: '<img class="imgEvent" src="images/event2.PNG" alt="No se pudo mostrar">',
+            nombre: '2.The BPM Festival',
             descripcion: 'Gran Festival de BPM en Ibiza'
         },
         {
-            foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
-            nombre: 'Madrid Popfest 2022',
+            foto: '<img class="imgEvent" src="images/event3.PNG" alt="No se pudo mostrar">',
+            nombre: '3.Madrid Popfest 2022',
             descripcion: 'Buena fiesta del Mejor Pop en Madrid'
-        }
+        },
+        {
+            foto: '<img class="imgEvent" src="images/event4.PNG" alt="No se pudo mostrar">',
+            nombre: '4.WAN 2022 Madrid',
+            descripcion: 'WAN Festival volverá a tomar La Nueva Cubierta de Leganés'
+        },
+        {
+            foto: '<img class="imgEvent" src="images/event5.PNG" alt="No se pudo mostrar">',
+            nombre: '5.Festival Cara-B 2022',
+            descripcion: 'Cara•B 2022 se presenta como un festival con una visión de 360 grados alrededor de la creación artística'
+        },
+        {
+            foto: '<img class="imgEvent" src="images/event6.PNG" alt="No se pudo mostrar">',
+            nombre: '6.Actual Festival 2022',
+            descripcion: 'El festival es un altavoz de ideas, pensamientos, talento, diversidad y expresiones artísticas contemporáneas. '
+        },
     ]
 }
 
-//TODO:Formulario de Busqueda 
-function mostrarFormulario() {
-    var formulario = document.getElementById("formulario");
-    formulario.style.display = block;
-    var evento = document.getElementById("eventos");
-    evento.style.display = block;
+const EventDes = {
+    destacado: [{
+        foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
+        nombre: 'Mallorca Live Festival',
+        descripcion: 'Venid al gran festival de la musica en Mallorca'
+    }]
 }
 
-//Datapicker
-/* $(function () {
-    $("#datepicker").datepicker();
-}); */
+function eventoDestacado() {
+    let txt = "";
+    txt += '<div class="degradadoizq"></div>';
+    for (let i in EventDes.destacado) {
+
+        txt += '<div class="event">';
+        txt += EventDes.destacado[i].foto;
+        txt += '<p><span>' + EventDes.destacado[i].nombre + '</span></p>';
+        txt += '<i class="fas fa-info-circle"></i>' + '</div>';
+    }
+    txt += '<div class="degradadoder"></div>';
+    document.getElementById("eventDes").innerHTML = txt;
+}
+
+eventoDestacado()
 
 function imprimirNews() {
     let txt = "";
@@ -195,3 +221,18 @@ function backToTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+imprimirNews();
+
+//TODO:Formulario de Busqueda 
+function mostrarFormulario() {
+    var formulario = document.getElementById("formulario");
+    formulario.style.display = block;
+    var evento = document.getElementById("eventos");
+    evento.style.display = block;
+}
+
+//Datapicker
+/* $(function () {
+  $("#datepicker").datepicker();
+}); */
