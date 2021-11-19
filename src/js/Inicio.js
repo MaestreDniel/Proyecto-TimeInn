@@ -162,3 +162,11 @@ function mostrarFormulario() {
 /* $(function () {
   $("#datepicker").datepicker();
 }); */
+
+
+
+
+//TODO:COOKIE SUSCRIPCION
+function setCookie(name,cvalue,expires){
+    
+}
