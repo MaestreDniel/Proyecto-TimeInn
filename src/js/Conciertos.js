@@ -72,7 +72,7 @@ const Concert = {
 function imprimirConcierto(){
   let txt ="";
   txt +="<br>"
-  txt += '<button  id="addConcert"  onclick="añadirConcierto()"><i class="far fa-plus-square"></i></button>';
+  txt += '<button onclick="añadirConcierto()"  id="addConcert"  ><i class="far fa-plus-square"></i></button>';
   for(let i in Concert.conciertos){
     txt +=  Concert.conciertos[i].div;
     txt +=  Concert.conciertos[i].link  + Concert.conciertos[i].foto+"</a>";
@@ -84,7 +84,6 @@ function imprimirConcierto(){
     txt += '</div>';
     txt += '<div id="edicion">';
     txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
-    
     txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
     txt += '</div>'
     txt += '</div>'
@@ -253,4 +252,5 @@ eventoDestacado();
 
 //TODO: Nuevo Concierto Formulario
 function añadirConcierto(){
-  document.getElementById("newConcierto").style.display = "block";}
+  document.getElementById("newConcierto").style.display = "block";
+}

@@ -29,7 +29,7 @@
     </header>
 <!--CUERPO-->
     <div id="cuerpo">
-
+            
 <!--DESTACAD0-->
     <div id="destacado">
         <img src="images/ConcertoDestacado.webp" style="position: sticky;" alt="">
@@ -42,6 +42,19 @@
 
 <!--Aside-->
     <aside>
+        <!--FORMULARIO NUEVO EVENTO-->
+<div id="newConcierto" style="display: none;">
+    <form action="">
+      <h5 style="background-color: #1137a7; color: gray;">CREADOR DE CONCIERTOS</h5>
+      <label id="newConcierto">Poster Concierto: </label><input class="newConcierto" type="file" name="poster" id="poster"><br>
+      <label id="newConcierto">Tiutlo: </label><input class="newConcierto" type="text" name="titulo" id="titulo"><br>
+      <label id="newConcierto">Grupo/Cantante:</label><input class="newConcierto" type="text" name="grupo" id="grupo"><br>
+      <label id="newConcierto">Fecha: </label><input class="newConcierto" type="date" name="fecha" id="fecha"><br>
+      <label id="newConcierto">Lugar: </label><input class="newConcierto" type="text" name="lugar" id="lugar">
+      <input id="add" type="submit" value="ADD">
+    </form>
+  </div>
+  <br>
         <div id="calendario">
             <input type="date">
             <div id="eventDes">
@@ -52,6 +65,8 @@
         <br>
         <div id="fanshop">
             <a href="https://www.merchandisingplaza.es/Musica-Merchandise/m_2"><img src="images/Fan_Shop.png"></a>
+       
+            
         </div>
       
     </aside>
@@ -70,19 +85,7 @@
 </footer>
     
   
-<!--FORMULARIO NUEVO EVENTO-->
-<div id="newConcierto" style="display: none;">
-    <body>
-      <form action="">
-        <h5 style="background-color: #1137a7; color: gray;">CREADOR DE CONCIERTOS</h5>
-        <label id="newConcierto">Poster Concierto: </label><input class="newConcierto" type="file" name="poster" id="poster"><br>
-        <label id="newConcierto">Tiutlo: </label><input class="newConcierto" type="text" name="titulo" id="titulo"><br>
-        <label id="newConcierto">Grupo/Cantante:</label><input class="newConcierto" type="text" name="grupo" id="grupo"><br>
-        <label id="newConcierto">Fecha: </label><input class="newConcierto" type="date" name="fecha" id="fecha"><br>
-        <label id="newConcierto">Lugar: </label><input class="newConcierto" type="text" name="lugar" id="lugar">
-        <input id="add" type="submit" value="ADD">
-      </form>
-    </div>
+
 
     <script src="js/Conciertos.js"></script>
 </body>
