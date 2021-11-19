@@ -24,28 +24,57 @@
             <div><a href="Conciertos.html">Conciertos</a></div>
             <div onclick="mostrarFormulario()"><a href="Formulario.html">Grupos</a></div>
             <div onclick="mostrarFormulario()"><a href="Formulario.html">Estilos</a></div>
-            <input id="search" type="search"><button id="buscar">Buscar</button></input>
+            <input id="search" type="search"><button id="buscar">Buscar</button>
             <i class="fas fa-user"></i>
         </nav>
     </header>
 
 <!--CUERPO-->
     <div id="cuerpo">
-        
-<!--NEWS--><div id="news">    </div>
-    
-<!--ASIDE -->
-<aside>
-
-    <!--CALENDARIO-->
+        <div id="news"></div>
+    <aside>
         <div id="calendario">
-            <input type="date">
-
-    <!--EVENTO DESTACADO-->
-        <div id="eventDes">            </div>
-            
-        <div id="fecha"></div>
+            <div id="calenheader">Noviembre 2021</div>
+            <div id="dias">
+                <div class="blur">29</div>
+            <div class="blur">30</div>
+            <div id="dia" class="mesactual">1</div>
+            <div class="mesactual">2</div>
+            <div class="mesactual">3</div>
+            <div class="mesactual">4</div>
+            <div class="mesactual">5</div>
+            <div class="mesactual">6</div>
+            <div class="mesactual">7</div>
+            <div class="mesactual">8</div>
+            <div class="mesactual">9</div>
+            <div class="mesactual">10</div>
+            <div class="mesactual">11</div>
+            <div class="mesactual">12</div>
+            <div class="mesactual">13</div>
+            <div class="mesactual">14</div>
+            <div class="mesactual">15</div>
+            <div class="mesactual">16</div>
+            <div class="mesactual">17</div>
+            <div class="mesactual">18</div>
+            <div class="mesactual">19</div>
+            <div class="mesactual">20</div>
+            <div class="mesactual">21</div>
+            <div class="mesactual">22</div>
+            <div class="mesactual">23</div>
+            <div class="mesactual">24</div>
+            <div class="mesactual">25</div>
+            <div class="mesactual">26</div>
+            <div class="mesactual">27</div>
+            <div class="mesactual">28</div>
+            <div class="mesactual">29</div>
+            <div class="mesactual">30</div>
+            <div class="blur">1</div>
+            <div class="blur">2</div>
+            <div class="blur">3</div>
+            </div>
         </div>
+        <div id="eventDes"></div>
+        <div id="fecha"></div>
         <br>
         <div id="fanshop">
             <a href="https://www.merchandisingplaza.es/Musica-Merchandise/m_2"><img src="images/Fan_Shop.png" width="1.5vw" height="1.5vh"></a>
@@ -54,7 +83,7 @@
     </aside>
     <main>
         <div id="eventos"></div>
-    <!--FOrmulario-->
+    <!--Formulario-->
         <div id="formulario" hidden>
             <form action="">
                 <h1>BUSQUEDA AVANZADA</h1>
@@ -80,23 +109,21 @@
         </div>
     </main>
     </div>
+    <div onclick="backToTop()" id="top" title="Volver arriba"><i class="fas fa-arrow-up"></i></div>
     <footer>
         
         <div id="follow"><i class="fas fa-thumbs-up"></i>Síguenos en:
-            <p><i class="far fa-copyright"></i>2022</p>
+            <p><i class="far fa-copyright"></i> 2022</p>
         </div>
-        <div id="social">
-        <div><i class="fab fa-twitter"></i>Twitter <a href="https://twitter.com"></a></div>
-        <div><i class="fab fa-instagram"></i>Instagram <a href="https://www.instagram.com/"></a> </div>
-        <div><i class="fab fa-facebook"></i>Facebook <a href="https://es-es.facebook.com/"></a></div>
-        <div><i class="fab fa-youtube"></i>YouTube <a href="https://www.youtube.com/"></a> </div>
-        
-        </div>
+        <div><i class="fab fa-twitter"></i><a href="https://twitter.com">Twitter</a></div>
+        <div><i class="fab fa-instagram"></i><a href="https://www.instagram.com/"></a>Instagram</div>
+        <div><i class="fab fa-facebook"></i><a href="https://es-es.facebook.com/"></a>Facebook</div>
+        <div><i class="fab fa-youtube"></i><a href="https://www.youtube.com/"></a>YouTube</div>
         <div id="url">
-            <a href="https://www.ticketmaster.es/" id="url">TICKETMASTER</a> 
-             <a href="https://www.entradas.com/" id="url">ENTRADAS</a> 
-             <a href="https://www.ticketea.com/" id="url">TIKETEA</a> 
-             <a href="https://entradas.ataquilla.com/ventaentradas/es/" id="url">ATAQUILLA</a> 
+            <a href="https://www.ticketmaster.es/">TICKETMASTER</a> 
+            <a href="https://www.entradas.com/">ENTRADAS</a> 
+            <a href="https://www.ticketea.com/">TIKETEA</a> 
+            <a href="https://entradas.ataquilla.com/ventaentradas/es/">ATAQUILLA</a> 
         </div>
     </footer>
     <script src="js/Inicio.js"></script>
