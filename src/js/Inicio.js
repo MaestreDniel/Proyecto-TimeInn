@@ -108,32 +108,32 @@ const News = {
 const Events = {
     eventos: [{
             foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
-            nombre: '1.Mallorca Live Festival',
+            nombre: '1. Mallorca Live Festival',
             descripcion: 'Venid al gran festival de la musica en Mallorca'
         },
         {
             foto: '<img class="imgEvent" src="images/event2.PNG" alt="No se pudo mostrar">',
-            nombre: '2.The BPM Festival',
+            nombre: '2. The BPM Festival',
             descripcion: 'Gran Festival de BPM en Ibiza'
         },
         {
             foto: '<img class="imgEvent" src="images/event3.PNG" alt="No se pudo mostrar">',
-            nombre: '3.Madrid Popfest 2022',
+            nombre: '3. Madrid Popfest 2022',
             descripcion: 'Buena fiesta del Mejor Pop en Madrid'
         },
         {
             foto: '<img class="imgEvent" src="images/event4.PNG" alt="No se pudo mostrar">',
-            nombre: '4.WAN 2022 Madrid',
+            nombre: '4. WAN 2022 Madrid',
             descripcion: 'WAN Festival volverá a tomar La Nueva Cubierta de Leganés'
         },
         {
             foto: '<img class="imgEvent" src="images/event5.PNG" alt="No se pudo mostrar">',
-            nombre: '5.Festival Cara-B 2022',
+            nombre: '5. Festival Cara-B 2022',
             descripcion: 'Cara•B 2022 se presenta como un festival con una visión de 360 grados alrededor de la creación artística'
         },
         {
             foto: '<img class="imgEvent" src="images/event6.PNG" alt="No se pudo mostrar">',
-            nombre: '6.Actual Festival 2022',
+            nombre: '6. Actual Festival 2022',
             descripcion: 'El festival es un altavoz de ideas, pensamientos, talento, diversidad y expresiones artísticas contemporáneas. '
         },
     ]

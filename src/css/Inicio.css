@@ -137,6 +137,8 @@ div.noticia {
   /*height: 30%;*/
 }
 
+
+
 #fanshop img {
   width: 100%;
 }
@@ -151,6 +153,7 @@ main {
 
 img.imgEvent {
   width: 15vw;
+  height: 65%;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -207,7 +210,6 @@ img.imgEvent {
 #eventos p span {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  padding: 1vw;
   font-size: 1.4vw;
   font-weight: bold;
 }
@@ -238,24 +240,60 @@ iframe {
 
 /*ASIDE DERECHA*/
 aside {
-  display: inline;
+  display: flex;
   order: 1;
   height: 100%;
   background-color: black;
   width: 100%;
+  flex-flow: column;
 }
 
 div#eventDes {
-  margin-top: 10%;
+  margin-top: 5vh;
   display: grid;
   justify-content: center;
   align-items: center;
   height: 32vh;
 }
 
-div#calendario {
-  display: grid;
+#calendario {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  font-size: 2vw;
+  border-radius: 15px;
 }
+
+#calenheader {
+  background-color: var(--rgba-secondary-2-0);
+  color: white;
+}
+
+#calendario #dias {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#calendario div {
+  border: 1px solid black;
+  border-collapse: collapse;
+  transition: background-color 0.15s ease-in-out;
+}
+
+#calendario div.mesactual:hover {
+  background-color: var(--rgba-primary-3);
+}
+
+#calendario div.mesactual:active {
+  background-color: var(--rgba-secondary-1-2);
+}
+
+#calendario div.blur {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
 
 #fanshop {
   width: 100%;
