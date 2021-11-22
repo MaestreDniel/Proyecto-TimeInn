@@ -300,8 +300,6 @@ div#formularioNew {
   bottom: 2vh;
 }
 
-
-
 /*FORMULARIO BUSQUEDA*/
 /*Nuevo COncierto*/
 div#newConcierto {
@@ -310,7 +308,7 @@ div#newConcierto {
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
-      margin-right: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -324,12 +322,10 @@ div#newConcierto {
 
 label#newConcierto {
   font-size: cover;
- color: #083ef1;
+  color: #083ef1;
   font-size: 5vh;
   text-align: center;
-  
 }
-
 
 input.newConcierto {
   background-color: #3b9ac7;
