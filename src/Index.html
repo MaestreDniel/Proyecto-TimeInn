@@ -101,19 +101,7 @@
       <main>
         <div id="eventos"></div>
 
-        <!--Formulario
-        <div id="formulario" hidden>
-            <form action="">
-                <h1>BUSQUEDA AVANZADA</h1>
-                <label ><h2> Grupo </h2></label><input type="text">    
-                <label><h2>Estilo</h2></label><input type="text">
-                <label><h2>Cantante</h2></label><input type="text">
-                <label><h2>Fecha</h2></label><input type="date">
-                <button type="reset">RESET</button>
-                <button type="submit" >BUSCAR</button>
-            </form>
-        </div>
-        -->
+
 
         <!--VIDEO-->
         <div id="video">
@@ -125,15 +113,18 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div id="central"></div>
+        <div id="central">
+
+        </div>
+
       </main>
-    </div>
+  
 
     <!--TOP-->
     <div onclick="backToTop()" id="top" title="Volver arriba">
       <i class="fas fa-arrow-up"></i>
     </div>
-
+</div>
     <!--FOOTER-->
     <div id="footer">
       <footer>
@@ -168,29 +159,7 @@
     </div>
 
 
-/*LOGIN*/
-<div id="suscripcion" hidden>
-    <form id="sub" action="">
-      <h1 style="color: rgba(194, 60, 49, 1); font-size: 7vh">
-        Welcome to Music 4 Events
-      </h1>
 
-      <div class="login">
-        <label id="sub" class="igual"> <b> EMAIL</b></label
-        ><input class="sub" type="email" id="logEmail" /> <br />
-        <label id="sub"> <b> PASSWORD</b></label
-        ><input class="sub" type="password" id="logPassword" />
-      </div>
-      <button onclick="login()">
-        <img
-          src="images/Logo Music4Events.png"
-          width="200"
-          height="200"
-          alt=""
-        />
-      </button>
-    </form>
-  </div>
 
 
 
@@ -206,5 +175,8 @@
         $("#footer").load("footer.html");
       });
     </script>
+
+
+</script>
   </body>
 </html>

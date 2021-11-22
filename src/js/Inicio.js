@@ -247,6 +247,10 @@ function mostrarFormulario() {
   $("#datepicker").datepicker();
 }); */
 
+//TODO:LOGIN
+function send(){
+    document.getElementById("suscripcion").style.display="none";
+}
 
 
 
