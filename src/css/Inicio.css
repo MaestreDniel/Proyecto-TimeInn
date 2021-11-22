@@ -6,7 +6,7 @@
 
   --rgba-primary-0: rgba(0, 0, 0, 1);
   --rgba-primary-1: rgba(1, 45, 62, 1);
-  --rgba-primary-2: rgba(4, 74, 100, 1);
+  --rgba-primary-1: rgba(1, 45, 62, 1);
   --rgba-primary-3: rgba(35, 98, 121, 1);
   --rgba-primary-4: rgba(78, 86, 88, 1);
   --rgba-primary-4-transpar: rgba(78, 86, 88, 0.8);
@@ -487,4 +487,11 @@ body {
 }
 .igual {
   margin-left: 8.5vh;
+}
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4{
+  font-family: 'Times New Roman', Times, serif;
 }

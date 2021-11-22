@@ -321,8 +321,12 @@ div#newConcierto {
   margin-top: 6vh;
 }
 
-button#newConcierto{
+button#closeForm{
   display: grid;
+}
+button#Save{
+  background-color: #083ef1;
+  
 }
 
 label#newConcierto {
@@ -339,6 +343,14 @@ input.newConcierto {
   text-align: center;
   color: rgba(39, 42, 43, 0.8);
 }
-input#add {
-  background-color: #0c85bd;
+button#add {
+  background-color: #083ef1;
+}
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
