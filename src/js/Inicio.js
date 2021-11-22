@@ -239,7 +239,7 @@ function mostrarFormulario() {
   $("#datepicker").datepicker();
 }); */
 
-/* Estas líneas son las que hacen funcionar el efecto de overlay de la info de cada efecto */
+/* Estas líneas son las que hacen funcionar el efecto de overlay de la info de cada evento */
 for (let i = 0; i <= Events.eventos.length; i++) {
     document.getElementsByClassName("fas fa-info-circle")[i].addEventListener("click", function () {
         on(i);
