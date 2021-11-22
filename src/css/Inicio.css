@@ -118,6 +118,13 @@ div.noticia {
   background-color: var(--rgba-primary-4);
 }
 
+a#moreNews{
+  font-weight: bold;
+  font-size: 2vw;
+  background-color: rgba(4, 74, 100, 1);;
+  color: rgba(160, 12, 0, 1);
+}
+
 .noticia img {
   width: 100%;
   border-top: 5px solid black;
@@ -149,6 +156,14 @@ main {
 
 /* div#video {
 } */
+
+/*EVENTOS*/
+a#ir{
+  background-color:  rgba(78, 86, 88, 0.8);
+  color:rgba(160, 118, 0, 0.9);
+  font-weight: bold;
+
+}
 
 img.imgEvent {
   width: 15vw;
