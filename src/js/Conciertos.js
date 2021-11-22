@@ -1,4 +1,5 @@
-//TODO:Objeto Conciertos
+//TODO:Objeto Conciertos.DONE
+
 //A continuacion creamos los objetos para los Conciertos que seran 6 en total
 const Concert = {
   conciertos: [{
@@ -67,11 +68,11 @@ const Concert = {
   ]
 }
 
-
+//TODO:Imprimir Concierto.DONE
 function imprimirConcierto(){
   let txt ="";
   txt +="<br>"
-  txt += '<button style="margin: 1%; id="addConcert"  onclick="addEvent()"><i class="far fa-plus-square"></i></button>';
+  txt += '<button onclick="saltarFormulario()"  id="addConcert"  ><i class="far fa-plus-square"></i></button>';
   for(let i in Concert.conciertos){
     txt +=  Concert.conciertos[i].div;
     txt +=  Concert.conciertos[i].link  + Concert.conciertos[i].foto+"</a>";
@@ -83,7 +84,6 @@ function imprimirConcierto(){
     txt += '</div>';
     txt += '<div id="edicion">';
     txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
-    
     txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
     txt += '</div>'
     txt += '</div>'
@@ -94,6 +94,9 @@ function imprimirConcierto(){
 }
 
 imprimirConcierto();
+
+
+
 //TODO: Editar Eventos
 //FUncion para editar eventos
 function editEvent() {
@@ -129,7 +132,11 @@ function editEvent() {
 }
 
 
-//TODO: Eliminar Eventos
+
+
+
+
+//TODO: Eliminar Eventos.DONE
 //Funcion para eliminar Eventos
 function eliminarEvent() {
   //Preguntamos al usuario cual quiere eliminar
@@ -164,6 +171,16 @@ function eliminarEvent() {
   }
 }
 
+
+
+//TODO:Busqueda Formulario 
+//Cuando pulsamos el boton de Grupos o estilos salta el formulario
+function mostrarFormulario() {
+    document.getElementById("formularioBusqueda").style.display = block;
+    document.getElementById("secciones").style.display = block;
+}
+
+
 /* Es el botón de go back to top, que saldrá en el momento
 que el usuario hace scroll 100px hacia abajo desde el tope de la página */
 
@@ -196,18 +213,23 @@ function mostrarFormulario() {
   evento.style.display = block;
 }
 
-//TODO:DATAPICKER para elegir fecha
+
+
+//TODO:DATAPICKER para elegir fecha.DONE
 //Datapicker
 $(function () {
   $("#datepicker").datepicker();
 });
 
-const EventDes = {
-  destacado: [{
-    foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
-    nombre: 'Mallorca Live Festival',
-    descripcion: 'Venid al gran festival de la musica en Mallorca'
-  }]
+
+//TODO:EventoDestacado.DONE
+const EventDes ={
+  destacado:[{
+      foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
+      nombre: 'Mallorca Live Festival',
+      descripcion: 'Venid al gran festival de la musica en Mallorca'
+  }
+  ]
 }
 
 function eventoDestacado() {
@@ -224,4 +246,44 @@ function eventoDestacado() {
   document.getElementById("eventDes").innerHTML = txt;
 }
 
-eventoDestacado()
+eventoDestacado();
+
+
+
+//TODO: Saltar Formulario Nuevo Concierto 
+function saltarFormulario(){
+  document.getElementById("newConcierto").style.display = "block";
+}
+
+
+//TODO:Añadir nuevo Concierto
+function añadirConcierto(){
+  var url= document.getElementById("url").value
+  var poster= document.getElementById("poster").value;
+  var titulo= document.getElementById("titulo").value;
+  var grupo= document.getElementById("grupo").value;
+  var fecha= document.getElementById("fecha").value;
+  var lugar= document.getElementById("lugar").value;
+
+  let txt ="";
+  txt +="<br>"
+  txt += '<button onclick="saltarFormulario()"  id="addConcert"  ><i class="far fa-plus-square"></i></button>';
+  for(let i in Concert.conciertos){
+    txt +=  '<div class="concert" id="concierto7">';
+    txt +=  url + poster+"</a>";
+    txt += '<div class="infoConcert">';
+    txt += "<h2>" + titulo + "</h2>";
+    txt += "<h3>" + grupo + "</h3>";
+    txt += "<h3>" + fecha + "</h3>";
+    txt += "<h3>" + lugar + "</h3>";
+    txt += '</div>';
+    txt += '<div id="edicion">';
+    txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
+    txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
+    txt += '</div>'
+    txt += '</div>'
+}
+
+document.getElementById("conciertos").innerHTML = txt;
+
+}

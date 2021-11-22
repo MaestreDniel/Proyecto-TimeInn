@@ -250,7 +250,7 @@ img.imgEvent {
 
 #video {
   text-align: center;
-  position: sticky;
+
   top: 12vh;
 }
 
@@ -430,4 +430,46 @@ footer i {
 #top:hover {
   background-color: var(--rgba-secondary-2-3);
   bottom: 2vh;
+}
+
+/*FORMULARIO SUSCRIPCION*/
+div#suscripcion {
+  display: flex;
+  margin-top: -120vh;
+}
+form#sub {
+  background-image: url("../images/fondoLogin.PNG");
+  background-size: contain;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+div.login {
+  display: flex;
+  font-size: 5vh;
+  width: 64vh;
+  color: rgba(160, 12, 0, 1);
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+input.sub {
+  margin-left: 2%;
+  background-color: rgba(99, 7, 0, 1);
+
+  height: 4vh;
+  font-size: 6vh;
+  width: 30vh;
+  color: rgba(194, 60, 49, 1);
+}
+body {
+  background-color: black;
+}
+.igual {
+  margin-left: 8.5vh;
 }
