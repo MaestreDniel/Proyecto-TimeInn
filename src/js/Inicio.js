@@ -151,7 +151,6 @@ function eventoDestacado() {
     let txt = "";
     txt += '<div class="degradadoizq"></div>';
     for (let i in EventDes.destacado) {
-
         txt += '<div class="event">';
         txt += EventDes.destacado[i].foto;
         txt += '<p><span>' + EventDes.destacado[i].nombre + '</span></p>';
@@ -193,6 +192,8 @@ function imprimirEventos() {
         txt += Events.eventos[i].foto;
         txt += '<p><span>' + Events.eventos[i].nombre + '</span></p>';
         txt += '<i class="fas fa-info-circle"></i>' + '</div>';
+        txt += '<div class="overlayevent" onclick="off()">'; // Por defecto está oculto
+        txt += '<span>' + Events.eventos[i].descripcion + '</span>' + '</div>';
     }
     txt += '<div class="degradadoder"></div>';
     document.getElementById("eventos").innerHTML = txt;
@@ -253,4 +254,24 @@ function login(){
 //TODO:COOKIE SUSCRIPCION
 function setCookie(name,cvalue,expires){
 
+}
+
+/* Estas líneas son las que hacen funcionar el efecto de overlay de la info de cada efecto */
+for (let i = 0; i <= Events.eventos.length; i++) {
+    document.getElementsByClassName("fas fa-info-circle")[i].addEventListener("click", function () {
+        on(i);
+    });
+}
+
+
+function on(numevent) {
+    let info = document.getElementsByClassName("overlayevent")[numevent - 1];
+    info.style.display = "block";
+}
+
+function off() {
+    for (let i = 0; i < Events.eventos.length; i++) {
+        let info = document.getElementsByClassName("overlayevent")[i];
+        info.style.display = "none";
+    }
 }
