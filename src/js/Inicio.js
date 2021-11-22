@@ -1,7 +1,3 @@
-//TODO:Incrustar Header y Footer
-
-
-
 //TODO:Objeto News. DONE
 const News = {
     noticias: [{
@@ -248,7 +244,7 @@ function mostrarFormulario() {
 }); */
 
 //TODO:LOGIN
-function send(){
+function login(){
     document.getElementById("suscripcion").style.display="none";
 }
 
