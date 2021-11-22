@@ -303,7 +303,8 @@ div#formularioNew {
 /*FORMULARIO BUSQUEDA*/
 /*Nuevo COncierto*/
 div#newConcierto {
-  background-color: rgba(1, 45, 62, 1);
+  
+  background-color: rgba(1, 45, 62, 0.7);
   background-size: cover;
   width: 100%;
   max-width: 550px;
@@ -318,6 +319,10 @@ div#newConcierto {
   position: absolute;
   margin-left: -40vw;
   margin-top: 6vh;
+}
+
+button#newConcierto{
+  display: grid;
 }
 
 label#newConcierto {

@@ -288,4 +288,7 @@ document.getElementById("conciertos").innerHTML = txt;
 
 }
 
-
+//TODO:Cerrar formulario
+function closeForm(){
+  $("div[newConcierto]").overlay().close();
+}
