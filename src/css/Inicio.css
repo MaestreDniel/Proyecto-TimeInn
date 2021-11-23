@@ -411,11 +411,12 @@ footer i {
 }
 
 #url {
-  font-size: 1.4vw;
+  font-size: 2vw;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  margin-left: 15vw;
+  margin-left: 8vw;
+  
 }
 
 #url a:hover {
