@@ -1,40 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TimeInn - Inicio</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/Logo Music4Events.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/Logo Music4Events.png"
+    />
     <link rel="stylesheet" type="text/css" href="css/Inicio.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7521fefac0.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Hacer truco de insertar header/footer -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7521fefac0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
     <header>
-        <div id="cabecera"></div>
-        <img id="logo" src="images/Logo Music4Events.png" alt="">
-        <nav id="paginas">
-            <div><a href="Inicio.html">Inicio</a></div>
-            <div><a href="Conciertos.html">Conciertos</a></div>
-            <div onclick="mostrarFormulario()"><a href="Formulario.html">Grupos</a></div>
-            <div onclick="mostrarFormulario()"><a href="Formulario.html">Estilos</a></div>
-            <input id="search" type="search"><button id="buscar">Buscar</button>
-            <i class="fas fa-user"></i>
-        </nav>
+      <div id="cabecera"></div>
+      <img id="logo" src="images/Logo Music4Events.png" alt="" />
+      <nav id="paginas">
+        <div><a href="Inicio.html">Inicio</a></div>
+        <div><a href="Conciertos.html">Conciertos</a></div>
+        <div onclick="mostrarFormulario()">
+          <a href="Formulario.html">Grupos</a>
+        </div>
+        <div onclick="mostrarFormulario()">
+          <a href="Formulario.html">Estilos</a>
+        </div>
+        <input id="search" type="search" /><button id="buscar">Buscar</button>
+        <i class="fas fa-user"></i>
+      </nav>
     </header>
+
+
+<!--Cuerpo-->
     <div id="cuerpo">
-        <div id="news"></div>
-    <aside>
+      <div id="news"></div>
+      
+<!--Aside-->
+      <aside>
+
+<!--Calendario-->
         <div id="calendario">
-            <div id="calenheader">Noviembre 2021</div>
-            <div id="dias">
-                <div class="blur">29</div>
+          <div id="calenheader">Noviembre 2021</div>
+          <div id="dias">
+            <div class="blur">29</div>
             <div class="blur">30</div>
-            <div id="diauno" class="mesactual"><a href="Conciertos.html" style="color:black;">1</a></div>
+            <div id="diauno" class="mesactual">
+              <a href="Conciertos.html" style="color: black">1</a>
+            </div>
             <div class="mesactual">2</div>
             <div class="mesactual">3</div>
             <div class="mesactual">4</div>
@@ -67,85 +91,127 @@
             <div class="blur">1</div>
             <div class="blur">2</div>
             <div class="blur">3</div>
-            </div>
+          </div>
         </div>
+
+<!--Evento Destacado-->        
         <div id="eventDes"></div>
         <div id="fecha"></div>
-        <br>
+        <br />
+
+<!--Fan Shop-->        
         <div id="fanshop">
-            <a href="https://www.merchandisingplaza.es/Musica-Merchandise/m_2"><img src="images/Fan_Shop.png" width="1.5vw" height="1.5vh"></a>
+          <a href="https://www.merchandisingplaza.es/Musica-Merchandise/m_2"
+            ><img src="images/Fan_Shop.png" width="1.5vw" height="1.5vh"
+          /></a>
         </div>
-      
-    </aside>
-    <main>
+      </aside>
+
+
+<!--Main-->      
+      <main>
+<!--Eventos-->          
         <div id="eventos"></div>
-    <!--Formulario-->
+        <!--Formulario-->
+<!--Formulario de Busqueda-->        
         <div id="formulario" hidden>
-            <form action="">
-                <h1>BUSQUEDA AVANZADA</h1>
-                <label ><h2> Grupo </h2></label><input type="text">    
-                <label><h2>Estilo</h2></label><input type="text">
-                <label><h2>Cantante</h2></label><input type="text">
-                <label><h2>Fecha</h2></label><input type="date">
-                <button type="reset">RESET</button>
-                <button type="submit" >BUSCAR</button>
-            </form>
+          <form action="">
+            <h1>BUSQUEDA AVANZADA</h1>
+            <label><h2>Grupo</h2></label><input type="text" />
+            <label><h2>Estilo</h2></label><input type="text" />
+            <label><h2>Cantante</h2></label><input type="text" />
+            <label><h2>Fecha</h2></label><input type="date" />
+            <button type="reset">RESET</button>
+            <button type="submit">BUSCAR</button>
+          </form>
         </div>
+<!--Video-->        
         <div id="video">
-            <iframe src="https://www.youtube.com/embed/G9kz-tag04U" title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe
+            src="https://www.youtube.com/embed/G9kz-tag04U"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div id="central">PARTE CENTRAL DE LA PÁGINA. AÑADIR CONTENIDO.
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
-                quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
-                quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula a ipsum tincidunt, 
-                quis fermentum diam feugiat. Proin fermentum, sapien a aliquam gravida.</p>
+        <div id="central">
+          PARTE CENTRAL DE LA PÁGINA. AÑADIR CONTENIDO.
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus
+            ligula a ipsum tincidunt, quis fermentum diam feugiat. Proin
+            fermentum, sapien a aliquam gravida.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus
+            ligula a ipsum tincidunt, quis fermentum diam feugiat. Proin
+            fermentum, sapien a aliquam gravida.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus
+            ligula a ipsum tincidunt, quis fermentum diam feugiat. Proin
+            fermentum, sapien a aliquam gravida.
+          </p>
         </div>
+
+<!--Login Suscripcion-->        
         <div id="suscripcion">
-            <form id="sub" action="">
-              <h1 style="color: rgba(194, 60, 49, 1); font-size: 7vh">
-                Welcome to Music 4 Events
-              </h1>
-      
-              <div class="login">
-                <label id="sub" class="igual"> <b> EMAIL</b></label
-                ><input class="sub" type="email" id="logEmail" /> <br />
-                <label id="sub"> <b> PASSWORD</b></label
-                ><input class="sub" type="password" id="logPassword" />
-              </div>
-              <button onclick="login()">
-                <img
-                  src="images/Logo Music4Events.png"
-                  width="200"
-                  height="200"
-                  alt=""
-                />
-              </button>
-            </form>
-          </div>
-    </main>
+          <form id="sub" action="">
+            <h1 style="color: rgba(194, 60, 49, 1); font-size: 7vh">
+              Welcome to Music 4 Events
+            </h1>
+            <div class="login">
+              <label id="sub" class="igual"> <b> EMAIL</b></label
+              ><input class="sub" type="email" id="logEmail" /> <br />
+              <label id="sub"> <b> PASSWORD</b></label
+              ><input class="sub" type="password" id="logPassword" />
+            </div>
+            <button onclick="login()">
+              <img
+                src="images/Logo Music4Events.png"
+                width="200"
+                height="200"
+                alt=""
+              />
+            </button>
+          </form>
+        </div>
+      </main>
     </div>
-    <div onclick="backToTop()" id="top" title="Volver arriba"><i class="fas fa-arrow-up"></i></div>
+
+<!--Top Button-->    
+    <div onclick="backToTop()" id="top" title="Volver arriba">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    
+<!--Footer-->    
     <footer>
-        
-        <div id="follow"><i class="fas fa-thumbs-up"></i>Síguenos en:
-            <p><i class="far fa-copyright"></i> 2022</p>
-        </div>
-        <div><i class="fab fa-twitter"></i><a href="https://twitter.com">Twitter</a></div>
-        <div><i class="fab fa-instagram"></i><a href="https://www.instagram.com/"></a>Instagram</div>
-        <div><i class="fab fa-facebook"></i><a href="https://es-es.facebook.com/"></a>Facebook</div>
-        <div><i class="fab fa-youtube"></i><a href="https://www.youtube.com/"></a>YouTube</div>
-        <div id="url">
-            <a href="https://www.ticketmaster.es/">TICKETMASTER</a> 
-            <a href="https://www.entradas.com/">ENTRADAS</a> 
-            <a href="https://www.ticketea.com/">TIKETEA</a> 
-            <a href="https://entradas.ataquilla.com/ventaentradas/es/">ATAQUILLA</a> 
-        </div>
+      <div id="follow">
+        <i class="fas fa-thumbs-up"></i>Síguenos en:
+        <p><i class="far fa-copyright"></i> 2022</p>
+      </div>
+      <div>
+        <i class="fab fa-twitter"></i><a href="https://twitter.com">Twitter</a>
+      </div>
+      <div>
+        <i class="fab fa-instagram"></i
+        ><a href="https://www.instagram.com/"></a>Instagram
+      </div>
+      <div>
+        <i class="fab fa-facebook"></i
+        ><a href="https://es-es.facebook.com/"></a>Facebook
+      </div>
+      <div>
+        <i class="fab fa-youtube"></i
+        ><a href="https://www.youtube.com/"></a>YouTube
+      </div>
+      <div id="url">
+        <a href="https://www.ticketmaster.es/">TICKETMASTER</a>
+        <a href="https://www.entradas.com/">ENTRADAS</a>
+        <a href="https://www.ticketea.com/">TIKETEA</a>
+        <a href="https://entradas.ataquilla.com/ventaentradas/es/">ATAQUILLA</a>
+      </div>
     </footer>
     <script src="js/Inicio.js"></script>
-
-
-</body>
+  </body>
 </html>

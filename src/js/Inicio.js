@@ -1,4 +1,6 @@
 //TODO:Objeto News. DONE
+/*Creamos una serie de objetos noticias los cuales imprimiremos directamente
+Los cuales constan de una foto, un titular, una descripción, una fecha y un boton que nos lleva a la noticia*/
 const News = {
     noticias: [{
             foto: '<img src="images/news1.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
@@ -122,7 +124,35 @@ const News = {
 };
 
 
+//TODO:Imprimir Noticias. DONE
+//Imprimimos las noticias recorriendo el objeto con cada una de sus posiciones
+function imprimirNews() {
+    let txt = "";
+    for (let i in News.noticias) {
+        txt += '<div class="noticia">';
+        txt += News.noticias[i].foto;
+        txt += '<div class="info">';
+        txt += "<h4>" + News.noticias[i].titular + "</h4>";
+        txt += "<p>" + News.noticias[i].descripcion + "</p>";
+        txt += News.noticias[i].info;
+        txt += `<p>Fecha publicación: 
+        ${News.noticias[i].fecha.dia}/${News.noticias[i].fecha.mes}/${News.noticias[i].fecha.anyo}</p>`;
+        txt += '<button id="editNot"><i class="fas fa-pencil-alt"></i></button>';
+        txt += '<button class="delNot"><i class="fas fa-trash-alt"></i></button>';
+        txt += '</div></div>'
+    }
+    document.getElementById("news").innerHTML = txt;
+}
+
+//Ejecutamos la función para que salte directamente
+imprimirNews();
+
+
+
+
 //TODO:Objeto principal Events.DONE
+/* Creamos objetos eventos donde tienen la foto del evento
+ el nombre del evento una pequeña descripción y un link para mas información */
 const Events = {
     eventos: [{
             foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
@@ -162,54 +192,10 @@ const Events = {
         },
     ]
 }
-    
-const EventDes = {
-    destacado: [{
-        foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
-        nombre: 'Mallorca Live Festival',
-        descripcion: 'Venid al gran festival de la musica en Mallorca',
-        info:'<a href="" id="moreNews">+info</a>'
-    }]
-}
-
-function eventoDestacado() {
-    let txt = "";
-    txt += '<div class="degradadoizq"></div>';
-    for (let i in EventDes.destacado) {
-        txt += '<div class="event">';
-        txt += EventDes.destacado[i].foto;
-        txt += '<p><span>' + EventDes.destacado[i].nombre + '</span></p>';
-        txt += '<i class="fas fa-info-circle"></i>' + '</div>';
-    }
-    txt += '<div class="degradadoder"></div>';
-    document.getElementById("eventDes").innerHTML = txt;
-}
-
-eventoDestacado()
-
 
 
 //TODO:Imprimir Noticias. DONE
-function imprimirNews() {
-    let txt = "";
-    for (let i in News.noticias) {
-        txt += '<div class="noticia">';
-        txt += News.noticias[i].foto;
-        txt += '<div class="info">';
-        txt += "<h4>" + News.noticias[i].titular + "</h4>";
-        txt += "<p>" + News.noticias[i].descripcion + "</p>";
-        txt += News.noticias[i].info;
-        txt += `<p>Fecha publicación: 
-        ${News.noticias[i].fecha.dia}/${News.noticias[i].fecha.mes}/${News.noticias[i].fecha.anyo}</p>`;
-        txt += '<button id="editNot"><i class="fas fa-pencil-alt"></i></button>';
-        txt += '<button class="delNot"><i class="fas fa-trash-alt"></i></button>';
-        txt += '</div></div>'
-    }
-    document.getElementById("news").innerHTML = txt;
-}
-
-
-//TODO:Imprimir Noticias. DONE
+//Con esta función imprimimos los eventos recorriendo dicho objeto
 function imprimirEventos() {
     let txt = "";
     txt += '<div class="degradadoizq"></div>';
@@ -225,8 +211,45 @@ function imprimirEventos() {
     document.getElementById("eventos").innerHTML = txt;
 }
 
-imprimirNews();
+//se imprimen automaticamente los eventos
 imprimirEventos();
+
+
+
+
+//TODO: Evento Destacado
+    //Tenemos un Evento destacado que va a ir aparte del resto de evento que resaltara sobre el resto
+const EventDes = {
+    destacado: [{
+        foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
+        nombre: 'Mallorca Live Festival',
+        descripcion: 'Venid al gran festival de la musica en Mallorca',
+        info:'<a href="" id="moreNews">+info</a>'
+    }]
+}
+//TODO:Impimir Evento destacado
+//Creamo esta función para impimir el evento destacado recorriendolo con un for
+function eventoDestacado() {
+    let txt = "";
+    txt += '<div class="degradadoizq"></div>';
+    for (let i in EventDes.destacado) {
+        txt += '<div class="event">';
+        txt += EventDes.destacado[i].foto;
+        txt += '<p><span>' + EventDes.destacado[i].nombre + '</span></p>';
+        txt += '<i class="fas fa-info-circle"></i>' + '</div>';
+    }
+    txt += '<div class="degradadoder"></div>';
+    document.getElementById("eventDes").innerHTML = txt;
+}
+//Directamente saldra al imprimir la pagina
+eventoDestacado()
+
+
+
+
+
+
+
 
 /* document.getElementById("follow").addEventListener("click", function () {
     imprimirNews();
@@ -249,15 +272,16 @@ function scrollFunction() {
     }
 }
 
+//TODO:Button Back to Top
 // Vuelve arriba al ser clicado
 function backToTop() {
     document.body.scrollTop = 0; // Safari
     document.documentElement.scrollTop = 0; // Chrome, Firefox, IE y Opera
 }
 
-imprimirNews();
 
 //TODO:Formulario de Busqueda 
+//Muestra el formulario de busqueda de eventos
 function mostrarFormulario() {
     var formulario = document.getElementById("formulario");
     formulario.style.display = block;
@@ -265,12 +289,8 @@ function mostrarFormulario() {
     evento.style.display = block;
 }
 
-//Datapicker
-/* $(function () {
-  $("#datepicker").datepicker();
-}); */
 
-//TODO:LOGIN
+//TODO:LOGIN/Suscripcion
 function login(){
     document.getElementById("suscripcion").style.display="none";
 }
@@ -278,6 +298,7 @@ function login(){
 
 
 //TODO:COOKIE SUSCRIPCION
+//Usamos esta función para la cookie y que cuando ha sido suscrito no vuelva a saltar el formulario
 function setCookie(name,cvalue,expires){
 
 }
@@ -290,12 +311,13 @@ for (let i = 0; i <= Events.eventos.length; i++) {
     });
 }
 
-
+//funcion para que apareza que overlay
 function on(numevent) {
     let info = document.getElementsByClassName("overlayevent")[numevent - 1];
     info.style.display = "block";
 }
 
+//Funcion para que desaparezca el overlay
 function off() {
     for (let i = 0; i < Events.eventos.length; i++) {
         let info = document.getElementsByClassName("overlayevent")[i];

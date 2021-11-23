@@ -121,7 +121,7 @@ function eventoDestacado() {
   txt += '<div class="degradadoder"></div>';
   document.getElementById("eventDes").innerHTML = txt;
 }
-
+//Impimimos el evento destacado a la izquierda de la pantalla
 eventoDestacado();
 
 
@@ -151,6 +151,7 @@ function añadirConcierto(){
   let txt ="";
   txt +="<br>"
   txt += '<button onclick="saltarFormulario()" type="button"  id="addConcert"  ><i class="far fa-plus-square"></i></button>';
+  //Para imprimir hacemos lo mismo que con las noticias recorremos el objeto y se va imprimiendo
   for(let i in NewConcert.conciertoNuevo){
     txt +=  NewConcert.conciertoNuevo[i].div;
     txt +=  NewConcert.conciertoNuevo[i].url + newConcert.conciertoNuevo[i].poster+"</a>";
