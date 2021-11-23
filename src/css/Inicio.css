@@ -438,14 +438,13 @@ div#suscripcion {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 105;
-  cursor: pointer;
 }
 
 form#sub {
-  background-image: url("../images/fondoLogin.PNG");
-  background-size: contain;
+  background-image: url("../images/concert_live_main_Uns-1280x720.jpg");
+  background-size: cover;
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -454,32 +453,54 @@ form#sub {
   z-index: 20;
 }
 
+#suscripcion h1 {
+  font-size: 4vw;
+  color: white;
+  background-color: var(--rgba-primary-0);
+}
+
 div.login {
   display: flex;
-  font-size: 5vh;
-  width: 64vh;
-  color: rgba(160, 12, 0, 1);
-  flex-direction: row;
-  flex-wrap: wrap;
+  font-size: 2vw;
+  color: white;
+  flex-flow: column nowrap;
 }
 
 input.sub {
-  margin-left: 2%;
-  background-color: rgba(99, 7, 0, 1);
-  height: 4vh;
-  font-size: 6vh;
-  width: 30vh;
-  color: rgba(194, 60, 49, 1);
+  margin: 2% 5% 2% 5%;
+  font-size: 2.5vw;
+  width: 20vw;
 }
 
-/* .suscripcion button:hover{
-  background-color: var(--rgba-secondary-1-2);
-} */
+.login b {
+  margin-top: 2%;
+  background-color: var(--rgba-primary-0);
+  padding: 1%;
+}
+
+#buttonsub {
+  animation: button 2s ease-in-out 0s infinite alternate;
+  width: 30vw;
+  height: 30vw;
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 3vh;
+  cursor: pointer;
+}
+
+@keyframes button {
+  from {
+    transform: translateY(1vh);
+  }
+  to {
+    transform: translateY(4vh);
+  }
+}
+
+#buttonsub:hover {
+  filter: saturate(20);
+}
 
 body {
   background-color: black;
-}
-
-.igual {
-  margin-left: 8.5vh;
 }
