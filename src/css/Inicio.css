@@ -164,15 +164,19 @@ a#ir{
   font-weight: bold;
 
 }
+img.patrocinio{
+  margin: 1%;
+  height: 5vh;
+}
 
 div.event{
-  width: 18vw;
-height: 57vh;
+  width: 20vw;
+height: 75vh;
 
 }
 
 img.imgEvent {
-  width: 18vw;
+  width: 20vw;
   height: 65%;
   border-radius: 10px 10px 0px 0px;
 }
@@ -343,6 +347,7 @@ div#eventDes {
   width: 100%;
   position: sticky;
   top: 12vh;
+  margin-top: 15vh;
 }
 
 #fanshop img {
@@ -366,7 +371,7 @@ footer {
   padding: 1vw;
   color: white;
   align-items: center;
-  height: 10vw;
+  height: 30vh;
 }
 
 #follow {
