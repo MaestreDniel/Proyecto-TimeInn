@@ -155,39 +155,45 @@ imprimirNews();
  el nombre del evento una pequeña descripción y un link para mas información */
 const Events = {
     eventos: [{
-            foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
+            foto: '<img class="imgEvent"  src="images/event1.PNG" alt="No se pudo mostrar">',
             nombre: '1. Mallorca Live Festival',
             descripcion: 'Venid al gran festival de la musica en Mallorca',
+            fecha: '24-26 jun 2022',
             info:'<a href="https://mallorcalivemusic.com/festival/tickets/?utm_source=Search&utm_medium=paid&utm_content=keywords&utm_campaign=MuseMLF22&gclid=EAIaIQobChMI9dCovays9AIVWJ3VCh0MzgcrEAAYASAAEgI6D_D_BwE" id="ir">Quiero ir</a>'
         },
         {
-            foto: '<img class="imgEvent" src="images/event2.PNG" alt="No se pudo mostrar">',
-            nombre: '2. The BPM FestivaViña Rock 2022 ',
-            descripcion: 'Viña Rock 2022 se celebrará los días 28, 29 y 30 de abril. La nueva edición del festival',
+            foto: '<img class="imgEvent"  src="images/event2.PNG" alt="No se pudo mostrar">',
+            nombre: '2. BPM FestivaViña Rock 2022 ',
+            descripcion: ' Viña Rock 2022 regresará a la localidad de Villarobledo, Albacete, contará con bandas como Lendakaris Muertos, Kase.',
+            fecha:'28-30 Abril 2022',
             info:'<a href="https://www.wakeandlisten.com/vina-rock-2022-rumores-confirmaciones-cartel-entradas/" id="ir">Quiero ir</a>'
         },
         {
             foto: '<img class="imgEvent" src="images/event3.PNG" alt="No se pudo mostrar">',
             nombre: '3. Primavera Sound 2022',
             descripcion: 'Primavera Sound 2022 celebrará en Barcelona su nueva edición durante dos fines de semana consecutivos del mes de junio de 2022',
+            fecha:'2 jun–12 jun 2022',
             info:'<a href="https://www.wakeandlisten.com/primavera-sound-2022-rumores-cartel-entradas/" id="ir">Quiero ir</a>'
         },
         {
             foto: '<img class="imgEvent" src="images/event4.PNG" alt="No se pudo mostrar">',
             nombre: '4. WAN 2022 Madrid',
             descripcion: 'WAN Festival volverá a tomar La Nueva Cubierta de Leganés',
+            fecha:'1-2 de Enero de 2022',
             info:'<a href="https://www.viagogo.es/Entradas-Festivales/Festivales-en-Espana/WAN-Festival-Entradas?AffiliateID=49&adposition=&PCID=PSESGOOFESWANF1CDBBBC6879&AdID=559011164042&MetroRegionID=&psc=%2c&ps=%2c&ps_p=0&ps_c=15166465804&ps_ag=131057867444&ps_tg=kwd-561827239111&ps_ad=559011164042&ps_adp=%2c&ps_fi=%2c&ps_li=%2c&ps_lp=1005517&ps_n=g&ps_d=c&gclid=EAIaIQobChMIlZeL-6ys9AIV6o5oCR0xTgEHEAAYASAAEgL9x_D_BwE" id="ir" >Quiero ir</a>'
         },
         {
             foto: '<img class="imgEvent" src="images/event5.PNG" alt="No se pudo mostrar">',
             nombre: '5. Festival Cara-B 2022',
             descripcion: 'Cara•B 2022 se presenta como un festival con una visión de 360 grados alrededor de la creación artística',
+            fecha:'23-27 mar 2022',
             info:'<a href="https://festivalcarab.com/" id="ir">Quiero ir</a>'
         },
         {
             foto: '<img class="imgEvent" src="images/event6.PNG" alt="No se pudo mostrar">',
             nombre: '6. Actual Festival 2022',
             descripcion: 'El festival es un altavoz de ideas, pensamientos, talento, diversidad y expresiones artísticas contemporáneas. ',
+            fecha:'2-8 Enero 2022',
             info:'<a href="" id="ir">Quiero ir</a>'
         },
     ]
@@ -203,6 +209,7 @@ function imprimirEventos() {
         txt += '<div class="event">';
         txt += Events.eventos[i].foto;
         txt += '<p><span>' + Events.eventos[i].nombre + '</span></p>';
+        txt += '<p>'+ Events.eventos[i].fecha +'</p>';
         txt += '<i class="fas fa-info-circle"></i>' + '</div>';
         txt += '<div class="overlayevent" onclick="off()">'; // Por defecto está oculto
         txt += '<span>' + Events.eventos[i].descripcion + '<br>'+ Events.eventos[i].info + '</span>' + '</div>';
