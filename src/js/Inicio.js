@@ -273,7 +273,7 @@ function imprimirEventos() {
         ${Events.eventos[i].fechaI.dia}/${Events.eventos[i].fechaI.mes}/${Events.eventos[i].fechaI.anyo}</p>`;
         txt += `<p>Fin: 
         ${Events.eventos[i].fechaF.dia}/${Events.eventos[i].fechaF.mes}/${Events.eventos[i].fechaF.anyo}</p>`;
-        txt += '<i class="fas fa-info-circle"></i>' +Events.eventos[i].patronicio+ '</div>';
+        txt += '<i class="fas fa-info-circle"></i>' + Events.eventos[i].patronicio + '</div>';
         txt += '<div class="overlayevent" onclick="off()">'; // Por defecto está oculto
         txt += '<span>' + Events.eventos[i].descripcion + '<br>'+ Events.eventos[i].info + '</span>' + '</div>';
     }
