@@ -154,8 +154,8 @@ main {
   display: block;
 }
 
-/* div#video {
-} */
+  /* div#video {
+  } */
 
 /*EVENTOS*/
 a#ir{
@@ -165,8 +165,14 @@ a#ir{
 
 }
 
+div.event{
+  width: 18vw;
+height: 57vh;
+
+}
+
 img.imgEvent {
-  width: 15vw;
+  width: 18vw;
   height: 65%;
   border-radius: 10px 10px 0px 0px;
 }

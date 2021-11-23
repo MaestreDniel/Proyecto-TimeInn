@@ -163,7 +163,7 @@ const Events = {
         },
         {
             foto: '<img class="imgEvent"  src="images/event2.PNG" alt="No se pudo mostrar">',
-            nombre: '2. BPM FestivaViña Rock 2022 ',
+            nombre: '2. BPM Viña Rock 2022 ',
             descripcion: ' Viña Rock 2022 regresará a la localidad de Villarobledo, Albacete, contará con bandas como Lendakaris Muertos, Kase.',
             fecha:'28-30 Abril 2022',
             info:'<a href="https://www.wakeandlisten.com/vina-rock-2022-rumores-confirmaciones-cartel-entradas/" id="ir">Quiero ir</a>'
