@@ -11,7 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2fd3a31e7c.js" crossorigin="anonymous"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script></head>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        //Función Data picker 
+    $( function() {
+      $( "#fecha" ).datepicker();
+    } );
+    </script>
+</head>
 <body>
 
 <!--HEADER-->
@@ -46,28 +57,37 @@
 
 <!--Aside-->
     <aside>
-        <!--FORMULARIO NUEVO EVENTO-->
+
+<!--FORMULARIO NUEVO EVENTO-->
 <div id="newConcierto" style="display: none;">
     <form action="">
+      <button type="button" id="closeForm" onclick="closeForm()" ><i class="far fa-times-circle"></i></button>
       <h5 style="background-color: #1137a7; color: gray;">CREADOR DE CONCIERTOS</h5>
-      <label id="newCOncierto">Link</label><input type="url" name="url" id="url" > <br>
+      <label id="newConcierto">Link</label><input type="url" name="url" id="url" > <br>
       <label id="newConcierto">Poster Concierto: </label><input class="newConcierto" type="file" name="poster" id="poster"><br>
-      <label id="newConcierto">Tiutlo: </label><input class="newConcierto" type="text" name="titulo" id="titulo"><br>
+      <label id="newConcierto">Tiutlo: </label><input class="newConcierto" type="text" name="titulo"  id="titulo"><br>
       <label id="newConcierto">Grupo/Cantante:</label><input class="newConcierto" type="text" name="grupo" id="grupo"><br>
       <label id="newConcierto">Fecha: </label><input class="newConcierto" type="date" name="fecha" id="fecha"><br>
       <label id="newConcierto">Lugar: </label><input class="newConcierto" type="text" name="lugar" id="lugar">
-      <input onclick="añadirConcierto" id="add" type="submit" value="ADD">
+      <button type="button"  id="add" onclick="añadirConcierto()"><i class="fas fa-plus-square"></i></button>
+      <button type="button" id="Save"><i class="fas fa-save"></i></button>
     </form>
   </div>
   <br>
+
+<!--Calendario-->  
         <div id="calendario">
             <input type="date">
+
+<!--Evento Destacado-->            
             <div id="eventDes">
              
-            </div>
+            </div>            
             <div id="fecha"></div>
         </div>
         <br>
+
+<!--Fan Shop-->        
         <div id="fanshop">
             <a href="https://www.merchandisingplaza.es/Musica-Merchandise/m_2"><img src="images/Fan_Shop.png"></a>
        
@@ -78,6 +98,7 @@
 
 </div>
 </div>
+<!--Top Button-->
 <div onclick="backToTop()" id="top" title="Volver arriba"><i class="fas fa-arrow-up"></i></div>
 <!--FOOTER-->
 <div id="footer">
@@ -100,6 +121,8 @@
     crossorigin="anonymous">
 </script>
 <script> 
+
+//Cargar Header y Footer
 $(function(){
   $("#header").load("header.html"); 
   $("#footer").load("footer.html"); 
