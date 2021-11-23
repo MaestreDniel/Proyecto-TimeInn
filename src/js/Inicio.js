@@ -162,8 +162,6 @@ function eventoDestacado() {
 
 eventoDestacado()
 
-
-
 //TODO:Imprimir Noticias. DONE
 function imprimirNews() {
     let txt = "";
@@ -263,14 +261,54 @@ function off() {
     }
 
 }
+
 //TODO:LOGIN
 
-function login(){
-    document.getElementById("suscripcion").style.display="none";
+function login() {
+    let formlogin = document.getElementById("suscripcion");
+    formlogin.style.display = "none";
 }
 
+/**
+ * Las cookies en el navegador Chrome no se guardan si se abre el archivo directamente desde un explorador
+ * de archivos, tiene que ser un localhost (con la extensión de Live Server de Visual Studio ya sirve.)
+ * https://stackoverflow.com/questions/15385641/javascript-code-for-cookie-not-working-in-chrome
+ */
 
-
-//TODO:COOKIE SUSCRIPCION
-function setCookie(name,cvalue,expires){
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    let user = getCookie("timeinn");
+    if (user != "") {
+        console.log("object");
+    } else {
+        setCookie("timeinn", "user", 7); // El 7 hará que tenga una duración de una semana
+        setTimeout(function muestraFormSub() {
+            let formlogin = document.getElementById("suscripcion");
+            formlogin.style.display = "block";
+        }, 3000);
+    }
+}
+
+checkCookie();
