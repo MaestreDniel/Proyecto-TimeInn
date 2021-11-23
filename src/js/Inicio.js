@@ -251,8 +251,23 @@ function eventoDestacado() {
 //Directamente saldra al imprimir la pagina
 eventoDestacado()
 
-
-
+//TODO:Imprimir Noticias. DONE
+function imprimirNews() {
+    let txt = "";
+    for (let i in News.noticias) {
+        txt += '<div class="noticia">';
+        txt += News.noticias[i].foto;
+        txt += '<div class="info">';
+        txt += "<h4>" + News.noticias[i].titular + "</h4>";
+        txt += "<p>" + News.noticias[i].descripcion + "</p>";
+        txt += `<p>Fecha publicación: 
+        ${News.noticias[i].fecha.dia}/${News.noticias[i].fecha.mes}/${News.noticias[i].fecha.anyo}</p>`;
+        txt += '<button id="editNot"><i class="fas fa-pencil-alt"></i></button>';
+        txt += '<button class="delNot"><i class="fas fa-trash-alt"></i></button>';
+        txt += '</div></div>'
+    }
+    document.getElementById("news").innerHTML = txt;
+}
 
 
 
@@ -330,5 +345,56 @@ function off() {
         let info = document.getElementsByClassName("overlayevent")[i];
         info.style.display = "none";
     }
+
 }
 
+//TODO:LOGIN
+
+function login() {
+    let formlogin = document.getElementById("suscripcion");
+    formlogin.style.display = "none";
+}
+
+/**
+ * Las cookies en el navegador Chrome no se guardan si se abre el archivo directamente desde un explorador
+ * de archivos, tiene que ser un localhost (con la extensión de Live Server de Visual Studio ya sirve.)
+ * https://stackoverflow.com/questions/15385641/javascript-code-for-cookie-not-working-in-chrome
+ */
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    let user = getCookie("timeinn");
+    if (user != "") {
+        console.log("object");
+    } else {
+        setCookie("timeinn", "user", 7); // El 7 hará que tenga una duración de una semana
+        setTimeout(function muestraFormSub() {
+            let formlogin = document.getElementById("suscripcion");
+            formlogin.style.display = "block";
+        }, 3000);
+    }
+}
+
+checkCookie();

@@ -265,7 +265,6 @@ img.imgEvent {
 
 #video {
   text-align: center;
-
   top: 12vh;
 }
 
@@ -308,7 +307,7 @@ div#eventDes {
 #calendario #dias {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #calendario div {
@@ -346,11 +345,6 @@ div#eventDes {
 }
 
 /*FIN CENTRO*/
-
-/*Formulario*/
-div#formulario {
-  display: none;
-}
 
 /*FOOTER*/
 footer {
@@ -449,9 +443,19 @@ footer i {
 
 /*FORMULARIO SUSCRIPCION*/
 div#suscripcion {
-  display: flex;
-  margin-top: -120vh;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 105;
+  cursor: pointer;
 }
+
 form#sub {
   background-image: url("../images/fondoLogin.PNG");
   background-size: contain;
@@ -462,8 +466,9 @@ form#sub {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 20;
 }
+
 div.login {
   display: flex;
   font-size: 5vh;
@@ -476,15 +481,20 @@ div.login {
 input.sub {
   margin-left: 2%;
   background-color: rgba(99, 7, 0, 1);
-
   height: 4vh;
   font-size: 6vh;
   width: 30vh;
   color: rgba(194, 60, 49, 1);
 }
+
+/* .suscripcion button:hover{
+  background-color: var(--rgba-secondary-1-2);
+} */
+
 body {
   background-color: black;
 }
+
 .igual {
   margin-left: 8.5vh;
 }
