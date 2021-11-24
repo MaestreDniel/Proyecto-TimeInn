@@ -293,6 +293,6 @@ evento.style.display = block;
 
 //TODO:DATAPICKER para elegir fecha.DONE
 //Datapicker
-$(function () {
+/* $(function () {
 $("#datepicker").datepicker();
-});
+}); */
