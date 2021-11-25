@@ -102,15 +102,16 @@ const News = {
 function imprimirNews() {
   let txt = "";
   for (let i in News.noticias) {
+    News.noticias.sort(
+      (a, b) => new Date(a.fecha).getTime() > new Date(b.fecha).getTime()
+    );
     txt += '<div class="noticia">';
     txt += News.noticias[i].foto;
     txt += '<div class="info">';
     txt += "<h4>" + News.noticias[i].titular + "</h4>";
     txt += "<p>" + News.noticias[i].descripcion + "</p>";
     txt += News.noticias[i].info + "<br>";
-    News.noticias.sort(
-      (a, b) => new Date(a.fecha).getTime() > new Date(b.fecha).getTime()
-    );
+    
 
     txt +=
       "Fecha Publicacion: " +
@@ -139,8 +140,8 @@ const Events = {
       foto: '<img class="imgEvent"  src="images/event1.PNG" alt="No se pudo mostrar">',
       nombre: "Mallorca Live Festival",
       descripcion: "Venid al gran festival de la musica en Mallorca",
-      fechaI: "24/06/2022",
-      fechaF: "26/06/2022",
+      fechaI: "2022/06/22",
+      fechaF: "2022/06/26",
       patronicio:
         '<img class="patrocinio" src="images/patrocinioEvent1.PNG" alt="No se pudo mostrar">',
       info: '<a href="https://mallorcalivemusic.com/festival/tickets/?utm_source=Search&utm_medium=paid&utm_content=keywords&utm_campaign=MuseMLF22&gclid=EAIaIQobChMI9dCovays9AIVWJ3VCh0MzgcrEAAYASAAEgI6D_D_BwE" id="ir">Quiero ir</a>',
@@ -205,12 +206,13 @@ function imprimirEventos() {
   let txt = "";
   txt += '<div class="degradadoizq"></div>';
   for (let i in Events.eventos) {
+    Events.eventos.sort(
+      (a, b) => new Date(a.fechaI).getTime() > new Date(b.fechaI).getTime()
+    );
     txt += '<div class="event">';
     txt += Events.eventos[i].foto;
     txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
-    Events.eventos.sort(
-        (a, b) => new Date(a.fechaI).getTime() > new Date(b.fechaI).getTime()
-      );
+   
     txt += "Fecha Publicacion: <br>";
     txt +=
       Events.eventos[i].fechaI.substr(8, 8) +
