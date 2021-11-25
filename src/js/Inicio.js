@@ -309,10 +309,7 @@ function mostrarFormulario() {
   evento.style.display = block;
 }
 
-//TODO:LOGIN/Suscripcion
-function login() {
-  document.getElementById("suscripcion").style.display = "none";
-}
+
 
 //TODO:Informacion de los Eventos con efecto Overlay
 /* Estas líneas son las que hacen funcionar el efecto de overlay de la info de cada efecto */
@@ -338,19 +335,18 @@ function off() {
   }
 }
 
-//TODO:LOGIN
-
+//TODO:LOGIN/Suscripcion
 function login() {
-  let formlogin = document.getElementById("suscripcion");
-  formlogin.style.display = "none";
+  document.getElementById("suscripcion").style.display = "none";
 }
+
 
 /**
  * Las cookies en el navegador Chrome no se guardan si se abre el archivo directamente desde un explorador
  * de archivos, tiene que ser un localhost (con la extensión de Live Server de Visual Studio ya sirve.)
  * https://stackoverflow.com/questions/15385641/javascript-code-for-cookie-not-working-in-chrome
  */
-
+//TODO:COKIE Suscripcion
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
