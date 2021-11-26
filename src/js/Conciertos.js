@@ -13,7 +13,7 @@ const Concert = {
        */
       div: '<div class="concert" id="concierto1">',
       link: ' <a href="https://www.the-scorpions.com/">',
-      foto: '<img class="imgEvent" src="images/concierto1.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+      foto: '<img class="imgEvent" src="images/concierto1.PNG" alt="No se pudo mostrar">',
       titulo: "1.Concierto scorpions",
       grupo: "Scorpions",
       fecha: "24-25 Junio 2022",
@@ -22,7 +22,7 @@ const Concert = {
     {
       div: '<div class="concert" id="concierto2">',
       link: '<a href="https://stageverse.muse.mu/?ref=https://www.google.com/">',
-      foto: '<img class="imgEvent" src="images/concierto2.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+      foto: '<img class="imgEvent" src="images/concierto2.PNG" alt="No se pudo mostrar">',
       titulo: "2.Muse Live Festival",
       grupo: "Muse",
       fecha: "24-25-26 Junio 2022",
@@ -31,7 +31,7 @@ const Concert = {
     {
       div: '<div class="concert" id="concierto3">',
       link: ' <a href="https://filmsymphony.es/">',
-      foto: '<img class="imgEvent" src="images/concierto3.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+      foto: '<img class="imgEvent" src="images/concierto3.PNG" alt="No se pudo mostrar">',
       titulo: "3.FSO Fénix La Gira",
       grupo: "Fenix",
       fecha: "safdasd",
@@ -40,7 +40,7 @@ const Concert = {
     {
       div: '<div class="concert" id="concierto4">',
       link: '<a href="https://ctangana.com/">',
-      foto: '<img class="imgEvent" src="images/concierto4.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+      foto: '<img class="imgEvent" src="images/concierto4.PNG" alt="No se pudo mostrar">',
       titulo: "4.Rio Babel, C. Tangana",
       grupo: "C.Tangana",
       fecha: "30-1-2 Julio 2022",
@@ -49,7 +49,7 @@ const Concert = {
     {
       div: '<div class="concert" id="concierto5">',
       link: '<a href="https://www.justinbiebermusic.com/">',
-      foto: '<img class="imgEvent" src="images/concierto5.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+      foto: '<img class="imgEvent" src="images/concierto5.PNG" alt="No se pudo mostrar">',
       titulo: "5.Justice World Tour, Justin Bieber",
       grupo: "Justin Bieber",
       fecha: "10 de Septiembre 2022",
@@ -58,7 +58,7 @@ const Concert = {
     {
       div: '<div class="concert" id="concierto6">',
       link: '<a href="https://www.pinkfloyd.com/home.php">',
-      foto: '<img class="imgEvent" src="images/concierto6.PNG" alt="No se pudo mostrar" width="150vw" height="200vh">',
+      foto: '<img class="imgEvent" src="images/concierto6.PNG" alt="No se pudo mostrar">',
       titulo: "6.Nicks Masons Saugerful of Secrets, Pink Floyd",
       grupo: "Pink Floyd",
       fecha: "9-10 de Julio 2022",
@@ -135,26 +135,26 @@ function saltarFormulario(){
 //TODO:Añadir nuevo Concierto
   //Cogemos los todos valores del formulario 
   //Creamos un objeto con cada uno de los valores del formulario
-  const NewConcert ={
-   conciertoNuevo: [{
-    div: '<div class="concert" id="concierto7">',
-     url:document.getElementById("url").value,
-     poster: document.getElementById("poster").value,
-     titulo:document.getElementById("titulo").value,
-     grupo:document.getElementById("grupo").value,
-     fecha:document.getElementById("fecha").value,
-     lugar:document.getElementById("lugar").value
-}
-]}
+  
 //Finalmente lo imprimimos debajo del ultimo evento
 function añadirConcierto(){
+  const NewConcert ={
+    conciertoNuevo: [{
+     div: '<div class="concert" id="concierto7">',
+      url:document.getElementById("url").value,
+      poster: '<img src="/src/images/concierto1.png" >',
+      titulo:document.getElementById("titulo").value,
+      grupo:document.getElementById("grupo").value,
+      fecha:document.getElementById("fecha").value,
+      lugar:document.getElementById("lugar").value
+ }
+ ]}
   let txt ="";
   txt +="<br>"
-  txt += '<button onclick="saltarFormulario()" type="button" id="addConcert"><i class="far fa-plus-square"></i></button>';
   //Para imprimir hacemos lo mismo que con las noticias recorremos el objeto y se va imprimiendo
   for(let i in NewConcert.conciertoNuevo){
-    txt +=  NewConcert.conciertoNuevo[i].div;
-    txt +=  "<a>" + NewConcert.conciertoNuevo[i].url + NewConcert.conciertoNuevo[i].poster + "</a>";
+    txt += NewConcert.conciertoNuevo[i].div;
+    txt += NewConcert.conciertoNuevo[i].poster;
     txt += '<div class="infoConcert">';
     txt += "<h2>" + NewConcert.conciertoNuevo[i].titulo + "</h2>";
     txt += "<h3>" + NewConcert.conciertoNuevo[i].grupo + "</h3>";
@@ -162,13 +162,13 @@ function añadirConcierto(){
     txt += "<h3>" + NewConcert.conciertoNuevo[i].lugar + "</h3>";
     txt += '</div>';
     txt += '<div id="edicion">';
-    txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
+    txt += '<button id="editConcert" onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
     txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
     txt += '</div>'
     txt += '</div>'
 }
 
-document.getElementById("conciertos").innerHTML = txt;
+document.getElementById("conciertos").innerHTML += txt;
 
 }
 
