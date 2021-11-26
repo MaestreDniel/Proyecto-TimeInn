@@ -343,6 +343,7 @@ div#eventDes {
 
 #diauno {
   background-color: var(--rgba-secondary-2-2);
+  cursor: pointer;
 }
 
 #fanshop {
@@ -463,6 +464,18 @@ div#suscripcion {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 105;
+}
+
+#close {
+  display: inline;
+  margin-left: auto;
+  color: var(--rgba-secondary-2-2);
+  font-size: 5vw;
+  cursor: pointer;
+}
+
+#close:hover {
+  color: var(--rgba-secondary-2-3);
 }
 
 form#sub {

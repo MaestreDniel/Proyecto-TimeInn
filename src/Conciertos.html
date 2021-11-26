@@ -61,14 +61,14 @@
 <!--FORMULARIO NUEVO EVENTO-->
 <div id="newConcierto" style="display: none;">
     <form action="">
-      <button type="button" id="closeForm" onclick="closeForm()" ><i class="far fa-times-circle"></i></button>
+      <div id="closeForm" onclick="closeForm()"><i class="fas fa-times-circle"></i></div>
       <h5 style="background-color: #1137a7; color: gray;">CREADOR DE CONCIERTOS</h5>
-      <label id="newConcierto">Link</label><input type="url" name="url" id="url" > <br>
-      <label id="newConcierto">Poster Concierto: </label><input class="newConcierto" type="file" name="poster" id="poster"><br>
-      <label id="newConcierto">Tiutlo: </label><input class="newConcierto" type="text" name="titulo"  id="titulo"><br>
-      <label id="newConcierto">Grupo/Cantante:</label><input class="newConcierto" type="text" name="grupo" id="grupo"><br>
-      <label id="newConcierto">Fecha: </label><input class="newConcierto" type="date" name="fecha" id="fecha"><br>
-      <label id="newConcierto">Lugar: </label><input class="newConcierto" type="text" name="lugar" id="lugar">
+      <label class="newConcierto">Link</label><input type="url" name="url" id="url" > <br>
+      <label class="newConcierto">Poster Concierto: </label><input class="newConcierto" type="file" name="poster" id="poster"><br>
+      <label class="newConcierto">Título: </label><input class="newConcierto" type="text" name="titulo"  id="titulo"><br>
+      <label class="newConcierto">Grupo/Cantante:</label><input class="newConcierto" type="text" name="grupo" id="grupo"><br>
+      <label class="newConcierto">Fecha: </label><input class="newConcierto" type="date" name="fecha" id="fecha"><br>
+      <label class="newConcierto">Lugar: </label><input class="newConcierto" type="text" name="lugar" id="lugar">
       <button type="button"  id="add" onclick="añadirConcierto()"><i class="fas fa-plus-square"></i></button>
       <button type="button" id="Save"><i class="fas fa-save"></i></button>
     </form>

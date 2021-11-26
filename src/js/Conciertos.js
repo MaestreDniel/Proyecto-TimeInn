@@ -150,16 +150,16 @@ function saltarFormulario(){
 function añadirConcierto(){
   let txt ="";
   txt +="<br>"
-  txt += '<button onclick="saltarFormulario()" type="button"  id="addConcert"  ><i class="far fa-plus-square"></i></button>';
+  txt += '<button onclick="saltarFormulario()" type="button" id="addConcert"><i class="far fa-plus-square"></i></button>';
   //Para imprimir hacemos lo mismo que con las noticias recorremos el objeto y se va imprimiendo
   for(let i in NewConcert.conciertoNuevo){
     txt +=  NewConcert.conciertoNuevo[i].div;
-    txt +=  NewConcert.conciertoNuevo[i].url + newConcert.conciertoNuevo[i].poster+"</a>";
+    txt +=  "<a>" + NewConcert.conciertoNuevo[i].url + NewConcert.conciertoNuevo[i].poster + "</a>";
     txt += '<div class="infoConcert">';
-    txt += "<h2>" + newConcert.conciertoNuevo[i].titulo + "</h2>";
-    txt += "<h3>" + newConcert.conciertoNuevo[i].grupo + "</h3>";
-    txt += "<h3>" + newConcert.conciertoNuevo[i].fecha + "</h3>";
-    txt += "<h3>" + newConcert.conciertoNuevo[i].lugar + "</h3>";
+    txt += "<h2>" + NewConcert.conciertoNuevo[i].titulo + "</h2>";
+    txt += "<h3>" + NewConcert.conciertoNuevo[i].grupo + "</h3>";
+    txt += "<h3>" + NewConcert.conciertoNuevo[i].fecha + "</h3>";
+    txt += "<h3>" + NewConcert.conciertoNuevo[i].lugar + "</h3>";
     txt += '</div>';
     txt += '<div id="edicion">';
     txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
