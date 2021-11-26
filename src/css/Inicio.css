@@ -102,6 +102,11 @@ div#cuerpo {
 }
 
 /*NOTICIAS*/
+
+img.imgNews{
+  height: 37vh; 
+}
+
 div#news {
   order: -1;
   display: flex;
