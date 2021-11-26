@@ -171,7 +171,14 @@ a#moreNews {
 /*MAIN CENTRO*/
 main {
   display: block;
+
 }
+
+div#eventos{
+  background-image: url("../images/festivalesFondo.jpg");
+  background-size: cover;
+}
+
 
 div.festivalDes{
   background-color: white;
@@ -594,6 +601,7 @@ body {
 
 
 *{
+  
   font-family: Arial, Helvetica, sans-serif;
 }
 
