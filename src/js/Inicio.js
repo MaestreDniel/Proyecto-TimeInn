@@ -277,9 +277,7 @@ function festivalDestacado() {
     txt += "Fecha Publicacion: <br>";
     txt += FestivalDes.festival[i].fechaI + "<br>";
     txt += FestivalDes.festival[i].fechaF + "<br>";
-    txt +='<i class="fas fa-info-circle"></i>' +   Events.eventos[i].patronicio +"</div>";
-    txt += '<div class="overlayevent" onclick="off()">'; // Por defecto está oculto
-    txt +="<span>" +  Events.eventos[i].descripcion + "<br>" + Events.eventos[i].info +  "</span>" +   "</div>";
+   
   }
   txt += '<div class="degradadoder"></div>';
   document.getElementById("festivalDestacado").innerHTML = txt;

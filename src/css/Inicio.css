@@ -160,15 +160,15 @@ main {
 
 div.festivalDes{
   background-color: white;
- 
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   width: 22vw;
-  margin-left: 15vh;
-  margin-top: 20vh;
-  height: 66vh;
+  margin-left: 14vh;
+  margin-top: 4vh;
+  height: 62vh;
+  
   border-radius: 2vh;
 }
 div#festivalDestacado{
@@ -177,6 +177,7 @@ div#festivalDestacado{
   height: 70vh;
   width: 70vh;
   margin-left: 7vw;
+  display: flex;
 }
 
 
