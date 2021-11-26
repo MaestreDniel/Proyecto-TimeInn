@@ -47,7 +47,7 @@
             
 <!--DESTACAD0-->
     <div id="destacado">
-        <img src="images/ConcertoDestacado.webp" style="position: sticky;" alt="">
+        <img src="images/ConcertoDestacado.webp" alt="">
     </div>
 
 <!--MAIN CONCIERTOS-->
@@ -61,16 +61,15 @@
 <!--FORMULARIO NUEVO EVENTO-->
 <div id="newConcierto" style="display: none;">
     <form id="concierform" action="">
-      <div id="closeForm" onclick="closeForm()"><i class="fas fa-times-circle"></i></div>
+      <div id="closeForm" onclick="cerrable()"><i class="fas fa-times-circle"></i></div>
       <h1>CREADOR DE CONCIERTOS</h1>
-      <label class="newConcierto">Link: <input type="url" name="url" id="url"></label>
+      <label class="newConcierto">Link: <input type="link" name="link" id="link"></label>
       <!-- <label class="newConcierto">Poster Concierto: <input class="newConcierto" type="file" name="poster" id="poster"></label> -->
       <label class="newConcierto">Título: <input class="newConcierto" type="text" name="titulo" id="titulo"></label>
       <label class="newConcierto">Grupo/Cantante: <input class="newConcierto" type="text" name="grupo" id="grupo"></label>
       <label class="newConcierto">Fecha: <input class="newConcierto" type="date" name="fecha" id="fecha"></label>
       <label class="newConcierto">Lugar: <input class="newConcierto" type="text" name="lugar" id="lugar"></label>
-      <button type="button" id="add" onclick="añadirConcierto()"><i class="fas fa-plus-square"></i></button>
-      <button type="button" id="save"><i class="fas fa-save"></i></button>
+      <button type="button" id="add" onclick="añadirConcierto(), closeForm()"><i class="fas fa-plus-square"></i></button>
     </form>
   </div>
   <br>

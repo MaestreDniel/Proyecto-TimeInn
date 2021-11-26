@@ -16,7 +16,7 @@ const Concert = {
       foto: '<img class="imgEvent" src="images/concierto1.PNG" alt="No se pudo mostrar">',
       titulo: "1.Concierto scorpions",
       grupo: "Scorpions",
-      fecha: "24-25 Junio 2022",
+      fecha: "2022-06-24",
       lugar: "",
     },
     {
@@ -25,7 +25,7 @@ const Concert = {
       foto: '<img class="imgEvent" src="images/concierto2.PNG" alt="No se pudo mostrar">',
       titulo: "2.Muse Live Festival",
       grupo: "Muse",
-      fecha: "24-25-26 Junio 2022",
+      fecha: "2022-06-25",
       lugar: "",
     },
     {
@@ -34,8 +34,8 @@ const Concert = {
       foto: '<img class="imgEvent" src="images/concierto3.PNG" alt="No se pudo mostrar">',
       titulo: "3.FSO Fénix La Gira",
       grupo: "Fenix",
-      fecha: "safdasd",
-      lugar: "dfas",
+      fecha: "2022-05-30",
+      lugar: "",
     },
     {
       div: '<div class="concert" id="concierto4">',
@@ -43,7 +43,7 @@ const Concert = {
       foto: '<img class="imgEvent" src="images/concierto4.PNG" alt="No se pudo mostrar">',
       titulo: "4.Rio Babel, C. Tangana",
       grupo: "C.Tangana",
-      fecha: "30-1-2 Julio 2022",
+      fecha: "2022-07-01",
       lugar: "Madrid",
     },
     {
@@ -52,7 +52,7 @@ const Concert = {
       foto: '<img class="imgEvent" src="images/concierto5.PNG" alt="No se pudo mostrar">',
       titulo: "5.Justice World Tour, Justin Bieber",
       grupo: "Justin Bieber",
-      fecha: "10 de Septiembre 2022",
+      fecha: "2022-10-10",
       lugar: "Estadio Unico de la Plata",
     },
     {
@@ -61,27 +61,27 @@ const Concert = {
       foto: '<img class="imgEvent" src="images/concierto6.PNG" alt="No se pudo mostrar">',
       titulo: "6.Nicks Masons Saugerful of Secrets, Pink Floyd",
       grupo: "Pink Floyd",
-      fecha: "9-10 de Julio 2022",
+      fecha: "2022-07-09",
       lugar: "Madrid y Barcelona",
     },
   ]
 }
 
 //TODO:Imprimir Concierto.DONE
-function imprimirConcierto(){
-
-  let txt ="";
-  txt +="<br>"
+function imprimirConcierto(conciertos) {
+  let txt = "";
+  txt += "<br>"
   txt += '<button onclick="saltarFormulario()" type="button" id="addConcert"  ><i class="far fa-plus-square"></i></button>';
+  txt += '<button onclick="filtraConciertos()" type="button" id="filterConcert"  ><i class="fas fa-filter"></i></button>';
   //Creamos un bucle Para recorrer los objetos de los Conciertos y a continuación imprimimos cada uno de ellos
-  for(let i in Concert.conciertos){
-    txt +=  Concert.conciertos[i].div;
-    txt +=  Concert.conciertos[i].link  + Concert.conciertos[i].foto+"</a>";
+  for (let i in conciertos) {
+    txt += conciertos[i].div;
+    txt += conciertos[i].link + conciertos[i].foto + "</a>";
     txt += '<div class="infoConcert">';
-    txt += "<h2>" + Concert.conciertos[i].titulo + "</h2>";
-    txt += "<h3>" + Concert.conciertos[i].grupo + "</h3>";
-    txt += "<h3>" + Concert.conciertos[i].fecha + "</h3>";
-    txt += "<h3>" + Concert.conciertos[i].lugar + "</h3>";
+    txt += "<h2>" + conciertos[i].titulo + "</h2>";
+    txt += "<h3>" + conciertos[i].grupo + "</h3>";
+    txt += "<h3>" + conciertos[i].fecha + "</h3>";
+    txt += "<h3>" + conciertos[i].lugar + "</h3>";
     txt += '</div>';
     txt += '<div id="edicion">';
     txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
@@ -95,17 +95,16 @@ function imprimirConcierto(){
 }
 
 //Ejecutamos la función para que al ejecutar la pagina ya este impreso
-imprimirConcierto();
+imprimirConcierto(Concert.conciertos);
 
 
 //TODO:EventoDestacado.DONE
-const EventDes ={
-  destacado:[{
-      foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
-      nombre: 'Mallorca Live Festival',
-      descripcion: 'Venid al gran festival de la musica en Mallorca'
-  }
-  ]
+const EventDes = {
+  destacado: [{
+    foto: '<img class="imgEvent" src="images/event1.PNG" alt="No se pudo mostrar">',
+    nombre: 'Mallorca Live Festival',
+    descripcion: 'Venid al gran festival de la musica en Mallorca'
+  }]
 }
 //Una vez Creado el objeto destacado creamos una funcion con un for para imprimirlo directamente al ejecutar
 function eventoDestacado() {
@@ -127,32 +126,35 @@ eventoDestacado();
 
 
 //TODO: Saltar Formulario Nuevo Concierto 
-function saltarFormulario(){
+function saltarFormulario() {
   document.getElementById("newConcierto").style.display = "block";
 }
 
 
 //TODO:Añadir nuevo Concierto
-  //Cogemos los todos valores del formulario 
-  //Creamos un objeto con cada uno de los valores del formulario
-  
+//Cogemos los todos valores del formulario 
+//Creamos un objeto con cada uno de los valores del formulario
+
 //Finalmente lo imprimimos debajo del ultimo evento
-function añadirConcierto(){
-  const NewConcert ={
+let cerrarForm = false;
+
+function añadirConcierto() {
+  let randomid = Math.round(Math.random() * 1000000, 1);
+  const NewConcert = {
     conciertoNuevo: [{
-     div: '<div class="concert" id="concierto7">',
-      url:document.getElementById("url").value,
+      div: `<div class="concert" id="${randomid}">`,
+      url: document.getElementById("link").value,
       poster: '<img src="/src/images/concierto1.png" >',
-      titulo:document.getElementById("titulo").value,
-      grupo:document.getElementById("grupo").value,
-      fecha:document.getElementById("fecha").value,
-      lugar:document.getElementById("lugar").value
- }
- ]}
-  let txt ="";
-  txt +="<br>"
+      titulo: document.getElementById("titulo").value,
+      grupo: document.getElementById("grupo").value,
+      fecha: document.getElementById("fecha").value,
+      lugar: document.getElementById("lugar").value
+    }]
+  }
+  let txt = "";
+  txt += "<br>"
   //Para imprimir hacemos lo mismo que con las noticias recorremos el objeto y se va imprimiendo
-  for(let i in NewConcert.conciertoNuevo){
+  for (let i in NewConcert.conciertoNuevo) {
     txt += NewConcert.conciertoNuevo[i].div;
     txt += NewConcert.conciertoNuevo[i].poster;
     txt += '<div class="infoConcert">';
@@ -166,15 +168,32 @@ function añadirConcierto(){
     txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
     txt += '</div>'
     txt += '</div>'
-}
-
-document.getElementById("conciertos").innerHTML += txt;
-
+    if (NewConcert.conciertoNuevo[i].url === "" || NewConcert.conciertoNuevo[i].titulo === "" ||
+      NewConcert.conciertoNuevo[i].grupo === "" || NewConcert.conciertoNuevo[i].fecha === "" ||
+      NewConcert.conciertoNuevo[i].lugar === "") {
+      cerrarForm = false;
+      alert("Debes rellenar todos los campos del formulario");
+    } else {
+      document.getElementById("conciertos").innerHTML += txt;
+      cerrarForm = true;
+      return cerrarForm;
+    }
+  }
 }
 
 //TODO:Cerrar formulario
-function closeForm(){
-  document.getElementById("newConcierto").style.display="none";
+function closeForm() { // Es para que se cierre automáticamente al añadir un concierto, no es lo mismo que cerrable()
+  if (cerrarForm == true) {
+    document.getElementById("newConcierto").style.display = "none";
+  }
+}
+
+document.getElementById("closeForm").addEventListener("click", function () {
+  cerrable();
+});
+
+function cerrable() { // Es para que se pueda cerrar directamente, se haya añadido un concierto antes o no
+  document.getElementById("newConcierto").style.display = "none";
 }
 
 //TODO:Busqueda Formulario 
@@ -184,7 +203,31 @@ function mostrarFormulario() {
   document.getElementById("secciones").style.display = block;
 }
 
+function filtraConciertos() {
+  let filtrado = parseInt(prompt(
+    `Hemos hecho estos filtros: 
+    1. Los conciertos que se celebran en Madrid
+    2. Los conciertos posteriores al 1 de julio de 2022
+    3. Busca un cantante en concreto`));
+  switch (filtrado) {
+    case 1:
+      let concierto = Concert.conciertos.filter(concierto => concierto.lugar === "Madrid");
+      imprimirConcierto(concierto);
+      break;
+    case 2:
+      let concierto2 = Concert.conciertos.filter(concierto => concierto.fecha > "2022-07-01");
+      imprimirConcierto(concierto2);
+      break;
+    case 3:
+      let cantante = prompt("Escribe el nombre del grupo o cantante")
+      let concierto3 = Concert.conciertos.filter(concierto => concierto.grupo === cantante);
+      imprimirConcierto(concierto3);
+      break;
+    default:
+      alert("Has elegido una opción no valida, no ocurrirá nada");
+  }
 
+}
 
 //TODO: Editar Eventos
 //FUncion para editar eventos
@@ -267,9 +310,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      buttop.style.display = "block";
+    buttop.style.display = "block";
   } else {
-      buttop.style.display = "none";
+    buttop.style.display = "none";
   }
 }
 
@@ -283,10 +326,10 @@ function backToTop() {
 //TODO:Formulario Busqueda
 //Cuando pulsamos el boton de Grupos o estilos salta el formulario
 function mostrarFormulario() {
-var formulario = document.getElementById("formularioBusqueda");
-formulario.style.display = block;
-var evento = document.getElementById("secciones");
-evento.style.display = block;
+  var formulario = document.getElementById("formularioBusqueda");
+  formulario.style.display = block;
+  var evento = document.getElementById("secciones");
+  evento.style.display = block;
 }
 
 

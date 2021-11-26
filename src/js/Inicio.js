@@ -217,7 +217,7 @@ function imprimirEventos() {
     txt += '<div class="event">';
     txt += Events.eventos[i].foto;
     txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
-    txt += "Fecha Publicacion: <br>";
+    txt += "<div class='fechaevent'>Fecha Publicacion: <br>";
     txt +=
       Events.eventos[i].fechaI.substr(8, 8) +
       Events.eventos[i].fechaI.substr(4, 4) +
@@ -227,7 +227,7 @@ function imprimirEventos() {
       Events.eventos[i].fechaF.substr(8, 8) +
       Events.eventos[i].fechaF.substr(4, 4) +
       Events.eventos[i].fechaF.substr(0, 4) +
-      "<br>";
+      "<br></div>";
     txt +=
       '<i class="fas fa-info-circle"></i>' +
       Events.eventos[i].patronicio +

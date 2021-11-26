@@ -106,8 +106,8 @@ div#news {
   order: -1;
   display: flex;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 120vw;
+  overflow-y: scroll;
   flex-direction: column;
   font-size: 1.3vw;
 }
@@ -155,22 +155,21 @@ main {
 
 div.festivalDes{
   background-color: white;
- 
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   width: 20vw;
   margin-left: 15vh;
-  margin-top: 20vh;
-  height: 66vh;
+  /* margin-top: 20vh; */
+  height: 40vw;
   border-radius: 2vh;
 }
 div#festivalDestacado{
   background-image: url("../images/Logo\ Music4Events.png");
   background-size: contain;
-  height: 70vh;
-  width: 70vh;
+  height: 40vw;
+  width: 40vw;
   margin-left: 7vw;
 }
 
@@ -238,7 +237,7 @@ a#ir {
   box-shadow: 10px 10px 14px var(--rgba-secondary-2-2);
 }
 
-#eventos p {
+#eventos .fechaevent {
   font-size: 1.2vw;
   margin-bottom: 0.5vw;
 }
