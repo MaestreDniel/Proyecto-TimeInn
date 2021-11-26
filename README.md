@@ -40,13 +40,25 @@
 
 ## FONTS 
 
+
 - h1,h2,h3,h4:
-  - font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif.
+   - font-family: 'Times New Roman', Times, serif.
+
 
 - label:
   - font-family: Verdana, Geneva, Tahoma, sans-serif.
 
-- Resto de texto:  font-family: Arial, Helvetica, sans-serif.
+
+- p:
+  - font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif.
+
+
+- input:
+  - font-family: 'Courier New', Courier, monospace.
+
+
+- Resto de texto:  
+  - font-family: Arial, Helvetica, sans-serif.
 
 
 
