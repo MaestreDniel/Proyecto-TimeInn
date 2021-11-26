@@ -7,16 +7,17 @@
 - `TODO: Evento Destacado`
 - `TODO:Impimir Evento destacado`
 - `TODO:Button Back to Top`
-- `TODO:Formulario de Busqueda `
+- `TODO:Formulario de Busqueda`
+- `TODO:Informacion de los Eventos con efecto Overlay `
 - `TODO:LOGIN/Suscripcion`
-- `TODO:COOKIE SUSCRIPCION`
-- `TODO:Informacion de los Eventos con efecto Overlay`
+- `Login/Suscripción`
+- `TODO:COOKIE SUSCRIPCIÓN`
 
 # TODO CONCIERTOS
 
 - `TODO:Objeto Conciertos.DONE`
 - `TODO:Imprimir Concierto.DONE`
-- `TODO:EventoDestacado.DONE`
+- `TODO:Evento Destacado.DONE`
 - `TODO: Saltar Formulario Nuevo Concierto `
 - `TODO:Añadir nuevo Concierto`
 - `TODO:Cerrar formulario`
