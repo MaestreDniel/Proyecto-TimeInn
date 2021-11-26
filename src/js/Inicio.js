@@ -4,7 +4,7 @@ Los cuales constan de una foto, un titular, una descripción, una fecha y un bot
 
 const News = {
   noticias: [{
-      foto: '<img class="imgNews" src="images/news1.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news1.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "El festival Iruña Rock 2022 anuncia su cartel completo",
       descripcion: "El festival Iruña Rock ha anunciado el cartel completo de su edición 2022, que tendrá lugar en el Navarra Arena los días 18 y 19 de marzo.",
       fecha: "2021/08/02",
@@ -12,7 +12,7 @@ const News = {
     },
 
     {
-      foto: '<img class="imgNews" src="images/news2.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news2.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "El Lets Festival anuncia sus primeros nombres para 2022",
       descripcion: "Pero las cosas van a ser diferentes en 2022, con un festival que volverá a pleno rendimiento.",
       fecha: "2021/09/11",
@@ -20,7 +20,7 @@ const News = {
     },
 
     {
-      foto: '<img class="imgNews" src="images/news3.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news3.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "Los festivales vuelven con fuerza en 2022",
       descripcion: "Festivales 2022. Ultra Miami 2022. Ultra Miami es históricamente el punto de inicio de la temporada de grandes festivales.",
       fecha: "2021/10/27",
@@ -28,14 +28,14 @@ const News = {
     },
 
     {
-      foto: '<img class="imgNews" src="images/news4.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news4.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "Festival Actual 2022 en Logroño: Conciertos y Entradas",
       descripcion: "Festival Actual 2022 regresará a la localidad riojana del 2 al 8 de enero del próximo año.",
       fecha: "2021/08/03",
       info: '<a href="https://www.dodmagazine.es/festival-actual-2022-conciertos-entradas/" id="moreNews">+INFO</a>',
     },
     {
-      foto: '<img class="imgNews" src="images/news5.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news5.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "Ed Sheeran ofrecerá un concierto exclusivo en Pokémon GO: los detalles",
       descripcion: "Ed Sheeran lo ha vuelto a hacer. El artista ha anunciado que dará un concierto exclusivo para Pokemon GO",
       fecha: "2021/09/15",
@@ -43,7 +43,7 @@ const News = {
     },
 
     {
-      foto: '<img class="imgNews" src="images/news6.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news6.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "Alizzz, el primer artista confirmado para el festival Brizna 2022",
       descripcion: "Alizzz es el primer artista confirmado para el festival Brizna 2022. Uno de los productores de pop español más importante e influyente.",
       fecha: "2021/11/09",
@@ -51,7 +51,7 @@ const News = {
     },
 
     {
-      foto: '<img class="imgNews" src="images/news7.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news7.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "Festival de Lucerna 2022: Diversidad",
       descripcion: "El Festival de Lucerna comparte su programación para el verano de 2022. Anne-Sophie Mutter, Lang Lang, Daniel Barenboim, Sir Simon Rattle,...",
       fecha: "2021/10/29",
@@ -59,7 +59,7 @@ const News = {
     },
 
     {
-      foto: '<img  class="imgNews"src="images/news8.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news8.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "La Oreja de Van Gogh está de gira en Estados Unidos",
       descripcion: "Después de cancelar varios conciertos por la pandemia y tener que rehacer su calendario, ahora recorrerán 18 ciudades estadounidenses.",
       fecha: "2021/11/05",
@@ -67,7 +67,7 @@ const News = {
     },
 
     {
-      foto: '<img class="imgNews" src="images/news9.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news9.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "Izaro dará un concierto especial en el Velódromo el 7 de mayo",
       descripcion: "Izaro cerrará la gira de Limones en invierno el próximo 7 de mayo en el Velódromo de Donostia. Será un concierto especial, tal y como ha asegurado la cantante en redes sociales,",
       fecha: "2021/10/24",
@@ -75,7 +75,7 @@ const News = {
     },
 
     {
-      foto: '<img class="imgNews" src="images/news10.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img src="images/news10.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "La Pegatina y Efecto Pasillo protagonizarán una gira conjunta por España",
       descripcion: 'Tras colaborar el año pasado en el sencillo “Ahípamí”, La Pegatina y Efecto Pasillo vuelven a unir fuerzas para presentar "EfectoPegatina", una gira conjunta que pasará por Valencia, Barcelona, Murcia y Zaragoza durante la primavera de 2022.',
       fecha: "2021/11/03",
@@ -217,7 +217,7 @@ function imprimirEventos() {
     txt += '<div class="event">';
     txt += Events.eventos[i].foto;
     txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
-    txt += "Fecha Publicacion: <br>";
+    txt += "<div class='fechaevent'>Fecha Publicacion: <br>";
     txt +=
       Events.eventos[i].fechaI.substr(8, 8) +
       Events.eventos[i].fechaI.substr(4, 4) +
@@ -227,7 +227,7 @@ function imprimirEventos() {
       Events.eventos[i].fechaF.substr(8, 8) +
       Events.eventos[i].fechaF.substr(4, 4) +
       Events.eventos[i].fechaF.substr(0, 4) +
-      "<br>";
+      "<br></div>";
     txt +=
       '<i class="fas fa-info-circle"></i>' +
       Events.eventos[i].patronicio +
