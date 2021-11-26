@@ -28,7 +28,7 @@ const News = {
     },
 
     {
-      foto: '<img src="images/news4.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
+      foto: '<img class="imgNews" src="images/news4.jpeg" alt="No se pudo mostrar la imagen en tu navegador"></img>',
       titular: "Festival Actual 2022 en Logroño: Conciertos y Entradas",
       descripcion: "Festival Actual 2022 regresará a la localidad riojana del 2 al 8 de enero del próximo año.",
       fecha: "2021/08/03",
