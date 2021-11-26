@@ -111,7 +111,6 @@ function imprimirNews() {
     txt += "<h4>" + News.noticias[i].titular + "</h4>";
     txt += "<p>" + News.noticias[i].descripcion + "</p>";
     txt += News.noticias[i].info + "<br>";
-    
 
     txt +=
       "Fecha Publicacion: " +
@@ -212,7 +211,7 @@ function imprimirEventos() {
     txt += '<div class="event">';
     txt += Events.eventos[i].foto;
     txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
-   
+
     txt += "Fecha Publicacion: <br>";
     txt +=
       Events.eventos[i].fechaI.substr(8, 8) +
@@ -224,7 +223,7 @@ function imprimirEventos() {
       Events.eventos[i].fechaF.substr(4, 4) +
       Events.eventos[i].fechaF.substr(0, 4) +
       "<br>";
-        txt +=
+    txt +=
       '<i class="fas fa-info-circle"></i>' +
       Events.eventos[i].patronicio +
       "</div>";
@@ -244,34 +243,45 @@ function imprimirEventos() {
 //se imprimen automaticamente los eventos
 imprimirEventos();
 
-//TODO: Evento Destacado
-//Tenemos un Evento destacado que va a ir aparte del resto de evento que resaltara sobre el resto
-const EventDes = {
-  destacado: [
+//TODO: Festival Destacado
+//Tenemos un Festival destacado que va a ir aparte del resto de evento que resaltara sobre el resto
+const FestivalDes = {
+  festival: [
     {
-      foto: '<img class="imgEvent" src="images/event1.PNG"   height:"290" width="252" alt="No se pudo mostrar">',
+      foto: '<img class="imgEvent"  src="images/event1.PNG" alt="No se pudo mostrar">',
       nombre: "Mallorca Live Festival",
       descripcion: "Venid al gran festival de la musica en Mallorca",
-      info: '<a href="" id="moreNews">+info</a>',
+      fechaI: "22/06/2022",
+      fechaF: "26/06/2022",
+      patronicio:
+        '<img class="patrocinio" src="images/patrocinioEvent1.PNG" alt="No se pudo mostrar">',
+      info: '<a href="https://mallorcalivemusic.com/festival/tickets/?utm_source=Search&utm_medium=paid&utm_content=keywords&utm_campaign=MuseMLF22&gclid=EAIaIQobChMI9dCovays9AIVWJ3VCh0MzgcrEAAYASAAEgI6D_D_BwE" id="ir">Quiero ir</a>',
     },
   ],
 };
-//TODO:Impimir Evento destacado
+
+//TODO:Impimir Festival destacado
 //Creamo esta función para impimir el evento destacado recorriendolo con un for
-function eventoDestacado() {
+function festivalDestacado() {
   let txt = "";
   txt += '<div class="degradadoizq"></div>';
-  for (let i in EventDes.destacado) {
-    txt += '<div class="event">';
-    txt += EventDes.destacado[i].foto;
-    txt += "<p><span>" + EventDes.destacado[i].nombre + "</span></p>";
-    txt += '<i class="fas fa-info-circle"></i>' + "</div>";
+  for (let i in FestivalDes.festival) {
+    txt += '<div class="festivalDes">';
+    txt += FestivalDes.festival[i].foto;
+    txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
+    txt += "Fecha Publicacion: <br>";
+    txt += FestivalDes.festival[i].fechaI + "<br>";
+    txt += FestivalDes.festival[i].fechaF + "<br>";
+    txt +='<i class="fas fa-info-circle"></i>' +   Events.eventos[i].patronicio +"</div>";
+    txt += '<div class="overlayevent" onclick="off()">'; // Por defecto está oculto
+    txt +="<span>" +  Events.eventos[i].descripcion + "<br>" + Events.eventos[i].info +  "</span>" +   "</div>";
   }
   txt += '<div class="degradadoder"></div>';
-  document.getElementById("eventDes").innerHTML = txt;
+  document.getElementById("festivalDestacado").innerHTML = txt;
 }
-//Directamente saldra al imprimir la pagina
-eventoDestacado();
+festivalDestacado()
+//se imprimen automaticamente los eventos
+
 
 /* Es el botón de go back to top, que saldrá en el momento
 que el usuario hace scroll 100px hacia abajo desde el tope de la página */
@@ -309,8 +319,6 @@ function mostrarFormulario() {
   evento.style.display = block;
 }
 
-
-
 //TODO:Informacion de los Eventos con efecto Overlay
 /* Estas líneas son las que hacen funcionar el efecto de overlay de la info de cada efecto */
 for (let i = 0; i <= Events.eventos.length; i++) {
@@ -339,7 +347,6 @@ function off() {
 function login() {
   document.getElementById("suscripcion").style.display = "none";
 }
-
 
 /**
  * Las cookies en el navegador Chrome no se guardan si se abre el archivo directamente desde un explorador

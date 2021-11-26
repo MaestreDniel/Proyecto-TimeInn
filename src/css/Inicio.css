@@ -154,6 +154,29 @@ main {
   display: block;
 }
 
+div.festivalDes{
+  background-color: white;
+ 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  width: 20vw;
+  margin-left: 15vh;
+  margin-top: 20vh;
+  height: 66vh;
+  border-radius: 2vh;
+}
+div#festivalDestacado{
+  background-image: url("../images/Logo\ Music4Events.png");
+  background-size: contain;
+  height: 70vh;
+  width: 70vh;
+  margin-left: 7vw;
+}
+
+
+
   /* div#video {
   } */
 
@@ -347,7 +370,7 @@ div#eventDes {
   width: 100%;
   position: sticky;
   top: 12vh;
-  margin-top: 15vh;
+  
 }
 
 #fanshop img {
@@ -492,7 +515,7 @@ input.sub {
   margin-left: 2%;
   background-color: rgba(99, 7, 0, 1);
   height: 4vh;
-  font-size: 6vh;
+  font-size: 4vh;
   width: 30vh;
   color: rgba(194, 60, 49, 1);
 }
