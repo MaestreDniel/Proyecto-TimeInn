@@ -181,18 +181,19 @@ div.festivalDes{
   align-content: center;
   width: 22vw;
   margin-left: 14vh;
-  margin-top: 4vh;
-  height: 62vh;
+  margin-top: 5vh;
+  height: 66vh;
   
   border-radius: 2vh;
 }
 div#festivalDestacado{
   background-image: url("../images/Logo\ Music4Events.png");
   background-size: contain;
-  height: 70vh;
+  height: 75vh;
   width: 70vh;
   margin-left: 7vw;
   display: flex;
+  margin-top: 2%;
 }
 
 

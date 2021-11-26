@@ -210,7 +210,7 @@ div#calendario {
 
 #fanshop {
   width: 100%;
-  position: sticky;
+ 
   top: 12vh;
   
 }
@@ -218,6 +218,22 @@ div#calendario {
 #fanshop img {
   width: 100%;
   height: 100%;
+}
+div#comprar{
+  display: grid;
+}
+div.buy{
+  display: grid;
+  margin: 1%;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+
+}
+img.buy{
+  display: grid;
+  width: 20vw; 
 }
 
 /*FOOTER*/
