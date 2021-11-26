@@ -41,7 +41,7 @@ header {
   display: flex;
   background-image: url("../images/fondoHeader.jpg");
   background-size: cover;
-  min-height: 80px;
+  max-height: 80vh;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -58,6 +58,7 @@ nav#paginas {
   display: flex;
   font-size: 2vw;
   align-items: end;
+  margin-bottom: 5vh;
 }
 
 nav#paginas div {
@@ -70,6 +71,8 @@ nav#paginas div {
 nav#paginas div:hover {
   background-color: var(--rgba-primary-4);
 }
+
+
 
 nav i {
   font-size: 100%;
@@ -90,7 +93,19 @@ a:active {
 
 input#search {
   width: 10vw;
-  margin-right: 5px;
+  
+}
+
+div.buscar{
+  display: flex;
+  margin-bottom: 1vw;
+}
+button#buscar{
+  display: flex;
+  width: 1.7vw;
+  height: 4vh;
+  background-image: url("../images/buscar.PNG");
+  background-size: contain;
 }
 
 /*FIN HEADER*/
@@ -596,3 +611,5 @@ p{
 input{
   font-family: 'Courier New', Courier, monospace;
 }
+
+
