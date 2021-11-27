@@ -14,7 +14,7 @@ const Concert = {
       div: '<div class="concert" id="concierto1">',
       link: ' <a href="https://www.the-scorpions.com/">',
       foto: '<img class="imgEvent" src="images/concierto1.PNG" alt="No se pudo mostrar">',
-      titulo: "1.Concierto scorpions",
+      titulo: "Concierto Scorpions",
       grupo: "Scorpions",
       fecha: "2022-06-24",
       lugar: "",
@@ -23,7 +23,7 @@ const Concert = {
       div: '<div class="concert" id="concierto2">',
       link: '<a href="https://stageverse.muse.mu/?ref=https://www.google.com/">',
       foto: '<img class="imgEvent" src="images/concierto2.PNG" alt="No se pudo mostrar">',
-      titulo: "2.Muse Live Festival",
+      titulo: "Muse Live Festival",
       grupo: "Muse",
       fecha: "2022-06-25",
       lugar: "",
@@ -32,7 +32,7 @@ const Concert = {
       div: '<div class="concert" id="concierto3">',
       link: ' <a href="https://filmsymphony.es/">',
       foto: '<img class="imgEvent" src="images/concierto3.PNG" alt="No se pudo mostrar">',
-      titulo: "3.FSO Fénix La Gira",
+      titulo: "FSO Fénix La Gira",
       grupo: "Fenix",
       fecha: "2022-05-30",
       lugar: "",
@@ -41,7 +41,7 @@ const Concert = {
       div: '<div class="concert" id="concierto4">',
       link: '<a href="https://ctangana.com/">',
       foto: '<img class="imgEvent" src="images/concierto4.PNG" alt="No se pudo mostrar">',
-      titulo: "4.Rio Babel, C. Tangana",
+      titulo: "Rio Babel, C. Tangana",
       grupo: "C.Tangana",
       fecha: "2022-07-01",
       lugar: "Madrid",
@@ -50,7 +50,7 @@ const Concert = {
       div: '<div class="concert" id="concierto5">',
       link: '<a href="https://www.justinbiebermusic.com/">',
       foto: '<img class="imgEvent" src="images/concierto5.PNG" alt="No se pudo mostrar">',
-      titulo: "5.Justice World Tour, Justin Bieber",
+      titulo: "Justice World Tour, Justin Bieber",
       grupo: "Justin Bieber",
       fecha: "2022-10-10",
       lugar: "Estadio Unico de la Plata",
@@ -59,10 +59,10 @@ const Concert = {
       div: '<div class="concert" id="concierto6">',
       link: '<a href="https://www.pinkfloyd.com/home.php">',
       foto: '<img class="imgEvent" src="images/concierto6.PNG" alt="No se pudo mostrar">',
-      titulo: "6.Nicks Masons Saugerful of Secrets, Pink Floyd",
+      titulo: "Nicks Masons Saugerful of Secrets, Pink Floyd",
       grupo: "Pink Floyd",
       fecha: "2022-07-09",
-      lugar: "Madrid y Barcelona",
+      lugar: "Barcelona",
     },
   ]
 }
@@ -71,22 +71,23 @@ const Concert = {
 function imprimirConcierto(conciertos) {
   let txt = "";
   txt += "<br>"
-  txt += '<button onclick="saltarFormulario()" type="button" id="addConcert"  ><i class="far fa-plus-square"></i></button>';
-  txt += '<button onclick="filtraConciertos()" type="button" id="filterConcert"  ><i class="fas fa-filter"></i></button>';
-  //Creamos un bucle Para recorrer los objetos de los Conciertos y a continuación imprimimos cada uno de ellos
+  txt += '<button onclick="saltarFormulario()" type="button" id="addConcert"><i class="far fa-plus-square"></i></button>';
+  txt += '<button onclick="filtraConciertos()" type="button" id="filterConcert"><i class="fas fa-filter"></i></button>';
+  txt += '<button onclick="imprimirConcierto(Concert.conciertos)" type="button" id="filterConcert"><i class="fas fa-undo-alt"></i></button>';
+  // Creamos un bucle Para recorrer los objetos de los Conciertos y a continuación imprimimos cada uno de ellos
   for (let i in conciertos) {
     txt += conciertos[i].div;
     txt += conciertos[i].link + conciertos[i].foto + "</a>";
     txt += '<div class="infoConcert">';
+    txt += '<div id="edicion">';
+    txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
+    txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
+    txt += '</div>'
     txt += "<h2>" + conciertos[i].titulo + "</h2>";
     txt += "<h3>" + conciertos[i].grupo + "</h3>";
     txt += "<h3>" + conciertos[i].fecha + "</h3>";
     txt += "<h3>" + conciertos[i].lugar + "</h3>";
     txt += '</div>';
-    txt += '<div id="edicion">';
-    txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
-    txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
-    txt += '</div>'
     txt += '</div>'
   }
 
