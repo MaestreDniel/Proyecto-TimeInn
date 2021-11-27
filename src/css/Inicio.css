@@ -181,17 +181,17 @@ div#eventos{
 
 
 div.festivalDes{
-  background-color: white;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
+  flex-flow: column nowrap;
+  background-color: white;
+  margin: 1vw 2vw 1vw 2vw;
+      margin-left: 2vw;
+  box-shadow: 5vh 5vh 10vh var(--rgba-primary-0);
+  border-radius: 10px;
+  transition: box-shadow 0.2s ease-in-out;
+  align-items: center;
   width: 22vw;
   margin-left: 14vh;
-  margin-top: 5vh;
-  height: 66vh;
-  
-  border-radius: 2vh;
 }
 div#festivalDestacado{
   background-image: url("../images/Logo\ Music4Events.png");
@@ -342,7 +342,8 @@ aside {
   display: flex;
   order: 1;
   height: 100%;
-  background-color: black;
+  background-image: url("../images/calendarEvents.jpg");
+  background-size: contain;
   width: 100%;
   flex-flow: column;
 }
@@ -361,6 +362,7 @@ div#eventDes {
   text-align: center;
   font-size: 2vw;
   border-radius: 15px;
+  margin-top: 7vh;
 }
 
 #calenheader {
@@ -396,6 +398,25 @@ div#eventDes {
 #diauno {
   background-color: var(--rgba-secondary-2-2);
   cursor: pointer;
+}
+
+div#buyMusic{
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.grupShop{
+  margin-top: 5vh;
+  display: flex;
+  width: 100%;
+  margin: 5%;
+  border-color: #cb7b08;
+  background-color: white;
+  width: 15vw;
 }
 
 #fanshop {
