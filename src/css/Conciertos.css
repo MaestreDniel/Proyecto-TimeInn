@@ -122,8 +122,13 @@ div#destacado {
   order: -1;
   width: 50vw;
   height: 100vh;
+  width: 20%;
   position: sticky;
-  top: 1vh;
+  top: 0;
+}
+
+#destacado img {
+  width: 100%;
 }
 
 /*CONCIERTOS*/
@@ -132,7 +137,7 @@ main {
   order: 0;
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 55%;
   flex-direction: column;
   align-items: flex-start;
   align-content: space-around;
@@ -154,6 +159,18 @@ div.concert {
   justify-content: space-between;
 }
 
+.concert h3 {
+  margin-bottom: 0.5vw;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+h3 {
+  font-size: 1.5vw;
+}
+
 div.infoConcert {
   display: grid;
   margin-left: 5vh;
@@ -166,11 +183,19 @@ button.info {
   width: 3vw;
 }
 
-.fa,
-.far,
-.fas {
+main .fa,
+main .far,
+main .fas {
   font-family: "Font Awesome 5 Free";
   font-size: 1.5vw;
+}
+
+main button {
+  display: inline;
+}
+
+main button:hover {
+  background-color: var(--rgba-secondary-1-3);
 }
 
 div#map {
@@ -193,7 +218,7 @@ aside {
   order: 1;
   height: 100%;
   background-color: black;
-  width: 50%;
+  width: 25%;
 }
 
 div#eventDes {
@@ -202,6 +227,10 @@ div#eventDes {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.imgEvent {
+  width: 100%;
 }
 
 div#calendario {
@@ -284,6 +313,14 @@ footer div:active {
 
 footer i {
   font-size: 3.5vw;
+}
+
+#url {
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-left: 8vw;
 }
 
 #url a:hover {
@@ -415,27 +452,28 @@ div#closeForm:hover {
 
 h1,h2,h3,h4{
   font-family: 'Times New Roman', Times, serif;
-}
 
-label{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-p{
+label {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-input{
-  font-family: 'Courier New', Courier, monospace;
+input {
+  font-family: "Courier New", Courier, monospace;
 }
 
 /*Boton Save/Añadir Concierto*/
-#add, #save {
+
+#add,#save {
   background-color: var(--rgba-secondary-1-2);
   cursor: pointer;
 }
 
-#add:hover, #save:hover {
+#add:hover,
+#save:hover {
   background-color: var(--rgba-secondary-1-3);
 }
 
