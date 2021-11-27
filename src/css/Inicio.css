@@ -41,7 +41,7 @@ header {
   display: flex;
   background-image: url("../images/fondoHeader.jpg");
   background-size: cover;
-  min-height: 80px;
+  max-height: 80vh;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -58,6 +58,7 @@ nav#paginas {
   display: flex;
   font-size: 2vw;
   align-items: end;
+  margin-bottom: 5vh;
 }
 
 nav#paginas div {
@@ -90,7 +91,20 @@ a:active {
 
 input#search {
   width: 10vw;
-  margin-right: 5px;
+  
+}
+
+div.buscar{
+  display: flex;
+  margin-bottom: 1vw;
+}
+
+button#buscar{
+  display: flex;
+  width: 1.7vw;
+  height: 4vh;
+  background-image: url("../images/buscar.PNG");
+  background-size: contain;
 }
 
 /*FIN HEADER*/
@@ -102,11 +116,16 @@ div#cuerpo {
 }
 
 /*NOTICIAS*/
+
+img.imgNews{
+  height: 37vh; 
+}
+
 div#news {
   order: -1;
   display: flex;
   width: 100%;
-  height: 120vw;
+  height: 105vw;
   overflow-y: scroll;
   flex-direction: column;
   font-size: 1.3vw;
@@ -151,29 +170,34 @@ a#moreNews {
 /*MAIN CENTRO*/
 main {
   display: block;
+
 }
+
+div#eventos{
+  background-image: url("../images/festivalesFondo.jpg");
+  background-size: cover;
+}
+
 
 div.festivalDes{
-  background-color: white;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  width: 20vw;
-  margin-left: 15vh;
-  /* margin-top: 20vh; */
-  height: 40vw;
-  border-radius: 2vh;
+  flex-flow: column nowrap;
+  background-color: white;
+  margin: 1vw 2vw 1vw 2vw;
+  margin-left: 2vw;
+  box-shadow: 5vh 5vh 10vh var(--rgba-primary-0);
+  border-radius: 10px;
+  transition: box-shadow 0.2s ease-in-out;
+  align-items: center;
+  width: 22vw;
+  margin-left: 14vh;
 }
+
 div#festivalDestacado{
-  background-image: url("../images/Logo\ Music4Events.png");
-  background-size: contain;
-  height: 40vw;
-  width: 40vw;
   margin-left: 7vw;
+  display: flex;
+  margin-top: 2%;
 }
-
-
 
   /* div#video {
   } */
@@ -260,9 +284,9 @@ img.patrocinio {
 }
 
 img.imgEvent {
-  width: 15vw;
-  height: 20vw;
-  border-radius: 10px 10px 0px 0px;
+  width: 22vw;
+height: 23vw;
+border-radius: 10px 10px 0px 0px;
 }
 
 .overlayevent {
@@ -312,7 +336,8 @@ aside {
   display: flex;
   order: 1;
   height: 100%;
-  background-color: black;
+  background-image: url("../images/calendarEvents.jpg");
+  background-size: contain;
   width: 100%;
   flex-flow: column;
 }
@@ -331,6 +356,7 @@ div#eventDes {
   text-align: center;
   font-size: 2vw;
   border-radius: 15px;
+  margin-top: 7vh;
 }
 
 #calenheader {
@@ -366,6 +392,25 @@ div#eventDes {
 #diauno {
   background-color: var(--rgba-secondary-2-2);
   cursor: pointer;
+}
+
+div#buyMusic{
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.grupShop{
+  margin-top: 5vh;
+  display: flex;
+  width: 100%;
+  margin: 5%;
+  border-color: #cb7b08;
+  background-color: white;
+  width: 15vw;
 }
 
 #fanshop {
@@ -571,6 +616,7 @@ body {
 
 
 *{
+  
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -589,3 +635,5 @@ p{
 input{
   font-family: 'Courier New', Courier, monospace;
 }
+
+
