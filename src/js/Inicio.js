@@ -99,21 +99,20 @@ News.noticias.sort(compare);
 //TODO:Imprimir Noticias. DONE
 //Imprimimos las noticias recorriendo el objeto con cada una de sus posiciones
 
-function imprimirNews() {
+function imprimirNews(noticia) {
   let txt = "";
-  for (let i in News.noticias) {
+  for (let i in noticia) {
     txt += '<div class="noticia">';
-    txt += News.noticias[i].foto;
+    txt += noticia[i].foto;
     txt += '<div class="info">';
-    txt += "<h4>" + News.noticias[i].titular + "</h4>";
-    txt += "<p>" + News.noticias[i].descripcion + "</p>";
-    txt += News.noticias[i].info + "<br>";
-
+    txt += "<h4>" + noticia[i].titular + "</h4>";
+    txt += "<p>" + noticia[i].descripcion + "</p>";
+    txt += noticia[i].info + "<br>";
     txt +=
       "Fecha Publicacion: " +
-      News.noticias[i].fecha.substr(8, 8) +
-      News.noticias[i].fecha.substr(4, 4) +
-      News.noticias[i].fecha.substr(0, 4) +
+      noticia[i].fecha.substr(8, 8) +
+      noticia[i].fecha.substr(4, 4) +
+      noticia[i].fecha.substr(0, 4) +
       "<br>";
     txt += '<button id="editNot"><i class="fas fa-pencil-alt"></i></button>';
     txt += '<button class="delNot"><i class="fas fa-trash-alt"></i></button>';
@@ -123,7 +122,7 @@ function imprimirNews() {
 }
 
 //Ejecutamos la función para que salte directamente
-imprimirNews();
+imprimirNews(News.noticias);
 
 //TODO:Objeto principal Events.DONE
 /* Creamos objetos eventos donde tienen la foto del evento
@@ -210,74 +209,58 @@ Events.eventos.sort(compareEventsPatroc);
 
 //TODO:Imprimir Eventos. DONE
 //Con esta función imprimimos los eventos recorriendo dicho objeto
-function imprimirEventos() {
+function imprimirEventos(evento) {
   let txt = "";
   txt += '<div class="degradadoizq"></div>';
-  for (let i in Events.eventos) {
+  for (let i in evento) {
     txt += '<div class="event">';
-    txt += Events.eventos[i].foto;
-    txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
+    txt += evento[i].foto;
+    txt += "<p><span>" + evento[i].nombre + "</span></p>";
     txt += "<div class='fechaevent'>Fecha Publicacion: <br>";
     txt +=
-      Events.eventos[i].fechaI.substr(8, 8) +
-      Events.eventos[i].fechaI.substr(4, 4) +
-      Events.eventos[i].fechaI.substr(0, 4) +
-      "<br>";
+      evento[i].fechaI.substr(8, 8) +
+      evento[i].fechaI.substr(4, 4) +
+      evento[i].fechaI.substr(0, 4) + "<br>";
     txt +=
-      Events.eventos[i].fechaF.substr(8, 8) +
-      Events.eventos[i].fechaF.substr(4, 4) +
-      Events.eventos[i].fechaF.substr(0, 4) +
-      "<br></div>";
-    txt +=
-      '<i class="fas fa-info-circle"></i>' +
-      Events.eventos[i].patronicio +
-      "</div>";
+      evento[i].fechaF.substr(8, 8) +
+      evento[i].fechaF.substr(4, 4) +
+      evento[i].fechaF.substr(0, 4) + "<br></div>";
+    txt += '<i class="fas fa-info-circle"></i>' + evento[i].patronicio + "</div>";
     txt += '<div class="overlayevent" onclick="off()">'; // Por defecto está oculto
-    txt +=
-      "<span>" +
-      Events.eventos[i].descripcion +
-      "<br>" +
-      Events.eventos[i].info +
-      "</span>" +
-      "</div>";
+    txt += "<span>" + evento[i].descripcion + "<br>" + evento[i].info + "</span>" + "</div>";
   }
   txt += '<div class="degradadoder"></div>';
   document.getElementById("eventos").innerHTML = txt;
 }
 
 //se imprimen automaticamente los eventos
-imprimirEventos();
+imprimirEventos(Events.eventos);
 
 //TODO: Festival Destacado
 //Tenemos un Festival destacado que va a ir aparte del resto de evento que resaltara sobre el resto
-const FestivalDes = {
-  festival: [
-    {
-      foto: '<img class="imgEvent"  src="images/event1.PNG" alt="No se pudo mostrar">',
-      nombre: "Mallorca Live Festival",
-      descripcion: "Venid al gran festival de la musica en Mallorca",
-      fechaI: "22/06/2022",
-      fechaF: "26/06/2022",
-      patronicio:
-        '<img class="patrocinio" src="images/patrocinioEvent1.PNG" alt="No se pudo mostrar">',
-      info: '<a href="https://mallorcalivemusic.com/festival/tickets/?utm_source=Search&utm_medium=paid&utm_content=keywords&utm_campaign=MuseMLF22&gclid=EAIaIQobChMI9dCovays9AIVWJ3VCh0MzgcrEAAYASAAEgI6D_D_BwE" id="ir">Quiero ir</a>',
-    },
-  ],
-};
+const festivalDest = [{
+  foto: '<img class="imgEvent"  src="images/event1.PNG" alt="No se pudo mostrar">',
+  nombre: "Mallorca Live Festival",
+  descripcion: "Venid al gran festival de la musica en Mallorca",
+  fechaI: "22/06/2022",
+  fechaF: "26/06/2022",
+  patronicio: '<img class="patrocinio" src="images/patrocinioEvent1.PNG" alt="No se pudo mostrar">',
+  info: '<a href="https://mallorcalivemusic.com/festival/tickets/?utm_source=Search&utm_medium=paid&utm_content=keywords&utm_campaign=MuseMLF22&gclid=EAIaIQobChMI9dCovays9AIVWJ3VCh0MzgcrEAAYASAAEgI6D_D_BwE" id="ir">Quiero ir</a>',
+}];
+
 
 //TODO:Impimir Festival destacado
 //Creamo esta función para impimir el evento destacado recorriendolo con un for
 function festivalDestacado() {
   let txt = "";
   txt += '<div class="degradadoizq"></div>';
-  for (let i in FestivalDes.festival) {
+  for (let i in festivalDest) {
     txt += '<div class="festivalDes">';
-    txt += FestivalDes.festival[i].foto;
+    txt += festivalDest[i].foto;
     txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
     txt += "Fecha Publicacion: <br>";
-    txt += FestivalDes.festival[i].fechaI + "<br>";
-    txt += FestivalDes.festival[i].fechaF + "<br>";
-   
+    txt += festivalDest[i].fechaI + "<br>";
+    txt += festivalDest[i].fechaF + "<br>";
   }
   txt += '<div class="degradadoder"></div>';
   document.getElementById("festivalDestacado").innerHTML = txt;
@@ -324,7 +307,7 @@ function mostrarFormulario() {
 
 //TODO:Informacion de los Eventos con efecto Overlay
 /* Estas líneas son las que hacen funcionar el efecto de overlay de la info de cada efecto */
-for (let i = 0; i <= Events.eventos.length; i++) {
+for (let i = 0; i <= Events.eventos.length - 1; i++) {
   document
     .getElementsByClassName("fas fa-info-circle")[i].addEventListener("click", function () {
       on(i);
@@ -333,7 +316,7 @@ for (let i = 0; i <= Events.eventos.length; i++) {
 
 //Funcion para que apareza que overlay
 function on(numevent) {
-  let info = document.getElementsByClassName("overlayevent")[numevent - 1];
+  let info = document.getElementsByClassName("overlayevent")[numevent];
   info.style.display = "block";
 }
 
