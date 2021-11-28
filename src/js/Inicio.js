@@ -109,13 +109,11 @@ function imprimirNews(noticia) {
     txt += "<p>" + noticia[i].descripcion + "</p>";
     txt += noticia[i].info + "<br>";
     txt +=
-      "Fecha Publicacion: " +
+      "Fecha de publicación: " +
       noticia[i].fecha.substr(8, 8) +
       noticia[i].fecha.substr(4, 4) +
       noticia[i].fecha.substr(0, 4) +
       "<br>";
-    txt += '<button id="editNot"><i class="fas fa-pencil-alt"></i></button>';
-    txt += '<button class="delNot"><i class="fas fa-trash-alt"></i></button>';
     txt += "</div></div>";
   }
   document.getElementById("news").innerHTML = txt;
@@ -216,7 +214,7 @@ function imprimirEventos(evento) {
     txt += '<div class="event">';
     txt += evento[i].foto;
     txt += "<p><span>" + evento[i].nombre + "</span></p>";
-    txt += "<div class='fechaevent'>Fecha Publicacion: <br>";
+    txt += "<div class='fechaevent'>Fecha de celebración: <br>";
     txt +=
       evento[i].fechaI.substr(8, 8) +
       evento[i].fechaI.substr(4, 4) +
@@ -258,7 +256,7 @@ function festivalDestacado() {
     txt += '<div class="festivalDes">';
     txt += festivalDest[i].foto;
     txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
-    txt += "Fecha Publicacion: <br>";
+    txt += "Fecha de celebración: <br>";
     txt += festivalDest[i].fechaI + "<br>";
     txt += festivalDest[i].fechaF + "<br>";
   }
@@ -382,3 +380,8 @@ checkCookie();
 document.getElementById("diauno").addEventListener("click", function () {
   location.href = 'Conciertos.html'; // Añade el enlace clicable a todo el contenedor
 });
+
+function menuNavRespons() {
+  let burger = document.getElementById("hamburger");
+  burger.classList.toggle("menuon");
+}

@@ -238,3 +238,8 @@ function mostrarFormulario() {
   var evento = document.getElementById("secciones");
   evento.style.display = block;
 }
+
+function menuNavRespons() {
+  let burger = document.getElementById("hamburger");
+  burger.classList.toggle("menuon");
+}

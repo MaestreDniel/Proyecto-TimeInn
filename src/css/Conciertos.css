@@ -53,11 +53,37 @@ header #logo {
   height: 8%;
 }
 
-nav#paginas {
-  display: flex;
-  font-size: 2vw;
-  align-items: end;
-  margin-bottom: 5vh;
+@media screen and (min-width: 600px) {
+  nav#paginas {
+    display: flex;
+    font-size: 2vw;
+    align-items: end;
+    margin-bottom: 5vh;
+  }
+
+  #burgerbutton {
+    display: none;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  nav#paginas {
+    display: none;
+  }
+
+  #burgerbutton {
+    display: flex;
+    background-color: white;
+    height: 6vw;
+    width: 6vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+  }
+}
+
+#burgerbutton:hover {
+  background-color: var(--rgba-primary-4-transpar);
 }
 
 nav#paginas div {
@@ -68,6 +94,25 @@ nav#paginas div {
 }
 
 nav#paginas div:hover {
+  background-color: var(--rgba-primary-4);
+}
+
+nav#hamburger div {
+  padding: 10px;
+  color: white;
+  margin-right: 2vw;
+  font-size: 3vw;
+}
+
+nav#hamburger {
+  background-color: black;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+nav#hamburger div:hover {
   background-color: var(--rgba-primary-4);
 }
 
@@ -88,6 +133,26 @@ a:active {
   color: white;
 }
 
+nav #conciertos {
+  color: var(--rgba-secondary-2-2);
+}
+
+@media screen and (max-width: 600px) {
+  nav#hamburger.menuon {
+    display: flex;
+    font-size: 2vw;
+    align-items: end;
+    margin-bottom: 5vh;
+    flex-direction: column;
+  }
+} 
+
+@media screen and (min-width: 600px) {
+  nav#hamburger {
+    display: none;
+  }
+} 
+
 input#search {
   width: 10vw;
 }
@@ -96,6 +161,7 @@ div.buscar {
   display: flex;
   margin-bottom: 1vw;
 }
+
 button#buscar {
   display: flex;
   width: 1.7vw;
