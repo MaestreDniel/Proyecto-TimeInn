@@ -6,7 +6,7 @@
 
   --rgba-primary-0: rgba(0, 0, 0, 1);
   --rgba-primary-1: rgba(1, 45, 62, 1);
-  --rgba-primary-1: rgba(1, 45, 62, 1);
+  --rgba-primary-2: rgba(4, 74, 100, 1);
   --rgba-primary-3: rgba(35, 98, 121, 1);
   --rgba-primary-4: rgba(78, 86, 88, 1);
   --rgba-primary-4-transpar: rgba(78, 86, 88, 0.8);
@@ -65,7 +65,7 @@ header #logo {
   #burgerbutton {
     display: none;
   }
-} 
+}
 
 @media screen and (max-width: 600px) {
   nav#paginas {
@@ -101,8 +101,7 @@ nav#paginas div:hover {
 nav#hamburger div {
   padding: 10px;
   color: white;
-  margin-right: 2vw;
-  font-size: 3vw;
+  font-size: 5vw;
 }
 
 nav#hamburger {
@@ -141,18 +140,16 @@ nav #index {
 @media screen and (max-width: 600px) {
   nav#hamburger.menuon {
     display: flex;
-    font-size: 2vw;
-    align-items: end;
-    margin-bottom: 5vh;
+    align-items: center;
     flex-direction: column;
   }
-} 
+}
 
 @media screen and (min-width: 600px) {
   nav#hamburger {
     display: none;
   }
-} 
+}
 
 input#search {
   width: 10vw;
@@ -184,7 +181,7 @@ button#buscar {
 @media screen and (max-width: 500px) {
   div#cuerpo {
     display: grid;
-    grid-template-rows: 60% 20% 20%;
+    grid-template-rows: 75% 5% 20%;
     grid-template-columns: 100%;
   }
 }
@@ -217,6 +214,7 @@ div#news {
     font-size: 4vw;
     height: 100%;
   }
+
   a#moreNews {
     font-weight: bold;
     font-size: 5vw;
@@ -279,6 +277,7 @@ div.festivalDes {
   align-items: center;
   width: 22vw;
   margin-left: 14vh;
+  text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -292,9 +291,6 @@ div#festivalDestacado {
   display: flex;
   margin-top: 2%;
 }
-
-/* div#video {
-  } */
 
 /*EVENTOS*/
 a#ir {
@@ -360,14 +356,14 @@ a#ir {
     font-size: 1.8vw;
     margin-bottom: 0.5vw;
   }
-  
+
   #eventos p span {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     font-size: 2vw;
     font-weight: bold;
   }
-  
+
   #eventos i {
     font-size: 3vw;
     margin-bottom: 5%;
@@ -379,14 +375,14 @@ a#ir {
     font-size: 1.2vw;
     margin-bottom: 0.5vw;
   }
-  
+
   #eventos p span {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     font-size: 1.4vw;
     font-weight: bold;
   }
-  
+
   #eventos i {
     font-size: 2vw;
     margin-bottom: 5%;
@@ -398,14 +394,14 @@ a#ir {
     font-size: 2.4vw;
     margin-bottom: 0.5vw;
   }
-  
+
   #eventos p span {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     font-size: 2.7vw;
     font-weight: bold;
   }
-  
+
   #eventos i {
     font-size: 4vw;
     margin-bottom: 5%;
@@ -537,6 +533,7 @@ div#buyMusic {
   margin-left: auto;
   margin-right: auto;
 }
+
 div.grupShop {
   margin-top: 5vh;
   display: flex;
@@ -557,8 +554,6 @@ div.grupShop {
   width: 100%;
   height: 100%;
 }
-
-/*FIN CENTRO*/
 
 /*FOOTER*/
 footer {
@@ -636,6 +631,15 @@ footer i {
   font-size: 1.5vw;
   transition: bottom 0.35s ease-in-out;
   animation: boton 0.65s;
+}
+
+@media screen and (max-width: 500px) {
+  #top {
+    font-size: 7vw;
+    bottom: 10vh;
+    right: 5vw;
+    border-radius: 5vw;
+  }
 }
 
 @keyframes boton {

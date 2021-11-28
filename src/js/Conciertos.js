@@ -1,3 +1,11 @@
+/**
+ * @author: Jeroni Mateo Curieses, Daniel Maestre Hermoso
+ * Fecha inicio: 3/11/2021
+ * Fecha fin: 28/11/2021
+ * Asignatura: Entorno Cliente y Diseño de Interfaces
+ * @version: 1.0
+ */
+
 // TODO:Objeto Conciertos.DONE
 // Creamos los objetos para los conciertos
 const Concert = {
@@ -72,16 +80,16 @@ const Concert = {
 function imprimirConcierto(conciertos) {
   let txt = "";
   txt += "<br>"
-  txt += '<button onclick="saltarFormulario()" type="button" id="addConcert"><i class="far fa-plus-square"></i></button>';
-  txt += '<button onclick="filtraConciertos()" type="button" id="filterConcert"><i class="fas fa-filter"></i></button>';
-  txt += '<button onclick="imprimirConcierto(Concert.conciertos)" type="button" id="filterConcert"><i class="fas fa-undo-alt"></i></button>';
+  txt += '<div id="contfunc"><div class="funciones">Añadir nuevo concierto<button onclick="saltarFormulario()" type="button" id="addConcert"><i class="far fa-plus-square"></i></button></div>';
+  txt += '<div class="funciones">Filtros de búsqueda<button onclick="filtraConciertos()" type="button" id="filterConcert"><i class="fas fa-filter"></i></button></div>';
+  txt += '<div class="funciones">Resetea los filtros<button onclick="imprimirConcierto(Concert.conciertos)" type="button" id="filterConcert"><i class="fas fa-undo-alt"></i></button></div></div>';
   // Creamos un bucle Para recorrer los objetos de los Conciertos y a continuación imprimimos cada uno de ellos
   for (let i in conciertos) {
     txt += conciertos[i].div;
     txt += conciertos[i].link + conciertos[i].foto + "</a>";
     txt += '<div class="infoConcert">';
     txt += '<div id="edicion">';
-    txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
+    txt += `<button id="editConcert" onclick="editEvent(${i})"><i class="fas fa-pencil-alt"></i></button>`;
     txt += `<button onclick="eliminarEvent(${i})" class="delConcert"><i class="fas fa-trash-alt"></i></button>`
     txt += '</div>'
     txt += "<h2>" + conciertos[i].titulo + "</h2>";

@@ -1,6 +1,14 @@
-//TODO:Objeto News. DONE
-/*Creamos una serie de objetos noticias los cuales imprimiremos directamente
-Los cuales constan de una foto, un titular, una descripción, una fecha y un boton que nos lleva a la noticia*/
+/**
+ * @author: Jeroni Mateo Curieses, Daniel Maestre Hermoso
+ * Fecha inicio: 3/11/2021
+ * Fecha fin: 28/11/2021
+ * Asignatura: Entorno Cliente y Diseño de Interfaces
+ * @version: 1.0
+ */
+
+// TODO:Objeto News. DONE
+/* Creamos una serie de objetos noticias los cuales imprimiremos directamente
+Las noticias contienen foto, titular, descripción, fecha y un botón con más información */
 
 const News = {
   noticias: [{
@@ -84,6 +92,7 @@ const News = {
   ],
 };
 
+// Ordena las noticias según su fecha de publicación
 function compare(a, b) {
   if (a.fecha < b.fecha) {
     return 1;
@@ -96,8 +105,8 @@ function compare(a, b) {
 
 News.noticias.sort(compare);
 
-//TODO:Imprimir Noticias. DONE
-//Imprimimos las noticias recorriendo el objeto con cada una de sus posiciones
+// TODO:Imprimir Noticias. DONE
+// Se recorre la estructura de datos para imprimir las noticias en la página de inicio
 
 function imprimirNews(noticia) {
   let txt = "";
@@ -119,10 +128,10 @@ function imprimirNews(noticia) {
   document.getElementById("news").innerHTML = txt;
 }
 
-//Ejecutamos la función para que salte directamente
+// Ejecutamos la función para que salte directamente
 imprimirNews(News.noticias);
 
-//TODO:Objeto principal Events.DONE
+// TODO:Objeto principal Events.DONE
 /* Creamos objetos eventos donde tienen la foto del evento
  el nombre del evento una pequeña descripción y un link para mas información */
 
@@ -205,8 +214,8 @@ function compareEventsPatroc(a, b) {
 
 Events.eventos.sort(compareEventsPatroc);
 
-//TODO:Imprimir Eventos. DONE
-//Con esta función imprimimos los eventos recorriendo dicho objeto
+// TODO:Imprimir Eventos. DONE
+// Funciona de manera similar a imprimirNews
 function imprimirEventos(evento) {
   let txt = "";
   txt += '<div class="degradadoizq"></div>';
@@ -231,11 +240,11 @@ function imprimirEventos(evento) {
   document.getElementById("eventos").innerHTML = txt;
 }
 
-//se imprimen automaticamente los eventos
+// Se imprimen automaticamente los eventos
 imprimirEventos(Events.eventos);
 
-//TODO: Festival Destacado
-//Tenemos un Festival destacado que va a ir aparte del resto de evento que resaltara sobre el resto
+// TODO: Festival Destacado
+// Tenemos un Festival destacado apartado de otros eventos
 const festivalDest = [{
   foto: '<img class="imgEvent"  src="images/event1.PNG" alt="No se pudo mostrar">',
   nombre: "Mallorca Live Festival",
@@ -247,8 +256,7 @@ const festivalDest = [{
 }];
 
 
-//TODO:Impimir Festival destacado
-//Creamo esta función para impimir el evento destacado recorriendolo con un for
+// TODO: Imprimir Festival destacado
 function festivalDestacado() {
   let txt = "";
   txt += '<div class="degradadoizq"></div>';
@@ -263,9 +271,8 @@ function festivalDestacado() {
   txt += '<div class="degradadoder"></div>';
   document.getElementById("festivalDestacado").innerHTML = txt;
 }
-festivalDestacado()
-//se imprimen automaticamente los eventos
 
+festivalDestacado()
 
 /* Es el botón de go back to top, que saldrá en el momento
 que el usuario hace scroll 100px hacia abajo desde el tope de la página */
@@ -312,13 +319,13 @@ for (let i = 0; i <= Events.eventos.length - 1; i++) {
     });
 }
 
-//Funcion para que apareza que overlay
+// Función para que apareza que overlay
 function on(numevent) {
   let info = document.getElementsByClassName("overlayevent")[numevent];
   info.style.display = "block";
 }
 
-//Funcion para que desaparezca el overlay
+// Función para que desaparezca el overlay
 function off() {
   for (let i = 0; i < Events.eventos.length; i++) {
     let info = document.getElementsByClassName("overlayevent")[i];
@@ -326,7 +333,7 @@ function off() {
   }
 }
 
-//TODO:LOGIN/Suscripcion
+// TODO:LOGIN/Suscripcion
 function login() {
   document.getElementById("suscripcion").style.display = "none";
 }
@@ -337,7 +344,7 @@ function login() {
  * https://stackoverflow.com/questions/15385641/javascript-code-for-cookie-not-working-in-chrome
  */
 
-//TODO:COOKIE Suscripcion
+// TODO:COOKIE Suscripción
 
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
