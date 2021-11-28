@@ -273,7 +273,7 @@ function festivalDestacado() {
   for (let i in FestivalDes.festival) {
     txt += '<div class="festivalDes">';
     txt += FestivalDes.festival[i].foto;
-    txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
+    txt += "<p><span>" + FestivalDes.festival[i].nombre + "</span></p>";
     txt += "Fecha Publicacion: <br>";
     txt += FestivalDes.festival[i].fechaI + "<br>";
     txt += FestivalDes.festival[i].fechaF + "<br>";
