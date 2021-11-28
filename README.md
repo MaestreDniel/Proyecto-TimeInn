@@ -4,6 +4,10 @@
 
 - LINK: https://balsamiq.cloud/s93gm7i/pd0tzro/r1337
 
+## NETLIFY
+
+- LINK: https://elated-gates-aa09b3.netlify.app/
+
 ## GITHUB PROJECT
 
 - LINK: https://github.com/MaestreDniel/Proyecto-TimeInn/projects/1
