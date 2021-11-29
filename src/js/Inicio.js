@@ -256,17 +256,13 @@ const festivalDest = [{
 }];
 
 
+
 // TODO: Imprimir Festival destacado
 function festivalDestacado() {
   let txt = "";
   txt += '<div class="degradadoizq"></div>';
-  for (let i in festivalDest.festival) {
+  for (let i in festivalDest) {
     txt += '<div class="festivalDes">';
-    txt += festivalDest.festival[i].foto;
-    txt += "<p><span>" + festivalDest.festival[i].nombre + "</span></p>";
-    txt += "Fecha Publicacion: <br>";
-    txt += festivalDest.festival[i].fechaI + "<br>";
-    txt += festivalDest.festival[i].fechaF + "<br>";
     txt += festivalDest[i].foto;
     txt += "<p><span>" + Events.eventos[i].nombre + "</span></p>";
     txt += "Fecha de celebración: <br>";
