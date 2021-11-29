@@ -1,15 +1,24 @@
-//TODO:Objeto Conciertos.DONE
-//A continuacion creamos los objetos para los Conciertos que seran 6 en total
+/**
+ * @author: Jeroni Mateo Curieses, Daniel Maestre Hermoso
+ * Fecha inicio: 3/11/2021
+ * Fecha fin: 28/11/2021
+ * Asignatura: Entorno Cliente y Diseño de Interfaces
+ * @version: 1.0
+ */
+
+// TODO:Objeto Conciertos.DONE
+// Creamos los objetos para los conciertos
 const Concert = {
   conciertos: [{
       /**
-       * Cada objeto tendra un div donde ira metido un id para poder manipularlo 
-       * el link que cuando pulsemos la imagen nos eviara a la pagina oficial del grupo
-       * una imagen del poster del concierto
-       * Los titulos de los conciertos los cuales estan enumerados para ser mas faciles para crear, ediar y eliminar
+       * Cada objeto tendrá:
+       * Un div donde irá metido un id para poder manipularlo 
+       * El link que dirige al usuario a la página oficial del grupo
+       * Una imagen del poster del concierto
+       * Título del concierto
        * El nombre del grupo o cantante
        * Las fechas de los eventos 
-       * FInalmente donde es el concierto
+       * Lugar del concierto
        */
       div: '<div class="concert" id="concierto1">',
       link: ' <a href="https://www.the-scorpions.com/">',
@@ -71,17 +80,17 @@ const Concert = {
 function imprimirConcierto(conciertos) {
   let txt = "";
   txt += "<br>"
-  txt += '<button onclick="saltarFormulario()" type="button" id="addConcert"><i class="far fa-plus-square"></i></button>';
-  txt += '<button onclick="filtraConciertos()" type="button" id="filterConcert"><i class="fas fa-filter"></i></button>';
-  txt += '<button onclick="imprimirConcierto(Concert.conciertos)" type="button" id="filterConcert"><i class="fas fa-undo-alt"></i></button>';
+  txt += '<div id="contfunc"><div class="funciones">Añadir nuevo concierto<button onclick="saltarFormulario()" type="button" id="addConcert"><i class="far fa-plus-square"></i></button></div>';
+  txt += '<div class="funciones">Filtros de búsqueda<button onclick="filtraConciertos()" type="button" id="filterConcert"><i class="fas fa-filter"></i></button></div>';
+  txt += '<div class="funciones">Resetea los filtros<button onclick="imprimirConcierto(Concert.conciertos)" type="button" id="filterConcert"><i class="fas fa-undo-alt"></i></button></div></div>';
   // Creamos un bucle Para recorrer los objetos de los Conciertos y a continuación imprimimos cada uno de ellos
   for (let i in conciertos) {
     txt += conciertos[i].div;
     txt += conciertos[i].link + conciertos[i].foto + "</a>";
     txt += '<div class="infoConcert">';
     txt += '<div id="edicion">';
-    txt += '<button id="editConcert"  onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
-    txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
+    txt += `<button id="editConcert" onclick="editEvent(${i})"><i class="fas fa-pencil-alt"></i></button>`;
+    txt += `<button onclick="eliminarEvent(${i})" class="delConcert"><i class="fas fa-trash-alt"></i></button>`
     txt += '</div>'
     txt += "<h2>" + conciertos[i].titulo + "</h2>";
     txt += "<h3>" + conciertos[i].grupo + "</h3>";
@@ -90,12 +99,10 @@ function imprimirConcierto(conciertos) {
     txt += '</div>';
     txt += '</div>'
   }
-
   document.getElementById("conciertos").innerHTML = txt;
-
 }
 
-//Ejecutamos la función para que al ejecutar la pagina ya este impreso
+// Se imprime directamente al cargar la página
 imprimirConcierto(Concert.conciertos);
 
 
@@ -131,47 +138,45 @@ function saltarFormulario() {
   document.getElementById("newConcierto").style.display = "block";
 }
 
+// TODO:Añadir nuevo Concierto
+// Cogemos los todos valores del formulario 
+// Creamos un objeto con cada uno de los valores del formulario
+// Finalmente lo imprimimos debajo del último evento
 
-//TODO:Añadir nuevo Concierto
-//Cogemos los todos valores del formulario 
-//Creamos un objeto con cada uno de los valores del formulario
-
-//Finalmente lo imprimimos debajo del ultimo evento
 let cerrarForm = false;
 
 function añadirConcierto() {
   let randomid = Math.round(Math.random() * 1000000, 1);
-  const NewConcert = {
-    conciertoNuevo: [{
-      div: `<div class="concert" id="${randomid}">`,
-      url: document.getElementById("link").value,
-      poster: '<img src="/src/images/concierto1.png" >',
-      titulo: document.getElementById("titulo").value,
-      grupo: document.getElementById("grupo").value,
-      fecha: document.getElementById("fecha").value,
-      lugar: document.getElementById("lugar").value
-    }]
-  }
+  const conciertoNuevo = [{
+    div: `<div class="concert" id="${randomid}">`,
+    url: document.getElementById("link").value,
+    poster: '<img src="/src/images/concierto1.png" >',
+    titulo: document.getElementById("titulo").value,
+    grupo: document.getElementById("grupo").value,
+    fecha: document.getElementById("fecha").value,
+    lugar: document.getElementById("lugar").value
+  }];
+
   let txt = "";
   txt += "<br>"
   //Para imprimir hacemos lo mismo que con las noticias recorremos el objeto y se va imprimiendo
-  for (let i in NewConcert.conciertoNuevo) {
-    txt += NewConcert.conciertoNuevo[i].div;
-    txt += NewConcert.conciertoNuevo[i].poster;
+  for (let i in conciertoNuevo) {
+    txt += conciertoNuevo[i].div;
+    txt += conciertoNuevo[i].poster;
     txt += '<div class="infoConcert">';
-    txt += "<h2>" + NewConcert.conciertoNuevo[i].titulo + "</h2>";
-    txt += "<h3>" + NewConcert.conciertoNuevo[i].grupo + "</h3>";
-    txt += "<h3>" + NewConcert.conciertoNuevo[i].fecha + "</h3>";
-    txt += "<h3>" + NewConcert.conciertoNuevo[i].lugar + "</h3>";
+    txt += "<h2>" + conciertoNuevo[i].titulo + "</h2>";
+    txt += "<h3>" + conciertoNuevo[i].grupo + "</h3>";
+    txt += "<h3>" + conciertoNuevo[i].fecha + "</h3>";
+    txt += "<h3>" + conciertoNuevo[i].lugar + "</h3>";
     txt += '</div>';
     txt += '<div id="edicion">';
     txt += '<button id="editConcert" onclick="editEvent()"><i class="fas fa-pencil-alt"></i></button>';
     txt += '<button onclick="eliminarEvent()" class="delConcert"><i class="fas fa-trash-alt"></i></button>'
     txt += '</div>'
     txt += '</div>'
-    if (NewConcert.conciertoNuevo[i].url === "" || NewConcert.conciertoNuevo[i].titulo === "" ||
-      NewConcert.conciertoNuevo[i].grupo === "" || NewConcert.conciertoNuevo[i].fecha === "" ||
-      NewConcert.conciertoNuevo[i].lugar === "") {
+    if (conciertoNuevo[i].url === "" || conciertoNuevo[i].titulo === "" ||
+      conciertoNuevo[i].grupo === "" || conciertoNuevo[i].fecha === "" ||
+      conciertoNuevo[i].lugar === "") {
       cerrarForm = false;
       alert("Debes rellenar todos los campos del formulario");
     } else {
@@ -182,7 +187,7 @@ function añadirConcierto() {
   }
 }
 
-//TODO:Cerrar formulario
+// TODO:Cerrar formulario
 function closeForm() { // Es para que se cierre automáticamente al añadir un concierto, no es lo mismo que cerrable()
   if (cerrarForm == true) {
     document.getElementById("newConcierto").style.display = "none";
@@ -197,8 +202,8 @@ function cerrable() { // Es para que se pueda cerrar directamente, se haya añad
   document.getElementById("newConcierto").style.display = "none";
 }
 
-//TODO:Busqueda Formulario 
-//Cuando pulsamos el boton de Grupos o estilos salta el formulario
+// TODO:Busqueda Formulario 
+// Cuando pulsamos el boton de Grupos o estilos salta el formulario
 function mostrarFormulario() {
   document.getElementById("formularioBusqueda").style.display = block;
   document.getElementById("secciones").style.display = block;
@@ -230,75 +235,12 @@ function filtraConciertos() {
 
 }
 
-//TODO: Editar Eventos
-//FUncion para editar eventos
-function editEvent() {
-  //Preguntamos al usuario cual quiere editar
-  var numEvent = parseInt(prompt("Que numero de concierto quieres editar"));
-  //Cogemos la plantilla para editar eventos
-  var newEvent = document.getElementById("editEvent");
-
-  //Dependiendo de que numero pase el por el prompt desaparecera un evento y aparecerá otro en su lugar
-  switch (numEvent) {
-    case 1:
-      document.getElementById("concierto1").style.display = "none";
-      newEvent.style.display = "block";
-      break;
-    case 2:
-      document.getElementById("concierto2").style.display = "none";
-      newEvent.style.display = "block";
-      break;
-    case 3:
-      document.getElementById("concierto3").style.display = "none";
-      newEvent.style.display = "block";
-      break;
-    case 4:
-      document.getElementById("concierto4").style.display = "none";
-      newEvent.style.display = "block";
-      break;
-    default:
-      alert("Solo hay 4 conciertos");
-      break;
-
-
-  }
+// TODO: Eliminar Eventos.DONE
+// Funcion para eliminar Eventos
+function eliminarEvent(evento) {
+  Concert.conciertos.splice(evento, 1);
+  imprimirConcierto(Concert.conciertos);
 }
-
-//TODO: Eliminar Eventos.DONE
-//Funcion para eliminar Eventos
-function eliminarEvent() {
-  //Preguntamos al usuario cual quiere eliminar
-
-  var numEvent = parseInt(prompt("Que numero de concierto quieres eliminar"));
-
-  //Dependiendo de que numero pase el por el prompt desaparecera un evento u otro
-  switch (numEvent) {
-    case 1:
-      document.getElementById("concierto1").style.display = "none";
-      break;
-    case 2:
-      document.getElementById("concierto2").style.display = "none";
-      break;
-    case 3:
-      document.getElementById("concierto3").style.display = "none";
-      break;
-    case 4:
-      document.getElementById("concierto4").style.display = "none";
-      break;
-    case 5:
-      document.getElementById("concierto5").style.display = "none";
-      break;
-    case 6:
-      document.getElementById("concierto6").style.display = "none";
-      break;
-    default:
-      alert("Solo hay 6 conciertos");
-      break;
-
-
-  }
-}
-
 
 /* Es el botón de go back to top, que saldrá en el momento
 que el usuario hace scroll 100px hacia abajo desde el tope de la página */
@@ -317,15 +259,15 @@ function scrollFunction() {
   }
 }
 
-//TODO:Go to TOP
+// TODO:Go to TOP
 // Vuelve arriba al ser clicado
 function backToTop() {
   document.body.scrollTop = 0; // Safari
   document.documentElement.scrollTop = 0; // Chrome, Firefox, IE y Opera
 }
 
-//TODO:Formulario Busqueda
-//Cuando pulsamos el boton de Grupos o estilos salta el formulario
+// TODO:Formulario Busqueda
+// Cuando pulsamos el boton de Grupos o estilos salta el formulario
 function mostrarFormulario() {
   var formulario = document.getElementById("formularioBusqueda");
   formulario.style.display = block;
@@ -333,10 +275,7 @@ function mostrarFormulario() {
   evento.style.display = block;
 }
 
-
-
-//TODO:DATAPICKER para elegir fecha.DONE
-//Datapicker
-/* $(function () {
-$("#datepicker").datepicker();
-}); */
+function menuNavRespons() {
+  let burger = document.getElementById("hamburger");
+  burger.classList.toggle("menuon");
+}

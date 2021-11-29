@@ -6,7 +6,7 @@
 
   --rgba-primary-0: rgba(0, 0, 0, 1);
   --rgba-primary-1: rgba(1, 45, 62, 1);
-  --rgba-primary-1: rgba(1, 45, 62, 1);
+  --rgba-primary-2: rgba(4, 74, 100, 1);
   --rgba-primary-3: rgba(35, 98, 121, 1);
   --rgba-primary-4: rgba(78, 86, 88, 1);
   --rgba-primary-4-transpar: rgba(78, 86, 88, 0.8);
@@ -54,11 +54,37 @@ header #logo {
   height: 8%;
 }
 
-nav#paginas {
-  display: flex;
-  font-size: 2vw;
-  align-items: end;
-  margin-bottom: 5vh;
+@media screen and (min-width: 600px) {
+  nav#paginas {
+    display: flex;
+    font-size: 2vw;
+    align-items: end;
+    margin-bottom: 5vh;
+  }
+
+  #burgerbutton {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav#paginas {
+    display: none;
+  }
+
+  #burgerbutton {
+    display: flex;
+    background-color: white;
+    height: 6vw;
+    width: 6vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+  }
+}
+
+#burgerbutton:hover {
+  background-color: var(--rgba-primary-4-transpar);
 }
 
 nav#paginas div {
@@ -72,7 +98,23 @@ nav#paginas div:hover {
   background-color: var(--rgba-primary-4);
 }
 
+nav#hamburger div {
+  padding: 10px;
+  color: white;
+  font-size: 5vw;
+}
 
+nav#hamburger {
+  background-color: black;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+nav#hamburger div:hover {
+  background-color: var(--rgba-primary-4);
+}
 
 nav i {
   font-size: 100%;
@@ -91,16 +133,34 @@ a:active {
   color: white;
 }
 
-input#search {
-  width: 10vw;
-  
+nav #index {
+  color: var(--rgba-secondary-2-2);
 }
 
-div.buscar{
+@media screen and (max-width: 600px) {
+  nav#hamburger.menuon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  nav#hamburger {
+    display: none;
+  }
+}
+
+input#search {
+  width: 10vw;
+}
+
+div.buscar {
   display: flex;
   margin-bottom: 1vw;
 }
-button#buscar{
+
+button#buscar {
   display: flex;
   width: 1.7vw;
   height: 4vh;
@@ -111,25 +171,55 @@ button#buscar{
 /*FIN HEADER*/
 
 /*CUERPO*/
-div#cuerpo {
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
+@media screen and (min-width: 500px) {
+  div#cuerpo {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  div#cuerpo {
+    display: grid;
+    grid-template-rows: 75% 5% 20%;
+    grid-template-columns: 100%;
+  }
 }
 
 /*NOTICIAS*/
 
-img.imgNews{
-  height: 37vh; 
+img.imgNews {
+  height: 37vh;
 }
 
 div#news {
   order: -1;
   display: flex;
   width: 100%;
-  height: 120vw;
+  height: 105vw;
   overflow-y: scroll;
   flex-direction: column;
   font-size: 1.3vw;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  div#news {
+    font-size: 1.8vw;
+    height: 150vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  div#news {
+    font-size: 4vw;
+    height: 100%;
+  }
+
+  a#moreNews {
+    font-weight: bold;
+    font-size: 5vw;
+    color: var(--rgba-secondary-2-1);
+  }
 }
 
 div.noticia {
@@ -137,11 +227,8 @@ div.noticia {
   background-color: var(--rgba-primary-4);
 }
 
-a#moreNews {
-  font-weight: bold;
-  font-size: 2vw;
-  background-color: rgba(4, 74, 100, 1);
-  color: rgba(160, 12, 0, 1);
+a#moreNews:hover {
+  color: var(--rgba-secondary-2-2);
 }
 
 .noticia img {
@@ -171,20 +258,21 @@ a#moreNews {
 /*MAIN CENTRO*/
 main {
   display: block;
-
 }
 
-div#eventos{
+div#eventos {
   background-image: url("../images/festivalesFondo.jpg");
   background-size: cover;
 }
 
 
-div.festivalDes{
+
+div.festivalDes {
   display: flex;
   flex-flow: column nowrap;
   background-color: white;
   margin: 1vw 2vw 1vw 2vw;
+  margin-left: 2vw;
   box-shadow: 5vh 5vh 10vh var(--rgba-primary-0);
   border-radius: 10px;
   transition: box-shadow 0.2s ease-in-out;
@@ -202,15 +290,20 @@ div#festivalDestacado{
   background-size: contain;
   height: 75vh;
   width: 70vh;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  div.festivalDes {
+    display: none;
+  }
+}
+
+div#festivalDestacado {
   margin-left: 7vw;
   display: flex;
   margin-top: 2%;
 }
-
-
-
-  /* div#video {
-  } */
 
 /*EVENTOS*/
 a#ir {
@@ -271,21 +364,61 @@ a#ir {
   box-shadow: 10px 10px 14px var(--rgba-secondary-2-2);
 }
 
-#eventos .fechaevent {
-  font-size: 1.2vw;
-  margin-bottom: 0.5vw;
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  #eventos .fechaevent {
+    font-size: 1.8vw;
+    margin-bottom: 0.5vw;
+  }
+
+  #eventos p span {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    font-size: 2vw;
+    font-weight: bold;
+  }
+
+  #eventos i {
+    font-size: 3vw;
+    margin-bottom: 5%;
+  }
 }
 
-#eventos p span {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  font-size: 1.4vw;
-  font-weight: bold;
+@media screen and (min-width: 1000px) {
+  #eventos .fechaevent {
+    font-size: 1.2vw;
+    margin-bottom: 0.5vw;
+  }
+
+  #eventos p span {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    font-size: 1.4vw;
+    font-weight: bold;
+  }
+
+  #eventos i {
+    font-size: 2vw;
+    margin-bottom: 5%;
+  }
 }
 
-#eventos i {
-  font-size: 2vw;
-  margin-bottom: 5%;
+@media screen and (max-width: 500px) {
+  #eventos .fechaevent {
+    font-size: 2.4vw;
+    margin-bottom: 0.5vw;
+  }
+
+  #eventos p span {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    font-size: 2.7vw;
+    font-weight: bold;
+  }
+
+  #eventos i {
+    font-size: 4vw;
+    margin-bottom: 5%;
+  }
 }
 
 img.patrocinio {
@@ -295,8 +428,8 @@ img.patrocinio {
 
 img.imgEvent {
   width: 22vw;
-height: 23vw;
-border-radius: 10px 10px 0px 0px;
+  height: 23vw;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .overlayevent {
@@ -404,7 +537,7 @@ div#eventDes {
   cursor: pointer;
 }
 
-div#buyMusic{
+div#buyMusic {
   display: flex;
   justify-content: space-between;
   overflow-x: scroll;
@@ -413,7 +546,8 @@ div#buyMusic{
   margin-left: auto;
   margin-right: auto;
 }
-div.grupShop{
+
+div.grupShop {
   margin-top: 5vh;
   display: flex;
   width: 100%;
@@ -427,15 +561,12 @@ div.grupShop{
   width: 100%;
   position: sticky;
   top: 12vh;
-  
 }
 
 #fanshop img {
   width: 100%;
   height: 100%;
 }
-
-/*FIN CENTRO*/
 
 /*FOOTER*/
 footer {
@@ -513,6 +644,15 @@ footer i {
   font-size: 1.5vw;
   transition: bottom 0.35s ease-in-out;
   animation: boton 0.65s;
+}
+
+@media screen and (max-width: 500px) {
+  #top {
+    font-size: 7vw;
+    bottom: 10vh;
+    right: 5vw;
+    border-radius: 5vw;
+  }
 }
 
 @keyframes boton {
@@ -624,26 +764,21 @@ body {
   margin-left: 8.5vh;
 }
 
-
-*{
-  
-  font-family: Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Times New Roman", Times, serif;
 }
 
-h1,h2,h3,h4{
-  font-family: 'Times New Roman', Times, serif;
-}
-
-label{
+label {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-p{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input{
-  font-family: 'Courier New', Courier, monospace;
+input {
+  font-family: "Courier New", Courier, monospace;
 }
-
-

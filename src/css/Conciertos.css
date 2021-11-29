@@ -53,11 +53,36 @@ header #logo {
   height: 8%;
 }
 
-nav#paginas {
-  display: flex;
-  font-size: 2vw;
-  align-items: end;
-  margin-bottom: 5vh;
+@media screen and (min-width: 600px) {
+  nav#paginas {
+    display: flex;
+    font-size: 2vw;
+    align-items: end;
+  }
+
+  #burgerbutton {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav#paginas {
+    display: none;
+  }
+
+  #burgerbutton {
+    display: flex;
+    background-color: white;
+    height: 6vw;
+    width: 6vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+  }
+}
+
+#burgerbutton:hover {
+  background-color: var(--rgba-primary-4-transpar);
 }
 
 nav#paginas div {
@@ -71,7 +96,23 @@ nav#paginas div:hover {
   background-color: var(--rgba-primary-4);
 }
 
+nav#hamburger div {
+  padding: 10px;
+  color: white;
+  font-size: 5vw;
+}
 
+nav#hamburger {
+  background-color: black;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+nav#hamburger div:hover {
+  background-color: var(--rgba-primary-4);
+}
 
 nav i {
   font-size: 100%;
@@ -90,16 +131,34 @@ a:active {
   color: white;
 }
 
-input#search {
-  width: 10vw;
-  
+nav #paginaconciertos {
+  color: var(--rgba-secondary-2-2);
 }
 
-div.buscar{
+@media screen and (max-width: 600px) {
+  nav#hamburger.menuon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  nav#hamburger {
+    display: none;
+  }
+}
+
+input#search {
+  width: 10vw;
+}
+
+div.buscar {
   display: flex;
   margin-bottom: 1vw;
 }
-button#buscar{
+
+button#buscar {
   display: flex;
   width: 1.7vw;
   height: 4vh;
@@ -133,11 +192,9 @@ div#destacado {
 
 /*CONCIERTOS*/
 main {
- 
   order: 0;
   display: flex;
   flex-wrap: wrap;
-  width: 55%;
   flex-direction: column;
   align-items: flex-start;
   align-content: space-around;
@@ -145,11 +202,6 @@ main {
 
 main#conciertos {
   background-color: var(--rgba-primary-4-transpar);
-}
-
-#conciertos img {
-  width: 14vw;
-  height: 18vw;
 }
 
 div.concert {
@@ -163,12 +215,48 @@ div.concert {
   margin-bottom: 0.5vw;
 }
 
-h2 {
-  font-size: 2vw;
+@media screen and (min-width: 600px) {
+  h2 {
+    font-size: 2vw;
+  }
+
+  h3 {
+    font-size: 1.5vw;
+  }
+
+  #conciertos img {
+    width: 14vw;
+    height: 18vw;
+  }
 }
 
-h3 {
-  font-size: 1.5vw;
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+
+  #conciertos img {
+    width: 20vw;
+    height: 28vw;
+  }
+}
+
+div#contfunc {
+  display: flex;
+  font-size: 2vw;
+  padding: 0vw 1vw 1vw 1vw;
+  background-color: var(--rgba-secondary-1-0);
+  color: white;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.funciones button {
+  margin-left: 1vw;
 }
 
 div.infoConcert {
@@ -221,48 +309,35 @@ aside {
   width: 25%;
 }
 
-div#eventDes {
-  margin-top: 10%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 .imgEvent {
   width: 100%;
 }
 
-div#calendario {
-  display: grid;
-}
-
 #fanshop {
   width: 100%;
- 
   top: 12vh;
-  
 }
 
 #fanshop img {
   width: 100%;
   height: 100%;
 }
-div#comprar{
+
+div#comprar {
   display: grid;
 }
-div.buy{
+
+div.buy {
   display: grid;
   margin: 1%;
   width: 100%;
   justify-items: center;
   align-items: center;
   justify-content: center;
-
 }
-img.buy{
+img.buy {
   display: grid;
-  width: 20vw; 
+  width: 20vw;
 }
 
 /*FOOTER*/
@@ -454,6 +529,9 @@ h1,h2,h3,h4{
   font-family: 'Times New Roman', Times, serif;
 
 }
+
+
+
 label {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -476,5 +554,3 @@ input {
 #save:hover {
   background-color: var(--rgba-secondary-1-3);
 }
-
-
