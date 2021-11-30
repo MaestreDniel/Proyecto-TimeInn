@@ -29,6 +29,11 @@
   }
   
 
+/*Formulario Sign Up*/  
+div#formSignUp{
+  display: flex;
+}
+
 p.error{
     color: rgba(160, 12, 0, 1);
 }
