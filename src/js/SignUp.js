@@ -1,19 +1,47 @@
+const { name } = require("browser-sync");
+
+/**
+ * Cogemos el valor de los campos del formulario para poder introducirlos en sus validaciones
+ * cogiendo sus respectivas variables 
+ * */
+var email = document.getElementById("email").value;
+var name = document.getElementById("name").value;
+var password = document.getElementById("password").value;
+var confirmP = document.getElementById("confirmP").value;
+
 //TODO: Validar Sign Up
 function validarSignUp(){
-    var email = document.getElementById("email").value;
-    var name = document.getElementById("name").value;
-    var password = document.getElementById("password").value;
-    var confirmP = document.getElementById("confirmP").value;
+   
     
-    if(email = " "){
-        document.getElementById("errorEmail").innerHTML= "* field requiere"
-    }if (name =" ") {
-        document.getElementById("errorName").innerHTML= "* field requiere"
-    }if (password= " ") {
-        document.getElementById("errorPassword").innerHTML= "* field requiere"
-    }if (confirmP = " ") {
-        document.getElementById("errorConfirm").innerHTML= "* field requiere"
-    }else{
-        document.write("Registrado");
+    
+}
+
+//TODO: Validar Email
+function validarEmail(){
+if (email = " ") {
+    document.getElementById("")
+    
+}
+
+}
+
+//TODO: Validar Name
+function validarName(){
+    if (name = " ") {
+        
+    }
+}
+
+//TODO: Validar Password
+function validarPassword(){
+    if (password = " ") {
+        
+    }
+}
+
+//TODO: Validar Confirmación Contraseña
+function validarConfContraseña(){
+    if (confirmP = " ") {
+        
     }
 }

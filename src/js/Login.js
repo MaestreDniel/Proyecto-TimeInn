@@ -1,13 +1,26 @@
+/**
+ * Cogemos el valor de los campos del formulario para poder introducirlos en sus validaciones
+ * cogiendo sus respectivas variables 
+ * */
+ 
+  var usuario = document.getElementById("usuario").value;
+  var contraseña = document.getElementById("contraseña").value;
+
 //TODO:Validar Login
 function validarLogin(){
-   var usuario = document.getElementById("usuario").value;
-   var contraseña = document.getElementById("contraseña").value;
-    if(usuario = " "){
-        document.getElementById("errorUsuario").innerHTML= "* field requiere"
-    }
-    else if(contraseña = " "){
-        document.getElementById("errorContraseña").innerHTML = "* field requiere";
-    }
+ 
+
+
 }
+
+
+//TODO: Validar User
+function validarUser(){
+
+
+}
+
+//TODO: Validar Contraseña
+
 
 
