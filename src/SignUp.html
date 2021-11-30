@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/SignUp.css">
     <title>Document</title>
 </head>
 <body>
     <form action="">
-        <label>Email:</label><input type="email" name="email" id="email"><p id="errorEmail"></p>
-        <label>Name</label><input type="text" name="name" id="name"> <p id="errorName"></p>
-        <label>Password</label><input type="password" name="password" id="password"> <p id="errorPassword"></p>
-        <label>Confirm Password</label><input type="password" name="confirmP" id="confirmP"><p id="errorConfirm"></p>
+        <label>Email:</label><input type="email" name="email" id="email"><p class="error" id="errorEmail"></p>
+        <label>Name</label><input type="text" name="name" id="name"> <p class="error" id="errorName"></p>
+        <label>Password</label><input type="password" name="password" id="password"> <p class="error" id="errorPassword"></p>
+        <label>Confirm Password</label><input type="password" name="confirmP" id="confirmP"><p class="error" id="errorConfirm"></p>
         <button onclick=" validarSignUp()" type="button" id="signUp">Sign Up</button>
         
     </form>
