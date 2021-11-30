@@ -7,7 +7,7 @@
   var contraseña = document.getElementById("contraseña").value;
 
 //TODO:Validar Login
-function validarLogin(){
+export function validarLogin(){
  
 
 

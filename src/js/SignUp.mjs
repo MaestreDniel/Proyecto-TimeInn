@@ -10,7 +10,7 @@ var password = document.getElementById("password").value;
 var confirmP = document.getElementById("confirmP").value;
 
 //TODO: Validar Sign Up
-function validarSignUp(){
+export function validarSignUp(){
    
     
     
