@@ -1,4 +1,5 @@
-function login(){
+//TODO:Validar Login
+function validarLogin(){
    var usuario = document.getElementById("usuario").value;
    var contraseña = document.getElementById("contraseña").value;
     if(usuario = " "){
@@ -8,3 +9,5 @@ function login(){
         document.getElementById("errorContraseña").innerHTML = "* field requiere";
     }
 }
+
+

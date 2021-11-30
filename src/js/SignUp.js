@@ -1,4 +1,5 @@
-function signUp(){
+//TODO: Validar Sign Up
+function validarSignUp(){
     var email = document.getElementById("email").value;
     var name = document.getElementById("name").value;
     var password = document.getElementById("password").value;
