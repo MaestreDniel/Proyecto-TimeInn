@@ -8,12 +8,13 @@
 </head>
 <body>
     <form action="">
-        <label>Email:</label><input type="email" name="email" id="email">
-        <label>Name</label><input type="text" name="name" id="name">
-        <label>Password</label><input type="password" name="password" id="password">
-        <label>Confirm Password</label><input type="password" name="confirmP" id="confirmP">
-        <button type="button" id="signUp">Sign Up</button>
+        <label>Email:</label><input type="email" name="email" id="email"><p id="errorEmail"></p>
+        <label>Name</label><input type="text" name="name" id="name"> <p id="errorName"></p>
+        <label>Password</label><input type="password" name="password" id="password"> <p id="errorPassword"></p>
+        <label>Confirm Password</label><input type="password" name="confirmP" id="confirmP"><p id="errorConfirm"></p>
+        <button onclick="signUp()" type="button" id="signUp">Sign Up</button>
         
     </form>
+    <script src="js/SignUp.js"></script>
 </body>
 </html>

@@ -8,8 +8,10 @@
 </head>
 <body>
     <form action="">
-        <label>Usuario</label><input type="text" name="Usuario" id="">
-        <label>Contraseña</label>
+        <label>Usuario</label><input type="text" name="Usuario" id=""><p id="errorUser"></p>
+        <label>Contraseña</label><input type="password" name="contraseña" id="contraseña"> <p id="errorContraseña"></p>
+        <button onclick="login()" type="button" id="login" >Login</button>
     </form>
+    <script src="js/Login.js"></script>
 </body>
 </html>
