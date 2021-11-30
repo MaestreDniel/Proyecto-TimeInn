@@ -16,11 +16,18 @@ function validarLogin(){
 
 //TODO: Validar User
 function validarUser(){
-
+    if (usuario= " ") {
+        document.getElementById("errorUser").innerHTML= "*field requiered"
+    }
 
 }
 
 //TODO: Validar Contraseña
+function validarContraseña(){
+    if (usuario = " ") {
+        document.getElementById("errorContraseña").innerHTML= "*field requiered"
+    }
 
+}
 
 

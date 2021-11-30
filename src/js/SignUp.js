@@ -19,7 +19,7 @@ function validarSignUp(){
 //TODO: Validar Email
 function validarEmail(){
 if (email = " ") {
-    document.getElementById("")
+    document.getElementById("errorEmail").innerHTML= "*field requiered"
     
 }
 
@@ -28,20 +28,20 @@ if (email = " ") {
 //TODO: Validar Name
 function validarName(){
     if (name = " ") {
-        
+        document.getElementById("errorName").innerHTML= "*field requiered"
     }
 }
 
 //TODO: Validar Password
 function validarPassword(){
     if (password = " ") {
-        
+        document.getElementById("errorPassword").innerHTML= "*field requiered"
     }
 }
 
 //TODO: Validar Confirmación Contraseña
-function validarConfContraseña(){
+function validarConfPassword(){
     if (confirmP = " ") {
-        
+        document.getElementById("errorConfirm").innerHTML= "*field requiered"
     }
 }
