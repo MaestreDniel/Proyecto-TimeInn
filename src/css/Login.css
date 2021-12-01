@@ -47,6 +47,8 @@
     align-items: center;
     justify-content: center;
     font-size: 2vw;
+    color: rgba(1, 45, 62, 1);
+    margin-bottom: 1vw;
   }
 
   button.signUpButton{
@@ -56,4 +58,11 @@
     align-items: center;
     justify-content: center;
     font-size: 2vw;
+    color: rgba(1, 45, 62, 1);
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
