@@ -32,6 +32,8 @@
 /*Formulario Sign Up*/  
 div#formSignUp{
   display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 p.error{
@@ -39,4 +41,12 @@ p.error{
 }
 a:focus, a:active {
   color: green;
+}
+button.signUpButton{
+  display: flex;
+  width: 35vh;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
 }
