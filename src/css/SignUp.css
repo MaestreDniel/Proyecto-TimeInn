@@ -37,3 +37,6 @@ div#formSignUp{
 p.error{
     color: rgba(160, 12, 0, 1);
 }
+a:focus, a:active {
+  color: green;
+}
