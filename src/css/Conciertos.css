@@ -114,11 +114,21 @@ nav#hamburger div:hover {
   background-color: var(--rgba-primary-4);
 }
 
-nav i {
+#usertimeinn {
   font-size: 100%;
   background-color: white;
   padding: 1% 1% 1% 1%;
   margin-left: 2vw;
+  cursor: pointer;
+  color: black
+}
+
+#usertimeinn:hover {
+  background-color: var(--rgba-secondary-1-2);
+}
+
+#usertimeinn:active {
+  background-color: var(--rgba-secondary-1-3);
 }
 
 a {
