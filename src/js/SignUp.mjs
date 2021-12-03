@@ -11,7 +11,11 @@ var confirmP = document.getElementById("confirmP").value;
 
 //TODO: Validar SignUp
 export function validarSignUp(){
-   
+   if (condition) {
+       getfocus();
+   } else {
+       losefocus();
+   }
     
     
 }
@@ -24,7 +28,7 @@ if (email = " ") {
     document.getElementById("errorEmail").innerHTML = "patron de contraseña incorrecto el patron es aaaaaaaaa@bbbbbbbb.ccc"
     
 }else{
-
+    
 }
 
 }
@@ -47,7 +51,11 @@ function validarName(){
 function validarPassword(){
     if (password = " ") {
         document.getElementById("errorPassword").innerHTML= "*field requiered"
-    }else if(password = confirmP){
+    }else if(password = /^/){
+
+    }
+    
+    else if(password = confirmP){
         document.getElementById("errorPassword").innerHTML= "las contraseñas no coiciden"
     }
     else{
@@ -63,6 +71,15 @@ function validarConfPassword(){
     }else if(password = confirmP){
         document.getElementById("errorPassword").innerHTML= "las contraseñas no coiciden"
     }else{
-        
+
     }
 }
+
+
+function getfocus() {
+    document.getElementById("registro").focus();
+  }
+  
+  function losefocus() {
+    document.getElementsByClassName("registro").blur();
+  }

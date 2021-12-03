@@ -8,13 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div id="formSignUp">
+        <h1 >REGISTRARSE</h1>
     <form action="">
-        <label>Email:</label><input type="email" name="email" id="email"><p class="error" id="errorEmail"></p>
-        <label>Name</label><input type="text" name="name" id="name"> <p class="error" id="errorName"></p>
-        <label>Password</label><input type="password" name="password" id="password"> <p class="error" id="errorPassword"></p>
-        <label>Confirm Password</label><input type="password" name="confirmP" id="confirmP"><p class="error" id="errorConfirm"></p>
-        <button onclick=" validarSignUp()" type="button" id="signUp">Sign Up</button>
+        <input placeholder="Email" class="registro" type="email" name="email" id="email"><p class="error" id="errorEmail"></p>
+        <input placeholder="Name" class="registro" type="text" name="name" id="name"> <p class="error" id="errorName"></p>
+        <input placeholder="Password" class="registro" type="password" name="password" id="password"> <p class="error" id="errorPassword"></p>
+        <input placeholder="Confirm Password" class="registro" type="password" name="confirmP" id="confirmP"><p class="error" id="errorConfirm"></p>
+        <button class="signUpButton" onclick=" validarSignUp()" type="button" id="signUp"><b><u>SignUp</u></b></button>
         
     </form>
 </div>

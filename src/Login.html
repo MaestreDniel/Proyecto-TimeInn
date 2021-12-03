@@ -8,12 +8,16 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div id="formLogin">
+        <h1>INICIAR SESION</h1>
     <form action="">
-        <label aria-label="hidden">Usuario</label><input type="text" name="Usuario" id=""><p class="error" id="errorUser"></p>
-        <label>Contraseña</label><input type="password" name="contraseña" id="contraseña"> <p class="error" id="errorContraseña"></p>
-        <button onclick="validarlogin()" type="button" id="login" >Login</button>
+        <input placeholder="Usuario" type="text" name="Usuario" id=""><p class="error" id="errorUser"></p>
+        <input placeholder="Contraseña" type="password" name="contraseña" id="contraseña"> <p class="error" id="errorContraseña"></p>
+        <button class="loginButton" onclick="validarlogin()" type="button" id="login" ><b><u>Login</u></b></button>
     </form>
+    <br>
+        <button class="signUpButton"><a style="color: rgba(1, 45, 62, 1)" href="SignUp.html"><b><u>SignUp</u></b></a></button>
 </div>
     <script src="js/Login.mjs"></script>
 </body>
