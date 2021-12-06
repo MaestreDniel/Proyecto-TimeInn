@@ -5,21 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/SignUp.css">
-    <title>Document</title>
+    <title>TimeInn - Regístrate</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Logo Music4Events.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7521fefac0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <div id="formSignUp">
-        <h1 >REGISTRARSE</h1>
-    <form action="">
-        <input placeholder="Email" class="registro" type="email" name="email" id="email"><p class="error" id="errorEmail"></p>
-        <input placeholder="Name" class="registro" type="text" name="name" id="name"> <p class="error" id="errorName"></p>
-        <input placeholder="Password" class="registro" type="password" name="password" id="password"> <p class="error" id="errorPassword"></p>
-        <input placeholder="Confirm Password" class="registro" type="password" name="confirmP" id="confirmP"><p class="error" id="errorConfirm"></p>
-        <button class="signUpButton" onclick=" validarSignUp()" type="button" id="signUp"><b><u>SignUp</u></b></button>
-        
-    </form>
-</div>
+    <div id="layout">
+        <header><img src="images/Logo Music4Events.png"></header>
+        <div id="infoutil">
+            <div>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem</div>
+            <div>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem</div>
+            <div>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem</div>
+        </div>
+        <div id="formSignUp">
+            <h1>Registrarse</h1>
+            <form action="">
+                <input placeholder="Email" class="registro" type="email" name="email" id="email"><p class="error" id="errorEmail"></p>
+                <input placeholder="Name" class="registro" type="text" name="name" id="name"> <p class="error" id="errorName"></p>
+                <input placeholder="Password" class="registro" type="password" name="password" id="password"> <p class="error" id="errorPassword"></p>
+                <input placeholder="Confirm Password" class="registro" type="password" name="confirmP" id="confirmP"><p class="error" id="errorConfirm"></p>
+                <button class="signUpButton" onclick=" validarSignUp()" type="button" id="signUp"><b><u>SignUp</u></b></button> 
+            </form>
+        </div>
+    </div>
     <script src="js/SignUp.mjs"></script>
 </body>
 </html>

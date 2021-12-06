@@ -122,7 +122,7 @@ nav#hamburger div:hover {
   padding: 1% 1% 1% 1%;
   margin-left: 2vw;
   cursor: pointer;
-  color: black
+  color: black;
 }
 
 #usertimeinn:hover {
@@ -275,8 +275,6 @@ div#eventos {
   background-size: cover;
 }
 
-
-
 div.festivalDes {
   display: flex;
   flex-flow: column nowrap;
@@ -295,7 +293,8 @@ div.festivalDes {
   height: 30vw;
   border-radius: 2vh;
 }
-div#festivalDestacado{
+
+div#festivalDestacado {
   background-image: url("../images/Logo\ Music4Events.png");
   background-size: contain;
   height: 75vh;

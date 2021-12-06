@@ -1,4 +1,6 @@
-const { name } = require("browser-sync");
+const {
+  name
+} = require("browser-sync");
 
 /**
  * Cogemos el valor de los campos del formulario para poder introducirlos en sus validaciones
@@ -10,76 +12,72 @@ var password = document.getElementById("password").value;
 var confirmP = document.getElementById("confirmP").value;
 
 //TODO: Validar SignUp
-export function validarSignUp(){
-   if (condition) {
-       getfocus();
-   } else {
-       losefocus();
-   }
-    
-    
+export function validarSignUp() {
+  if (condition) {
+    getfocus();
+  } else {
+    losefocus();
+  }
+
+
 }
 
 //TODO: Validar Email
-function validarEmail(){
-if (email = " ") {
-    document.getElementById("errorEmail").innerHTML= "*field requiered"
-}else if(email = /^[A-Za-z]{10}+@+[A-Za-z]{5,10}+.+[A-Za-z]{3}/){
+function validarEmail() {
+  if (email = " ") {
+    document.getElementById("errorEmail").innerHTML = "*field requiered"
+  } else if (email = /^[A-Za-z]{10}+@+[A-Za-z]{5,10}+.+[A-Za-z]{3}/) {
     document.getElementById("errorEmail").innerHTML = "patron de contraseña incorrecto el patron es aaaaaaaaa@bbbbbbbb.ccc"
-    
-}else{
-    
-}
+
+  } else {
+
+  }
 
 }
 
 
 
 //TODO: Validar Name
-function validarName(){
-    if (name = " "){
-        document.getElementById("errorName").innerHTML= "*field requiered"
-    }else if (name > /^ \w{10}/ ) {
-        document.getElementById("errorName").innerHTML= "el nombre tiene que tener un maximo de 10 caracteres"
-    }
-    else{
+function validarName() {
+  if (name = " ") {
+    document.getElementById("errorName").innerHTML = "*field requiered"
+  } else if (name > /^ \w{10}/) {
+    document.getElementById("errorName").innerHTML = "el nombre tiene que tener un maximo de 10 caracteres"
+  } else {
 
-    }
+  }
 }
 
 //TODO: Validar Password
-function validarPassword(){
-    if (password = " ") {
-        document.getElementById("errorPassword").innerHTML= "*field requiered"
-    }else if(password = /^/){
+function validarPassword() {
+  if (password = " ") {
+    document.getElementById("errorPassword").innerHTML = "*field requiered"
+  } else if (password = /^/) {
 
-    }
-    
-    else if(password = confirmP){
-        document.getElementById("errorPassword").innerHTML= "las contraseñas no coiciden"
-    }
-    else{
+  } else if (password = confirmP) {
+    document.getElementById("errorPassword").innerHTML = "las contraseñas no coiciden"
+  } else {
 
-    }
+  }
 
 }
 
 //TODO: Validar Confirmación Contraseña
-function validarConfPassword(){
-    if (confirmP = " ") {
-        document.getElementById("errorConfirm").innerHTML= "*field requiered"
-    }else if(password = confirmP){
-        document.getElementById("errorPassword").innerHTML= "las contraseñas no coiciden"
-    }else{
+function validarConfPassword() {
+  if (confirmP = " ") {
+    document.getElementById("errorConfirm").innerHTML = "*field requiered"
+  } else if (password = confirmP) {
+    document.getElementById("errorPassword").innerHTML = "las contraseñas no coiciden"
+  } else {
 
-    }
+  }
 }
 
 
 function getfocus() {
-    document.getElementById("registro").focus();
-  }
-  
-  function losefocus() {
-    document.getElementsByClassName("registro").blur();
-  }
+  document.getElementById("registro").focus();
+}
+
+function losefocus() {
+  document.getElementsByClassName("registro").blur();
+}
