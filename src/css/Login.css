@@ -43,7 +43,7 @@ body {
     "header header"
     "infoutil form";
   width: 100%;
-  max-height: 120vh;
+  height: 100vh;
 }
 
 /* El truco para centrar el contenido después de haber hecho un grid consiste en entender estos conceptos:
