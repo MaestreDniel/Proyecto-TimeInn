@@ -34,8 +34,9 @@ body {
 }
 
 header img {
-  width: 10%;
-  height: 10%;
+  width: 30%;
+  height: 100%;
+
 }
 
 /*Formulario Sign Up*/
@@ -47,6 +48,14 @@ div#formSignUp {
   flex-direction: column;
   align-items: center;
 }
+ 
+#layout{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
 
 p.error {
   color: rgba(160, 12, 0, 1);
