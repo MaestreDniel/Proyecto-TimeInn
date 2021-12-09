@@ -9,7 +9,7 @@ export function validarEmail() {
     document.getElementById("errorEmail").innerHTML = "patron de contraseña incorrecto el patron es aaaaaaaaaa@bbbbbbbb.ccc"
 
   } else {
-
+    validarEmail=true;
   }
 
 }
@@ -27,6 +27,8 @@ export function validarName() {
   }  */else {
     document.getElementById("errorName").innerHTML = "";
     input.classList.toggle("valido");
+
+    validarName = true;
   }
 }
 
@@ -40,7 +42,7 @@ export function validarPassword() {
   } else if (password = confirmP) {
     document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden"
   } else {
-
+    validarPassword=true
   }
 
 }
@@ -53,7 +55,7 @@ export function validarConfPassword() {
   } else if (password = confirmP) {
     document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden"
   } else {
-
+    validarConfPassword=true
   }
 }
 
