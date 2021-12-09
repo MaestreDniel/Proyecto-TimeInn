@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Login.css">
+    <link rel="stylesheet" href="css/forms.css">
     <title>TimeInn - Login</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/Logo Music4Events.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,17 +41,17 @@
         <section id="formlogin">
             <h1>Iniciar sesión</h1>
             <form action="">
-                <input placeholder="Usuario*" type="text" name="Usuario">
-                <p class="error" id="errorUser"></p>
-                <input placeholder="Contraseña*" type="password" name="contraseña" id="contraseña">
+                <input id="user" aria-label="Usuario" placeholder="Usuario*" type="text" name="user" aria-required="true">
+                <p id="errorName" class="error"></p>
+                <input id="password" aria-label="Contraseña" placeholder="Contraseña*" type="password" name="password" aria-required="true">
                 <span><i class="far fa-eye"></i></span>
-                <p class="error" id="errorContraseña"></p>
-                <div class="button" id="loginButton">Inicia sesión</div>
+                <p id="errorPassword" class="error"></p>
+                <div id="loginButton" class="button" aria-label="Inicia sesión">Inicia sesión</div>
                 <div>¿Eres nuevo en Music4Events?</div>
-                <div class="button" id="signUpButton"><a href="SignUp.html">Regístrate</a></div>
+                <div id="signUpButton" class="button" aria-label="Regístrate"><a href="SignUp.html">Regístrate</a></div>
             </form><br>
         </section>
     </div>
-    <script src="js/Login.mjs"></script>
+    <script src="js/Login.js" type="module"></script>
 </body>
 </html>

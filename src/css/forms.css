@@ -85,9 +85,10 @@ header a img {
   margin-top: 30%;
 }
 
-/*Formulario Login*/
+/* Formulario */
 
-#formlogin {
+#formlogin, #formSignUp {
+  grid-area: form;
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -95,8 +96,12 @@ header a img {
   margin-left: 5%;
 }
 
-#formlogin h1 {
+#formlogin h1, #formSignUp h1 {
   margin-bottom: 7%;
+}
+
+.valido {
+  border-color: green;
 }
 
 p.error {
@@ -105,7 +110,7 @@ p.error {
 
 input {
   outline-color: var(--rgba-primary-2);
-  height: 4em;
+  height: 3em;
   width: 70%;
   transition: all 0.5s ease-in-out;
 }
@@ -118,14 +123,10 @@ input:focus {
   box-shadow: 2px 2px 2px var(--rgba-primary-2);
 }
 
-#formlogin a:visited {
-  color: white;
-}
-
 .button {
   display: flex;
-  width: 45%;
-  height: 15%;
+  width: 14em;
+  height: 2.2em;
   font-size: 1.2em;
   border-radius: 8px;
   padding: 1%;
@@ -134,7 +135,7 @@ input:focus {
   align-items: center;
 }
 
-#formlogin div {
+#formlogin div, #formSignUp div {
   margin: 2%;
 }
 
