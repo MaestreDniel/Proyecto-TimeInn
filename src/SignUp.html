@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/SignUp.css">
+    <link rel="stylesheet" href="css/forms.css">
     <title>TimeInn - Regístrate</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/Logo Music4Events.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,23 +14,47 @@
 </head>
 <body>
     <div id="layout">
-        <header><img src="images/Logo Music4Events.png"></header>
-        <div id="infoutil">
-            <div>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem</div>
-            <div>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem</div>
-            <div>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem</div>
-        </div>
+        <header><a href="Index.html"><img src="images/Logo Music4Events.png"></a></header>
+        <section id="infoutil">
+            <h4>Reserva entrada en tu concierto favorito</h4>
+            <div>
+                <i class="fas fa-ticket-alt"></i>
+                <div>En nuestra web te ofrecemos todas las facilidades para que puedas conseguir entradas 
+                    para ver a tus artistas favoritos.</div>
+            </div>
+            
+            <h4>Entérate de las últimas novedades</h4>
+            <div>
+                <i class="far fa-newspaper"></i>
+                <div>Trabajamos día a día para mantenerte actualizado. En nuestro portal de noticias
+                    podrás conocer de primera mano todo lo que necesitas saber.</div>
+            </div>
+            
+            <h4>Participa en nuestros sorteos</h4>
+            <div>
+                <i class="far fa-star"></i>
+                <div>Desde camisetas personalizadas, hasta pasar un día con tu ídolo. Formar parte de la 
+                    comunidad de Music4Events te da derecho a participar en todos los sorteos.</div>
+            </div>
+            <h3>¿A qué estás esperando?</h3>
+        </section>
         <div id="formSignUp">
             <h1>Registrarse</h1>
             <form action="">
-                <input placeholder="Email" class="registro" type="email" name="email" id="email"><p class="error" id="errorEmail"></p>
-                <input placeholder="Name" class="registro" type="text" name="name" id="name"> <p class="error" id="errorName"></p>
-                <input placeholder="Password" class="registro" type="password" name="password" id="password"> <p class="error" id="errorPassword"></p>
-                <input placeholder="Confirm Password" class="registro" type="password" name="confirmP" id="confirmP"><p class="error" id="errorConfirm"></p>
-                <button class="signUpButton" onclick=" validarSignUp()" type="button" id="signUp"><b><u>SignUp</u></b></button> 
+                <input id="email" placeholder="Dirección de email*" class="registro" type="email" name="email">
+                <p id="errorEmail" class="error"></p>
+                <input id="user" placeholder="Usuario*" class="registro" type="text" name="user">
+                <p id="errorName" class="error"></p>
+                <input id="password" placeholder="Contraseña*" class="registro" type="password" name="password">
+                <p id="errorPassword" class="error"></p>
+                <input id="confirmP" placeholder="Repite la contraseña*" class="registro" type="password" name="confirmP">
+                <p id="errorConfirm" class="error"></p>
+                <div id="signUpButton" class="button" onclick="validarSignUp()" aria-label="Regístrate">Regístrate</div>
+                <div>¿Ya tienes una cuenta?</div>
+                <div id="loginButton" class="button" aria-label="Inicia sesión"><a href="Login.html">Inicia sesión</a></div>
             </form>
         </div>
     </div>
-    <script src="js/SignUp.mjs"></script>
+    <script src="js/SignUp.js" type="module"></script>
 </body>
 </html>
