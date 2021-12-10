@@ -64,15 +64,18 @@ export function validarPassword() {
 //TODO: Validar Confirmación Contraseña
 export function validarConfPassword() {
   let confirmP = document.getElementById("confirmP").value;
+  let password = document.getElementById("password").value;
   if (confirmP = "") {
-    document.getElementById("errorConfirm").innerHTML = "*Campo obligatorio"
-  } else if (password = confirmP) {
-    document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden"
+    document.getElementById("errorConfirm").innerHTML = "*Campo obligatorio";
+    toggleInputFalse("confirmP");
+    return false;
+  } else if (password !== confirmP) {
+    document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden";
+    return false;
   } else {
-    // validarConfPassword=true
+    return true;
   }
 }
-
 
 export function loginValido() {
   if (validarName() && validarPassword()) {
@@ -82,31 +85,21 @@ export function loginValido() {
   }
 }
 
-export function SignUpValido(){
-  if(validarName() && validarEmail() && validarPassword() && validarConfPassword()){
-    window.location.href='./Login.html'
-  }
-  else{
+export function SignUpValido() {
+  if (validarName() && validarEmail() && validarPassword() && validarConfPassword()) {
+    window.location.href = './Login.html';
+  } else {
     document.getElementById("errorPassword").innerHTML = "Credenciales incorrectas";
   }
 }
-//TODO: Validar SignUp
-/* export function validarSignUp(funcion) {
-  if (funcion) {
-    getfocus();
-  } else {
-    losefocus();
-  }
+
+export function paginaSignUp() {
+  window.location.href = './SignUp.html';
 }
 
-function getfocus() {
-  document.getElementById("user").focus();
+export function paginaLogin() {
+  window.location.href = './Login.html';
 }
-
-function losefocus() {
-  document.getElementById("user").blur();
-} */
-
 
 // Se muestra la contraseña solamente mientras se mantenga el ojo pulsado
 export function mostrarPassword() {

@@ -5,40 +5,38 @@
 
 
 import {
-    validarEmail, validarName , validarPassword, validarConfPassword, mostrarPassword , mostrarPasswordConf
+    validarEmail, validarName , validarPassword, validarConfPassword, mostrarPassword , mostrarPasswordConf, paginaLogin, SignUpValido
   
 } from "./validaciones.mjs"
 
 document.getElementById("email").addEventListener("click", function () {
-  validarEmail()
+  validarEmail();
 })
 
 document.getElementById("user").addEventListener("click", function () {
-  validarName()
+  validarName();
 })
 
 document.getElementById("password").addEventListener("click", function () {
-  validarPassword()
+  validarPassword();
 })
 
-document.getElementById("conformP").addEventListener("click",  function (){
-  validarConfPassword()
-})
-
-
-/**
- * Si todo es true, querra decir que te has registrado
- * una vez has sido registrado te lleva a la pagina de login
- * si inicias sesion correctamente ya podras navegar por la web
- * */
-if (validarEmail && validarName && validarPassword && validarConfPassword) {
-  window.location.href='./';
-}
-
-document.getElementById("verPassword").addEventListener("click", function () {
-  mostrarPassword()
+document.getElementById("confirmP").addEventListener("click",  function (){
+  validarConfPassword();
 })
 
 document.getElementById("verPassword").addEventListener("click", function () {
-  mostrarPasswordConf()
+  mostrarPassword();
+})
+
+document.getElementById("verPassword").addEventListener("click", function () {
+  mostrarPasswordConf();
+})
+
+document.getElementById("loginButton").addEventListener("click", function () {
+  paginaLogin();
+})
+
+document.getElementById("signUpButton").addEventListener("click", function () {
+  SignUpValido();
 })

@@ -1,7 +1,7 @@
 // El fichero sería como un main.js, aquí importa los datos necesarios
 
 import {
-  loginValido, mostrarPassword, validarName, validarPassword,
+  loginValido, mostrarPassword, paginaSignUp, validarName, validarPassword,
 } from "./validaciones.mjs";
 
 document.getElementById("user").addEventListener("blur", function () {
@@ -24,6 +24,9 @@ document.getElementById("loginButton").addEventListener("click", function () {
   loginValido();
 })
 
+document.getElementById("signUpButton").addEventListener("click", function () {
+  paginaSignUp();
+})
 
 // TODO:COOKIE User Login
 
