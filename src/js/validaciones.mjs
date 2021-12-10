@@ -5,7 +5,7 @@ export function validarEmail() {
   let email = document.getElementById("email").value;
   if (email = "") {
     document.getElementById("errorEmail").innerHTML = "*Campo obligatorio"
-  } else if (email = /^[A-Za-z]{1,10}@[A-Za-z]{1,10}.[A-Za-z]{1,3}/) {
+  } else if ( !(/^[A-Za-z]{1,10}@[A-Za-z]{5,10}.(net|com|gov)/.test(email))) {
     document.getElementById("errorEmail").innerHTML = "patron de contraseña incorrecto el patron es aaaaaaaaaa@bbbbbbbb.ccc"
 
   } else {
@@ -50,8 +50,8 @@ export function validarPassword() {
   let password = document.getElementById("password").value;
   if (password = "") {
     document.getElementById("errorPassword").innerHTML = "*Campo obligatorio"
-  } else if (password = /^/) {
-
+  } else if (password = /^\w{7}+(.|-|;|,)/) {
+    document.getElementById("errorPassword").innerHTML = "debe tener un minimo de 8 caracteres e incluir alguno de estos caracteres . , ; ,"
   } else if (password = confirmP) {
     document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden"
   } else {
