@@ -2,7 +2,7 @@
 
 
 import {
-  loginValido, validarName, validarPassword,
+  loginValido, mostrarPassword, validarName, validarPassword,
 } from "./validaciones.mjs";
 
 document.getElementById("user").addEventListener("blur", function () {
@@ -13,17 +13,14 @@ document.getElementById("password").addEventListener("blur", function () {
   validarPassword();
 })
 
+document.getElementById("verPassword").addEventListener("mousedown", function () {
+  mostrarPassword();
+}) 
+  
+document.getElementById("verPassword").addEventListener("mouseup", function () {
+  mostrarPassword();
+})
 
-
-
-function mostrarPassword(){
-  let tipo = document.getElementById("password");
-      if(tipo.type == "password"){
-          tipo.type = "text";
-      }else{
-          tipo.type = "password";
-      }
-  }
 document.getElementById("loginButton").addEventListener("click", function () {
   loginValido();
 })
@@ -67,4 +64,4 @@ function checkCookie() {
   }
 }
 
-checkCookie();
+// checkCookie();
