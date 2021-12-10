@@ -4,11 +4,11 @@ import {
   validarName, validarPassword
 } from "./validaciones.mjs";
 
-document.getElementById("user").addEventListener("click", function () {
+document.getElementById("user").addEventListener("blur", function () {
   validarName()
 })
 
-document.getElementById("password").addEventListener("click", function () {
+document.getElementById("password").addEventListener("blur", function () {
   validarPassword()
 })
 

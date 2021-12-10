@@ -104,8 +104,12 @@ header a img {
   border-color: green;
 }
 
+.novalido {
+  border-color: var(--rgba-secondary-2-2);
+}
+
 p.error {
-  color: rgba(160, 12, 0, 1);
+  color: var(--rgba-secondary-2-2);
 }
 
 input {

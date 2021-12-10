@@ -14,21 +14,34 @@ export function validarEmail() {
 
 }
 
+function toggleInputFalse(myinput) {
+  let input = document.getElementById(myinput);
+  input.classList.toggle("novalido", true);
+  input.classList.toggle("valido", false);
+}
 
+function toggleInputTrue(myinput) {
+  let input = document.getElementById(myinput);
+  input.classList.toggle("valido", true);
+  input.classList.toggle("novalido", false);
+}
 
 //TODO: Validar Name
 export function validarName() {
   let user = document.getElementById("user").value;
-  let input = document.getElementById("user");
   if (user.length == 0) {
     document.getElementById("errorName").innerHTML = "*Campo obligatorio";
-  } /* else if (user > /^ \w{1,10}/) {
-    document.getElementById("errorName").innerHTML = "el nombre debe tener un maximo de 10 caracteres"
-  }  */else {
+    toggleInputFalse("user");
+  } else if (!(/^\w{1,20}$/.test(user))) {
+    document.getElementById("errorName").innerHTML =
+      "El nombre debe estar compuesto de carácteres alfanuméricos y tener un máximo de 20 caracteres";
+    toggleInputFalse("user");
+  } else {
     document.getElementById("errorName").innerHTML = "";
     input.classList.toggle("valido");
 
     validarName = true;
+    toggleInputTrue("user");
   }
 }
 
@@ -60,8 +73,8 @@ export function validarConfPassword() {
 }
 
 //TODO: Validar SignUp
-export function validarSignUp() {
-  if (condition) {
+/* export function validarSignUp(funcion) {
+  if (funcion) {
     getfocus();
   } else {
     losefocus();
@@ -69,9 +82,9 @@ export function validarSignUp() {
 }
 
 function getfocus() {
-  document.getElementById("registro").focus();
+  document.getElementById("user").focus();
 }
 
 function losefocus() {
-  document.getElementsByClassName("registro").blur();
-}
+  document.getElementById("user").blur();
+} */
