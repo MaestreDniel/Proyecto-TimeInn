@@ -1,6 +1,6 @@
 // El fichero sería como un main.js, aquí importa los datos necesarios
 
-import { name } from "browser-sync";
+
 import {
   loginValido, validarName, validarPassword,
 } from "./validaciones.mjs";

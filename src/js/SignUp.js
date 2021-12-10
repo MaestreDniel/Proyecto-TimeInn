@@ -21,7 +21,7 @@ document.getElementById("password").addEventListener("click", function () {
   validarPassword()
 })
 
-document.getElementById("conformP").addEventListener("click",  function (){
+document.getElementById("conformP").addEventListener("click",  function () {
   validarConfPassword()
 })
 
