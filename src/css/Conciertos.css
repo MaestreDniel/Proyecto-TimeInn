@@ -34,7 +34,6 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
 }
-
 /*HEADER*/
 header {
   display: flex;
@@ -58,6 +57,7 @@ header #logo {
     display: flex;
     font-size: 2vw;
     align-items: end;
+    margin-bottom: 5vh;
   }
 
   #burgerbutton {
@@ -120,7 +120,7 @@ nav#hamburger div:hover {
   padding: 1% 1% 1% 1%;
   margin-left: 2vw;
   cursor: pointer;
-  color: black
+  color: black;
 }
 
 #usertimeinn:hover {
@@ -141,7 +141,7 @@ a:active {
   color: white;
 }
 
-nav #paginaconciertos {
+nav #index {
   color: var(--rgba-secondary-2-2);
 }
 

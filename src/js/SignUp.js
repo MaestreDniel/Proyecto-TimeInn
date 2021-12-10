@@ -1,9 +1,3 @@
-/* const {
-  name
-} = require("browser-sync"); */
-
-
-
 /**
  * Cogemos el valor de los campos del formulario para poder introducirlos en sus validaciones
  * cogiendo sus respectivas variables 
@@ -32,7 +26,11 @@ document.getElementById("conformP").addEventListener("click",  function (){
 })
 
 
-
+/**
+ * Si todo es true, querra decir que te has registrado
+ * una vez has sido registrado te lleva a la pagina de login
+ * si inicias sesion correctamente ya podras navegar por la web
+ * */
 if (validarEmail && validarName && validarPassword && validarConfPassword) {
-  window.location.href='../SignUp.html';
+  window.location.href='../Login.html';
 }

@@ -13,6 +13,7 @@ document.getElementById("password").addEventListener("blur", function () {
 })
 
 
+//Si todo es true, querra decir que has sido logueado y te lleva la pagina de inicio de la Web
 if(validarName && validarPassword){
   window.location.href= '../Index.html';
 }
