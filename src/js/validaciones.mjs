@@ -80,6 +80,15 @@ export function loginValido() {
     document.getElementById("errorPassword").innerHTML = "Credenciales incorrectas";
   }
 }
+
+export function SignUpValido(){
+  if(validarName() && validarEmail() && validarPassword() && validarConfPassword()){
+    window.location.href='./Login.html'
+  }
+  else{
+    document.getElementById("errorPassword").innerHTML = "Credenciales incorrectas";
+  }
+}
 //TODO: Validar SignUp
 /* export function validarSignUp(funcion) {
   if (funcion) {
