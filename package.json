@@ -22,5 +22,25 @@
     "postcss": "^8.2.4",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  }
+  },
+  "name": "Proyecto-TimeInn",
+  "description": "- LINK: https://balsamiq.cloud/s93gm7i/pd0tzro/r1337",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaestreDniel/Proyecto-TimeInn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaestreDniel/Proyecto-TimeInn/issues"
+  },
+  "homepage": "https://github.com/MaestreDniel/Proyecto-TimeInn#readme"
 }

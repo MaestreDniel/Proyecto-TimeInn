@@ -32,9 +32,9 @@ export function validarName() {
     document.getElementById("errorName").innerHTML = "*Campo obligatorio";
     toggleInputFalse("user");
     return false;
-  } else if (!(/^\w{1,20}$/.test(user))) {
+  } else if (!(/^\[A-Za-z]{1,20}$/.test(user))) {
     document.getElementById("errorName").innerHTML =
-      "El nombre debe estar compuesto de carácteres alfanuméricos y tener un máximo de 20 caracteres";
+      "El nombre debe tener un máximo de 20 caracteres ";
     toggleInputFalse("user");
     return false;
   } else {
