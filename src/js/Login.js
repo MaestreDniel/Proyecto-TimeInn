@@ -15,5 +15,14 @@ document.getElementById("password").addEventListener("blur", function () {
 
 //Si todo es true, querra decir que has sido logueado y te lleva la pagina de inicio de la Web
 if(validarName && validarPassword){
-  window.location.href= '../Index.html';
+  window.location.href= './';
 }
+
+function mostrarPassword(){
+  let tipo = document.getElementById("password");
+      if(tipo.type == "password"){
+          tipo.type = "text";
+      }else{
+          tipo.type = "password";
+      }
+  }

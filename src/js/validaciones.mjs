@@ -90,10 +90,22 @@ function losefocus() {
 } */
 
 
+//Si pulsamos el ojo muestra la contraseña
+function mostrarPassword(){
+  let tipo = document.getElementById("password");
+      if(tipo.type == "password"){
+          tipo.type = "text";
+      }else{
+          tipo.type = "password";
+      }
+  }
 
-
- 
-
-
-
- 
+  //Si pulsamos el ojo muestra la contraseña de confirmacion
+  function mostrarPasswordConf(){
+    let tipo = document.getElementById("confirmP");
+        if(tipo.type == "password"){
+            tipo.type = "text";
+        }else{
+            tipo.type = "password";
+        }
+    }

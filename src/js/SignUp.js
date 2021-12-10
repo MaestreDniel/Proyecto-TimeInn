@@ -6,7 +6,7 @@
 
 import {
   validarConfPassword,
-  validarEmail, validarName , validarPassword, validarConfPassword
+  validarEmail, validarName , validarPassword, validarConfPassword, mostrarPassword , mostrarPasswordConf
 } from "./validaciones.mjs"
 
 document.getElementById("email").addEventListener("click", function () {
@@ -32,5 +32,13 @@ document.getElementById("conformP").addEventListener("click",  function (){
  * si inicias sesion correctamente ya podras navegar por la web
  * */
 if (validarEmail && validarName && validarPassword && validarConfPassword) {
-  window.location.href='../Login.html';
+  window.location.href='./';
 }
+
+document.getElementById("verPassword").addEventListener("click", function () {
+  mostrarPassword()
+})
+
+document.getElementById("verPassword").addEventListener("click", function () {
+  mostrarPasswordConf()
+})
