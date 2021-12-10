@@ -7,9 +7,8 @@ export function validarEmail() {
     document.getElementById("errorEmail").innerHTML = "*Campo obligatorio"
   } else if ( !(/^[A-Za-z]{1,10}@[A-Za-z]{5,10}.(net|com|gov)/.test(email))) {
     document.getElementById("errorEmail").innerHTML = "patron de contraseña incorrecto el patron es aaaaaaaaaa@bbbbbbbb.ccc"
-
   } else {
-    validarEmail=true;
+    // validarEmail=true;
   }
 
 }
@@ -32,16 +31,17 @@ export function validarName() {
   if (user.length == 0) {
     document.getElementById("errorName").innerHTML = "*Campo obligatorio";
     toggleInputFalse("user");
+    return false;
   } else if (!(/^\w{1,20}$/.test(user))) {
     document.getElementById("errorName").innerHTML =
       "El nombre debe estar compuesto de carácteres alfanuméricos y tener un máximo de 20 caracteres";
     toggleInputFalse("user");
+    return false;
   } else {
     document.getElementById("errorName").innerHTML = "";
-    input.classList.toggle("valido");
-
-    validarName = true;
     toggleInputTrue("user");
+    // validado = true;
+    return true;
   }
 }
 
@@ -55,9 +55,9 @@ export function validarPassword() {
   } else if (password = confirmP) {
     document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden"
   } else {
-    validarPassword=true
+    //validado = true;
+    return true;
   }
-
 }
 
 //TODO: Validar Confirmación Contraseña
@@ -68,10 +68,18 @@ export function validarConfPassword() {
   } else if (password = confirmP) {
     document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden"
   } else {
-    validarConfPassword=true
+    // validarConfPassword=true
   }
 }
 
+
+export function loginValido() {
+  if (validarName() && validarPassword()) {
+    window.location.href = './';
+  } else {
+    document.getElementById("errorPassword").innerHTML = "Credenciales incorrectas";
+  }
+}
 //TODO: Validar SignUp
 /* export function validarSignUp(funcion) {
   if (funcion) {
@@ -109,3 +117,4 @@ function mostrarPassword(){
             tipo.type = "password";
         }
     }
+

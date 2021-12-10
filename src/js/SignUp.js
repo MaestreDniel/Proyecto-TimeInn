@@ -5,8 +5,8 @@
 
 
 import {
-  validarConfPassword,
   validarEmail, validarName , validarPassword, validarConfPassword, mostrarPassword , mostrarPasswordConf
+  
 } from "./validaciones.mjs"
 
 document.getElementById("email").addEventListener("click", function () {
