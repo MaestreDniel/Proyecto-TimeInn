@@ -1,19 +1,17 @@
 // El fichero sería como un main.js, aquí importa los datos necesarios
 
 import {
-  validarName, validarPassword
+  loginValido, validarName, validarPassword,
 } from "./validaciones.mjs";
 
 document.getElementById("user").addEventListener("blur", function () {
-  validarName()
+  validarName();
 })
 
 document.getElementById("password").addEventListener("blur", function () {
-  validarPassword()
+  validarPassword();
 })
 
-
-//Si todo es true, querra decir que has sido logueado y te lleva la pagina de inicio de la Web
-if(validarName && validarPassword){
-  window.location.href= '../Index.html';
-}
+document.getElementById("loginButton").addEventListener("click", function () {
+  loginValido();
+})
