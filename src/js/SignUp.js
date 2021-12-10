@@ -30,3 +30,10 @@ document.getElementById("password").addEventListener("click", function () {
 document.getElementById("conformP").addEventListener("click",  function (){
   validarConfPassword()
 })
+
+
+function SignUp(){
+  if (validarEmail && validarName && validarPassword && validarConfPassword) {
+    window.location.href='../SignUp.html';
+  }
+}

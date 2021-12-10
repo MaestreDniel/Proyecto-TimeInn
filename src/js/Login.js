@@ -11,3 +11,10 @@ document.getElementById("user").addEventListener("click", function () {
 document.getElementById("password").addEventListener("click", function () {
   validarPassword()
 })
+
+
+function Login(){
+  if(validarName && validarPassword){
+    window.location.href= '../Index.html';
+  }
+}
