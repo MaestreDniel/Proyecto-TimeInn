@@ -5,7 +5,7 @@
 
 
 import {
-  validarEmail, validarName , validarPassword, validarConfPassword, mostrarPassword , mostrarPasswordConf
+    validarEmail, validarName , validarPassword, validarConfPassword, mostrarPassword , mostrarPasswordConf
   
 } from "./validaciones.mjs"
 

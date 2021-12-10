@@ -50,7 +50,7 @@ export function validarPassword() {
   let password = document.getElementById("password").value;
   if (password = "") {
     document.getElementById("errorPassword").innerHTML = "*Campo obligatorio"
-  } else if (password = /^\w{7}+(.|-|;|,)/) {
+  } else if (!(/^\w{7,}(.|-|;|,)/).test(password)) {
     document.getElementById("errorPassword").innerHTML = "debe tener un minimo de 8 caracteres e incluir alguno de estos caracteres . , ; ,"
   } else if (password = confirmP) {
     document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden"
