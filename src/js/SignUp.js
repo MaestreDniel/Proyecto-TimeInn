@@ -32,8 +32,7 @@ document.getElementById("conformP").addEventListener("click",  function (){
 })
 
 
-function SignUp(){
-  if (validarEmail && validarName && validarPassword && validarConfPassword) {
-    window.location.href='../SignUp.html';
-  }
+
+if (validarEmail && validarName && validarPassword && validarConfPassword) {
+  window.location.href='../SignUp.html';
 }

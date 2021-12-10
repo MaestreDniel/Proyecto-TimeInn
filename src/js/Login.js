@@ -13,8 +13,6 @@ document.getElementById("password").addEventListener("blur", function () {
 })
 
 
-function Login(){
-  if(validarName && validarPassword){
-    window.location.href= '../Index.html';
-  }
+if(validarName && validarPassword){
+  window.location.href= '../Index.html';
 }
