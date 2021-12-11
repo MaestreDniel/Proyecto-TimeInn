@@ -45,4 +45,31 @@ document.getElementById("verPassword").addEventListener("click", function () {
 
 
 var emails = [];
+
+function existeEmail(){
+  let correo = document.getElementById("email").value;
+  for (let i = 0; i < emails.length; i++) {
+  if( correo = emails[i]){
+    return false;
+    }
+    else{
+      return true
+    }
+    
+  }
+}
+
 var users = [];
+
+function existeUser(){
+let usuario = document.getElementById("user").value;
+  for (let i = 0; i < users.length; i++) {
+    if(usuario =users[i]){
+      return false;
+    }
+    else{
+      return true
+    }
+    
+  }
+}
