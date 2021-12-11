@@ -42,3 +42,7 @@ document.getElementById("verPassword").addEventListener("click", function () {
 document.getElementById("verPassword").addEventListener("click", function () {
   mostrarPasswordConf()
 })
+
+
+var emails = [];
+var users = [];
