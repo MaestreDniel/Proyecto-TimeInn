@@ -1,5 +1,6 @@
 // El fichero sería como un main.js, aquí importa los datos necesarios
 
+
 import {
   loginValido, mostrarPassword, paginaSignUp, validarName, validarPassword,
 } from "./validaciones.mjs";

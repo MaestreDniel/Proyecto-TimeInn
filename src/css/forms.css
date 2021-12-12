@@ -82,12 +82,13 @@ header {
 header a img {
   width: 6em;
   height: 6em;
-  margin-top: 30%;
+  margin-top: 20vh;
 }
 
 /* Formulario */
 
-#formlogin, #formSignUp {
+#formlogin,
+#formSignUp {
   grid-area: form;
   display: flex;
   flex-direction: column;
@@ -96,7 +97,8 @@ header a img {
   margin-left: 5%;
 }
 
-#formlogin h1, #formSignUp h1 {
+#formlogin h1,
+#formSignUp h1 {
   margin-bottom: 7%;
 }
 
@@ -139,7 +141,8 @@ input:focus {
   align-items: center;
 }
 
-#formlogin div, #formSignUp div {
+#formlogin div,
+#formSignUp div {
   margin: 2%;
 }
 
@@ -166,6 +169,11 @@ input:focus {
 a:any-link {
   color: white;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 
 form {
@@ -173,4 +181,11 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+span.ver {
+  display: flex;
+  z-index: 1;
+  margin-top: -4vh;
+  margin-left: 25vw;
 }
