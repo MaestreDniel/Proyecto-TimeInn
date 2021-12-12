@@ -5,8 +5,8 @@
 
 
 import {
-    validarEmail, validarName , validarPassword, validarConfPassword, mostrarPassword , mostrarPasswordConf, paginaLogin, SignUpValido
-  
+  validarEmail, validarName, validarPassword, validarConfPassword,
+  mostrarPassword, mostrarPasswordConf, paginaLogin, SignUpValido
 } from "./validaciones.mjs"
 
 document.getElementById("email").addEventListener("click", function () {
@@ -21,7 +21,7 @@ document.getElementById("password").addEventListener("click", function () {
   validarPassword();
 })
 
-document.getElementById("confirmP").addEventListener("click",  function (){
+document.getElementById("confirmP").addEventListener("click", function () {
   validarConfPassword();
 })
 
@@ -46,30 +46,28 @@ document.getElementById("signUpButton").addEventListener("click", function () {
 
 var emails = [];
 
-function existeEmail(){
+function existeEmail() {
   let correo = document.getElementById("email").value;
   for (let i = 0; i < emails.length; i++) {
-  if( correo = emails[i]){
-    return false;
-    }
-    else{
+    if (correo = emails[i]) {
+      return false;
+    } else {
       return true
     }
-    
+
   }
 }
 
 var users = [];
 
-function existeUser(){
-let usuario = document.getElementById("user").value;
+function existeUser() {
+  let usuario = document.getElementById("user").value;
   for (let i = 0; i < users.length; i++) {
-    if(usuario =users[i]){
+    if (usuario = users[i]) {
       return false;
-    }
-    else{
+    } else {
       return true
     }
-    
+
   }
 }

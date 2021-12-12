@@ -149,7 +149,7 @@ export function SignUpValido() {
   }
 }
 // Validar SignUp
-/* export function validarSignUp(funcion) {
+export function validarSignUp(funcion) {
   if (funcion) {
     getfocus();
   } else {
@@ -167,7 +167,7 @@ export function paginaLogin() {
 
 function losefocus() {
   document.getElementById("user").blur();
-} */
+}
 
 //TODO:Mostrar Contraseña
 // Se muestra la contraseña solamente mientras se mantenga el ojo pulsado
