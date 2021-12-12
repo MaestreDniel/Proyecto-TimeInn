@@ -4,11 +4,17 @@
 export function validarEmail() {
   let email = document.getElementById("email").value;
   if (email = "") {
-    document.getElementById("errorEmail").innerHTML = "*Campo obligatorio"
+    document.getElementById("errorEmail").innerHTML = "*Campo obligatorio";
+    toggleInputFalse("email");
+    return false;
   } else if (!(/^[A-Za-z]{1,10}@[A-Za-z]{5,10}.(net|com|gov)/.test(email))) {
     document.getElementById("errorEmail").innerHTML = "patron de contraseña incorrecto el patron es aaaaaaaaaa@bbbbbbbb.ccc"
+    toggleInputFalse("email");
+    return false;
   } else {
-    // validarEmail=true;
+    document.getElementById("errorEmail").innerHTML = "";
+    toggleInputTrue("email");
+    return true;
   }
 
 }
@@ -71,8 +77,11 @@ export function validarConfPassword() {
     return false;
   } else if (password !== confirmP) {
     document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden";
+    toggleInputFalse("confirmP");
     return false;
   } else {
+    document.getElementById("errorPassword").innerHTML = "";
+    toggleInputTrue("confirmP");
     return true;
   }
 }
