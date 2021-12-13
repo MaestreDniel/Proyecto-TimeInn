@@ -386,7 +386,7 @@ function checkCookie() {
 checkCookie();
 
 function checkCookieUser() {
-  document.getElementById("logueado").innerHTML = `¡Bienvenido/a ${getCookie("user")}!`;
+  document.getElementById("logueado").innerHTML = getCookie("user");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
