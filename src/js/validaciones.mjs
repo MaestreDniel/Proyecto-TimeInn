@@ -151,6 +151,8 @@ export function loginValido() {
   //Si el nombre y la contraseña del login se han validado el usuario se puede loguear
   if (validarNameLogin() && validarPassword()) {
     //Se loguea y nos llevara a la pagina de inicio de la web
+    
+    alert("Welcome to Music4Events" );
     window.location.href = "./";
   } else {
     document.getElementById("errorLogin").innerHTML =
@@ -171,6 +173,7 @@ export function loginValido() {
 export function SignUpValido() {
   //Si los campos del SignUp estan validados correctamente te llevan al login
   if (validarEmail() && validarName() && validarPassword() && validarConfPassword()) {
+    alert("Te has suscrito a Music4Events");
     window.location.href = "./Login.html";
   }
   //Si uno de los anteriores falla nos avisa de que es incorrecto
