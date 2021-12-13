@@ -3,35 +3,38 @@
 //TODO: Validar Email
 export function validarEmail() {
   let email = document.getElementById("email").value;
+//Si el email esta vacio salta el error y retorna falso
   if ((email.length == 0)) {
     document.getElementById("errorEmail").innerHTML = "*Campo obligatorio";
     toggleInputFalse("email");
     return false;
+//Si no sigue el siguiente patron el email es incorrecto
   } else if (!(/^[A-Za-z]{1}[a-z]{0,20}@[a-z]{5,10}.(net|com|gov)/.test(email))) {
     document.getElementById("errorEmail").innerHTML = `El email debe seguir este formato: 
-    aaaaaaaaaa@bbbbbbbb.ccc <br> Teniendo en cuenta que: <br>
-    - aaaaaaaaa está en minúsculas, salvo la primera letra que opcionalmente puede ser mayúscula <br>
-    - bbbbbbbb tiene entre 5 y 10 letras minúsculas <br>
-    - ccc solo puede valer: com, net o gov <br>
-    - Que solo hay 1 arroba y 1 punto (y la arroba va antes que el punto)`;
+    aaaaaaaaaa@bbbbbbbb.ccc <br> Teniendo en cuenta que: <br>`;
     toggleInputFalse("email");
     return false;
+    //Si email coincide con alguno del array de emails registrados tambien da error
   } else if (!existeEmail()) {
     document.getElementById("errorEmail").innerHTML = "Este email ya está registrado";
     toggleInputFalse("email");
     return false;
+//Si todo lo anterior se ha realizado correctamente retorna true y el email esta validado
   } else {
     document.getElementById("errorEmail").innerHTML = "";
     toggleInputTrue("email");
+    emails.push(email);
     return true;
   }
 }
+
 
 function toggleInputFalse(myinput) {
   let input = document.getElementById(myinput);
   input.classList.toggle("novalido", true);
   input.classList.toggle("valido", false);
 }
+
 
 function toggleInputTrue(myinput) {
   let input = document.getElementById(myinput);
@@ -57,6 +60,7 @@ export function validarName() {
     return false;
   } else { //Si cumple todos los requisitos entonces se da como valido y da true
     document.getElementById("errorName").innerHTML = "";
+    users.push(user);
     toggleInputTrue("user");
     return true;
   }
@@ -88,8 +92,11 @@ export function validarPassword() {
     return false;
   } else { //Si cumple todos los requisitos entonces se da como válido y da true
     document.getElementById("errorPassword").innerHTML = "";
+    
     toggleInputTrue("password");
+    
     return true;
+
   }
 }
 
@@ -97,14 +104,17 @@ export function validarPassword() {
 export function validarConfPassword() {
   let confirmP = document.getElementById("confirmP").value;
   let password = document.getElementById("password").value;
+  //Si la confirmacion esta vacia da error
   if (confirmP.length == 0) {
     document.getElementById("errorConfirm").innerHTML = "*Campo obligatorio";
     toggleInputFalse("confirmP");
     return false;
+//Si no coinciden ambas contraseñas da error
   } else if (password !== confirmP) {
     document.getElementById("errorPassword").innerHTML = "Las contraseñas no coinciden";
     toggleInputFalse("confirmP");
     return false;
+//Si se cumplen las condiciones anteriores la confirmacion de la contraseña es correcta
   } else {
     document.getElementById("errorPassword").innerHTML = "";
     toggleInputTrue("confirmP");
@@ -112,8 +122,11 @@ export function validarConfPassword() {
   }
 }
 
+//TODO: Login Validado Correctamente
 export function loginValido() {
+  //Si el nombre y la contraseña del login se han validado el usuario se puede loguear
   if (validarNameLogin() && validarPassword()) {
+    //Se loguea y nos llevara a la pagina de inicio de la web
     window.location.href = "./";
   } else {
     document.getElementById("errorLogin").innerHTML = "Credenciales incorrectas";
@@ -194,6 +207,8 @@ export function ocultarPasswordLogin() {
   }
 }
 
+
+//Array donde se almacenan todos los emails de los usuarios registrados
 let emails = ["dmaestre@cifpfbmoll.com", "jmateo@cifpfbmoll.com"];
 
 function existeEmail() {
@@ -208,6 +223,8 @@ function existeEmail() {
   return true;
 }
 
+
+//Array donde se almacenan todos los nombres de usuario registrados
 let users = ["Maestre", "JMateo"];
 
 function existeUser() {
