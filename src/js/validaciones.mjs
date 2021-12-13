@@ -85,7 +85,7 @@ export function validarPassword() {
     //Si no cumple el patron salta el error y retorna falso
   } else if (!/^\w{7,}(.|-|;|,)/.test(password)) {
     document.getElementById("errorPassword").innerHTML =
-      "La contraseña debe tener un minimo de 8 caracteres e incluir alguno de estos caracteres . , ; ,";
+      "Minimo de 8 caracteres e incluir algun . , ; ,";
     toggleInputFalse("password");
     return false;
     //Si cumple todos los requisitos entonces se da como valido y da true
