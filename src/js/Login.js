@@ -30,8 +30,6 @@ document.getElementsByTagName("body")[0].addEventListener("mousemove", function 
   ocultarPasswordLogin();
 })
 
-
-
 // TODO:COOKIE User Login
 
 function setCookie(cname, cvalue, exdays) {
@@ -61,7 +59,7 @@ function checkCookie() {
   let nickname = document.getElementById("user").value;
   let user = getCookie(nickname);
   if (user != "") {
-    alert("bienvenido aqui " + nickname)
+    //
   } else {
     setCookie("user", nickname, 7); // El 7 hará que tenga una duración de una semana
   }

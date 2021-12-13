@@ -159,7 +159,6 @@ export function loginValido() {
   if (validarNameLogin() && validarPassword()) {
     //Se loguea y nos llevara a la pagina de inicio de la web
     
-    alert("Welcome to Music4Events" );
     window.location.href = "./";
   } else {
     document.getElementById("errorLogin").innerHTML =
@@ -180,15 +179,13 @@ export function loginValido() {
 export function SignUpValido() {
   //Si los campos del SignUp estan validados correctamente te llevan al login
   if (validarEmail() && validarName() && validarPassword() && validarConfPassword()) {
-    alert("Te has suscrito a Music4Events");
+    // alert("Te has suscrito a Music4Events");
     window.location.href = "./Login.html";
   }
   //Si uno de los anteriores falla nos avisa de que es incorrecto
   else {
-    document.getElementById("errorSignUp").innerHTML =
-      "Credenciales incorrectas";
-
-      // El primer  erróneo se pondra rojo
+    document.getElementById("errorSignUp").innerHTML = "Credenciales incorrectas";
+      // El primer erróneo se pondra rojo
     if (!validarEmail()) { 
       document.getElementById("email").focus();
     } else if (!validarName()) {
@@ -209,10 +206,6 @@ export function paginaSignUp() {
 export function paginaLogin() {
   window.location.href = "./Login.html";
 }
-
-/* function losefocus() {
-  document.getElementById("user").blur();
-} */
 
 //TODO:Mostrar Contraseña
 // Se muestra la contraseña solamente mientras se mantenga el ojo pulsado
@@ -271,7 +264,7 @@ function existeEmail() {
 }
 
 //Array donde se almacenan todos los nombres de usuario registrados
-let users = ["Maestre", "JMateo","Classicoman"];
+let users = ["Maestre", "JMateo", "Classicoman"];
 
 //Recorre el array de usuarios para ver si el usuario que introducimos ya existe, para que no se repita
 function existeUser() {
