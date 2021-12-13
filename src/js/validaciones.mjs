@@ -3,26 +3,24 @@
 //TODO: Validar Email
 export function validarEmail() {
   let email = document.getElementById("email").value;
-  //Si el email esta vacio salta el error y retorna falso
+//Si el email esta vacio salta el error y retorna falso
   if (email.length == 0) {
     document.getElementById("errorEmail").innerHTML = "*Campo obligatorio";
     toggleInputFalse("email");
     return false;
-    //Si no sigue el siguiente patron el email es incorrecto
+//Si no sigue el siguiente patron el email es incorrecto
   } else if (!/^[A-Za-z]{1}[a-z]{0,20}@[a-z]{5,10}.(net|com|gov)/.test(email)) {
-    document.getElementById(
-      "errorEmail"
-    ).innerHTML = `El email debe seguir este formato: 
-    aaaaaaaaaa@bbbbbbbb.ccc <br> Teniendo en cuenta que: <br>`;
+    document.getElementById("errorEmail").innerHTML =
+     `El email debe seguir este formato:aaaaaaaaaa@bbbbbbbb.ccc <br> Teniendo en cuenta que: <br>`;
     toggleInputFalse("email");
     return false;
     //Si email coincide con alguno del array de emails registrados tambien da error
   } else if (!existeEmail()) {
-    document.getElementById("errorEmail").innerHTML =
-      "Este email ya está registrado";
+    document.getElementById("errorEmail").innerHTML="Este email ya está registrado";
     toggleInputFalse("email");
     return false;
     //Si todo lo anterior se ha realizado correctamente retorna true y el email esta validado
+    //Guarda el email dentro del array para que no se repita el email con otros registros
   } else {
     document.getElementById("errorEmail").innerHTML = "";
     toggleInputTrue("email");
@@ -31,13 +29,13 @@ export function validarEmail() {
   }
 }
 
+//TODO:Input validacion
 //Campo invalido false
 function toggleInputFalse(myinput) {
   let input = document.getElementById(myinput);
   input.classList.toggle("novalido", true);
   input.classList.toggle("valido", false);
 }
-
 //Campo valido true
 function toggleInputTrue(myinput) {
   let input = document.getElementById(myinput);
@@ -48,25 +46,30 @@ function toggleInputTrue(myinput) {
 //TODO: Validar Name
 export function validarName() {
   let user = document.getElementById("user").value;
+//Si está vacio salta el error y retorna falso
   if (user.length == 0) {
-    //Si está vacio salta el error y retorna falso
     document.getElementById("errorName").innerHTML = "*Campo obligatorio";
     toggleInputFalse("user");
     return false;
-  } else if (!/^\w{1,20}$/.test(user)) {
-    //Si no cumple el patrón de usuario salta el error y retorna falso
+  }
+
+  //Si no cumple el patrón de usuario salta el error y retorna falso 
+  else if (!/^\w{1,20}$/.test(user)) {
+
     document.getElementById("errorName").innerHTML =
       "El nombre debe estar compuesto de carácteres alfanuméricos y tener un máximo de 20 caracteres";
     toggleInputFalse("user");
     return false;
-  } else if (!existeUser()) {
-    //Si ya existe el usuario salta el error y retorna falso
+  }
+  //Si ya existe el usuario salta el error y retorna falso
+   else if (!existeUser()) {  
     document.getElementById("errorName").innerHTML =
       "Este nombre de usuario ya existe";
     toggleInputFalse("user");
     return false;
-  } else {
-    //Si cumple todos los requisitos entonces se da como valido y da true
+  } 
+  //Si cumple todos los requisitos entonces se da como valido y da true
+  else {
     document.getElementById("errorName").innerHTML = "";
     users.push(user);
     toggleInputTrue("user");
@@ -76,12 +79,15 @@ export function validarName() {
 
 //TODO: Validar Nombre Login
 export function validarNameLogin() {
+//Si el nombre del usuario no existe salta el error y retorna falso
   if (existeUser()) {
     document.getElementById("errorName").innerHTML =
       "Este nombre de usuario no está registrado";
     toggleInputFalse("user");
     return false;
-  } else {
+  }
+  //En caso contrario retorna true  
+  else {
     document.getElementById("errorName").innerHTML = "";
     toggleInputTrue("user");
     return true;
@@ -91,19 +97,21 @@ export function validarNameLogin() {
 //TODO: Validar Password
 export function validarPassword() {
   let password = document.getElementById("password").value;
+//Si está vacio salta el error y retorna falso
   if (password.length == 0) {
-    //Si está vacio salta el error y retorna falso
-    document.getElementById("errorPassword").innerHTML = "*Campo obligatorio";
+   document.getElementById("errorPassword").innerHTML = "*Campo obligatorio";
     toggleInputFalse("password");
     return false;
-  } else if (!/^.{7,}\W{1,}/.test(password)) {
-    //Si no cumple el patrón salta el error y retorna falso
+  } 
+  //Si no cumple el patrón salta el error y retorna falso
+  else if (!/^.{7,}\W{1,}/.test(password)) {
     document.getElementById("errorPassword").innerHTML =
       "Minimo de 8 caracteres e incluir algun . , ; ,";
     toggleInputFalse("password");
     return false;
-  } else {
-    //Si cumple todos los requisitos entonces se da como válido y da true
+  }
+  //Si cumple todos los requisitos entonces se da como válido y da true
+   else {
     document.getElementById("errorPassword").innerHTML = "";
 
     toggleInputTrue("password");
@@ -121,14 +129,18 @@ export function validarConfPassword() {
     document.getElementById("errorConfirm").innerHTML = "*Campo obligatorio";
     toggleInputFalse("confirmP");
     return false;
-    //Si no coinciden ambas contraseñas da error
-  } else if (password !== confirmP) {
+    
+  }
+ //Si no coinciden ambas contraseñas da error 
+  else if (password !== confirmP) {
     document.getElementById("errorPassword").innerHTML =
       "Las contraseñas no coinciden";
     toggleInputFalse("confirmP");
     return false;
-    //Si se cumplen las condiciones anteriores la confirmacion de la contraseña es correcta
-  } else {
+    
+  }
+  //Si se cumplen las condiciones anteriores la confirmacion de la contraseña es correcta
+   else {
     document.getElementById("errorPassword").innerHTML = "";
     toggleInputTrue("confirmP");
     return true;
@@ -144,9 +156,13 @@ export function loginValido() {
   } else {
     document.getElementById("errorLogin").innerHTML =
       "Credenciales incorrectas";
+      //Si no se valida correctamente el user Login se marca en rojo
     if (!validarNameLogin()) {
       document.getElementById("user").focus();
-    } else if (!validarPassword()) {
+
+    }
+    //Si no se valida correctamente la contraseña Login se marca en rojo
+     else if (!validarPassword()) {
       document.getElementById("password").focus();
     }
   }
@@ -154,18 +170,17 @@ export function loginValido() {
 
 //TODO: Validacion SignUP
 export function SignUpValido() {
-  if (
-    validarEmail() &&
-    validarName() &&
-    validarPassword() &&
-    validarConfPassword()
-  ) {
+  //Si los campos del SignUp estan validados correctamente te llevan al login
+  if (validarEmail() && validarName() && validarPassword() && validarConfPassword()) {
     window.location.href = "./Login.html";
-  } else {
+  }
+  //Si uno de los anteriores falla nos avisa de que es incorrecto
+  else {
     document.getElementById("errorSignUp").innerHTML =
       "Credenciales incorrectas";
-    if (!validarEmail()) {
-      // El primer campo erróneo recibirá focus
+
+      // El primer  erróneo se pondra rojo
+    if (!validarEmail()) { 
       document.getElementById("email").focus();
     } else if (!validarName()) {
       document.getElementById("user").focus();
@@ -176,6 +191,7 @@ export function SignUpValido() {
     }
   }
 }
+
 
 export function paginaSignUp() {
   window.location.href = "./SignUp.html";
@@ -221,6 +237,7 @@ export function ocultarPassword() {
   }
 }
 
+
 export function ocultarPasswordLogin() {
   let tipo = document.getElementById("password");
   if (tipo.type == "text") {
@@ -231,6 +248,7 @@ export function ocultarPasswordLogin() {
 //Array donde se almacenan todos los emails de los usuarios registrados
 let emails = ["dmaestre@cifpfbmoll.com", "jmateo@cifpfbmoll.com"];
 
+//Recorre el array de email para ver si el email que introducimos ya existe, para que no se repita
 function existeEmail() {
   let correo = document.getElementById("email").value;
   for (let i = 0; i < emails.length; i++) {
@@ -246,6 +264,7 @@ function existeEmail() {
 //Array donde se almacenan todos los nombres de usuario registrados
 let users = ["Maestre", "JMateo"];
 
+//Recorre el array de usuarios para ver si el usuario que introducimos ya existe, para que no se repita
 function existeUser() {
   let usuario = document.getElementById("user").value;
   for (let i = 0; i < users.length; i++) {
