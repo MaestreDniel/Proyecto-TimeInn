@@ -181,6 +181,7 @@ export function SignUpValido() {
   if (validarEmail() && validarName() && validarPassword() && validarConfPassword()) {
     // alert("Te has suscrito a Music4Events");
     window.location.href = "./Login.html";
+    
   }
   //Si uno de los anteriores falla nos avisa de que es incorrecto
   else {

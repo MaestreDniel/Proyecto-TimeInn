@@ -2,7 +2,7 @@
 
 
 import {
-  loginValido, mostrarPassword, paginaSignUp, validarPassword, ocultarPasswordLogin
+  loginValido, mostrarPassword, paginaSignUp, validarPassword, ocultarPasswordLogin , SignUpValido
 } from "./validaciones.mjs";
 
 document.getElementById("password").addEventListener("blur", function () {
