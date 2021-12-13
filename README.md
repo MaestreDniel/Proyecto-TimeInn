@@ -1,10 +1,10 @@
 # MUSIC4EVENTS (Proyecto TimeInn)
 
-## WIREFRAME
+## WIREFRAME <img src="https://cdn.dribbble.com/users/65105/screenshots/4060343/wireframe_logo_03.png">
 
 - LINK: https://balsamiq.cloud/s93gm7i/pd0tzro/r1337
 
-## NETLIFY
+## NETLIFY <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Netlify_logo.svg/1280px-Netlify_logo.svg.png">
 
 - LINK: https://elated-gates-aa09b3.netlify.app/
 
