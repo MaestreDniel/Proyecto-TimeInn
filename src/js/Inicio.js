@@ -386,12 +386,12 @@ function checkCookie() {
 checkCookie();
 
 function checkCookieUser() {
-  document.getElementById("logueado").innerHTML = getCookie("user");
+  let usuariologueado = getCookie("user");
+  document.getElementById("logueado").innerHTML = usuariologueado.toLocaleUpperCase()
+  alert("bienvenido aqui " + getCookie("user"));
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(checkCookieUser(), 2000);
-})
+checkCookieUser();
 
 
 document.getElementById("diauno").addEventListener("click", function () {
