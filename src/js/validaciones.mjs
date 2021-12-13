@@ -24,7 +24,7 @@ export function validarEmail() {
   } else {
     document.getElementById("errorEmail").innerHTML = "";
     toggleInputTrue("email");
-    emails.push(email);
+    
     return true;
   }
 }
@@ -71,7 +71,6 @@ export function validarName() {
   //Si cumple todos los requisitos entonces se da como valido y da true
   else {
     document.getElementById("errorName").innerHTML = "";
-    users.push(user);
     toggleInputTrue("user");
     return true;
   }
@@ -246,7 +245,7 @@ export function ocultarPasswordLogin() {
 }
 
 //Array donde se almacenan todos los emails de los usuarios registrados
-let emails = ["dmaestre@cifpfbmoll.com", "jmateo@cifpfbmoll.com"];
+let emails = ["dmaestre@cifpfbmoll.com", "jmateo@cifpfbmoll.com","classicoman@gmail.net"];
 
 //Recorre el array de email para ver si el email que introducimos ya existe, para que no se repita
 function existeEmail() {
@@ -262,7 +261,7 @@ function existeEmail() {
 }
 
 //Array donde se almacenan todos los nombres de usuario registrados
-let users = ["Maestre", "JMateo"];
+let users = ["Maestre", "JMateo","Classicoman"];
 
 //Recorre el array de usuarios para ver si el usuario que introducimos ya existe, para que no se repita
 function existeUser() {
