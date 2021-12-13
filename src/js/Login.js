@@ -18,6 +18,7 @@ document.getElementById("verPassword").addEventListener("mouseup", function () {
 })
 
 document.getElementById("loginButton").addEventListener("click", function () {
+  checkCookie();
   loginValido();
 })
 
@@ -28,6 +29,8 @@ document.getElementById("signUpButton").addEventListener("click", function () {
 document.getElementsByTagName("body")[0].addEventListener("mousemove", function () {
   ocultarPasswordLogin();
 })
+
+
 
 // TODO:COOKIE User Login
 
@@ -58,14 +61,8 @@ function checkCookie() {
   let nickname = document.getElementById("user").value;
   let user = getCookie(nickname);
   if (user != "") {
-    // console.log("object");
+    alert("bienvenido aqui " + nickname)
   } else {
-    setCookie(user, nickname, 7); // El 7 hará que tenga una duración de una semana
-    setTimeout(function muestraFormSub() {
-      let formlogin = document.getElementById("formlogin  ");
-      formlogin.style.display = "block";
-    }, 3000);
+    setCookie("user", nickname, 7); // El 7 hará que tenga una duración de una semana
   }
 }
-
-// checkCookie();
