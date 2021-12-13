@@ -386,14 +386,14 @@ function checkCookie() {
 checkCookie();
 
 function checkCookieUser() {
-  document.getElementById("logueado").innerHTML = getCookie("user");
-  //alert("bienvenido aqui " + getCookie("user"));
+  let usuariologueado = getCookie("user");
+  
+  document.getElementById("logueado").innerHTML = usuariologueado.toLocaleUpperCase()
+  alert("bienvenido aqui " + getCookie("user"));
   
 }
 
-document.getElementsByTagName("body")[0].addEventListener("load", function () {
-  checkCookieUser();
-})
+checkCookieUser();
 
 
 document.getElementById("diauno").addEventListener("click", function () {
