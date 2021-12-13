@@ -19,7 +19,7 @@ Criterios de validación:
   - ccc solo puede valer: com, net o gov
   - Que solo hay 1 arroba y 1 punto (y la arroba va antes que el punto)
 
-Cuando se hace un login correcto, se redirige al usuario a la página de inicio y encima del calendario se muestra el nombre del usuario logueado, ya que este se queda guardado en una cookie.
+Cuando se hace un login correcto (la contraseña exacta no importa porque en realidad no se queda guardada), se redirige al usuario a la página de inicio y encima del calendario se muestra el nombre del usuario logueado, ya que este se queda guardado en una cookie.
 
 ## <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Wireframe_logo.png/640px-Wireframe_logo.png">
 
