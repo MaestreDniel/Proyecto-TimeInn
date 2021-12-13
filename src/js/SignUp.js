@@ -5,71 +5,50 @@
 
 
 import {
-    validarEmail, validarName , validarPassword, validarConfPassword, mostrarPassword , mostrarPasswordConf
-  
+  validarEmail, validarName, validarPassword, validarConfPassword,
+  mostrarPassword, mostrarPasswordConf, paginaLogin, SignUpValido, ocultarPassword
 } from "./validaciones.mjs"
 
-document.getElementById("email").addEventListener("click", function () {
-  validarEmail()
+document.getElementById("email").addEventListener("blur", function () {
+  validarEmail();
 })
 
-document.getElementById("user").addEventListener("click", function () {
-  validarName()
+document.getElementById("user").addEventListener("blur", function () {
+  validarName();
 })
 
-document.getElementById("password").addEventListener("click", function () {
-  validarPassword()
+document.getElementById("password").addEventListener("blur", function () {
+  validarPassword();
 })
 
-document.getElementById("conformP").addEventListener("click",  function () {
-  validarConfPassword()
+document.getElementById("confirmP").addEventListener("blur", function () {
+  validarConfPassword();
 })
 
-
-/**
- * Si todo es true, querra decir que te has registrado
- * una vez has sido registrado te lleva a la pagina de login
- * si inicias sesion correctamente ya podras navegar por la web
- * */
-if (validarEmail && validarName && validarPassword && validarConfPassword) {
-  window.location.href='./';
-}
-
-document.getElementById("verPassword").addEventListener("click", function () {
-  mostrarPassword()
+document.getElementById("verPassword").addEventListener("mousedown", function () {
+  mostrarPassword();
 })
 
-document.getElementById("verPassword").addEventListener("click", function () {
-  mostrarPasswordConf()
+document.getElementById("verPassword").addEventListener("mouseup", function () {
+  mostrarPassword();
 })
 
+document.getElementById("verPassword2").addEventListener("mousedown", function () {
+  mostrarPasswordConf();
+})
 
-var emails = [];
+document.getElementById("verPassword2").addEventListener("mouseup", function () {
+  mostrarPasswordConf();
+})
 
-function existeEmail(){
-  let correo = document.getElementById("email").value;
-  for (let i = 0; i < emails.length; i++) {
-  if( correo = emails[i]){
-    return false;
-    }
-    else{
-      return true
-    }
-    
-  }
-}
+document.getElementById("loginButton").addEventListener("click", function () {
+  paginaLogin();
+})
 
-var users = [];
+document.getElementById("signUpButton").addEventListener("click", function () {
+  SignUpValido();
+})
 
-function existeUser(){
-let usuario = document.getElementById("user").value;
-  for (let i = 0; i < users.length; i++) {
-    if(usuario =users[i]){
-      return false;
-    }
-    else{
-      return true
-    }
-    
-  }
-}
+document.getElementsByTagName("body")[0].addEventListener("mousemove", function () {
+  ocultarPassword();
+})

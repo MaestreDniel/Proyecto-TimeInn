@@ -10,6 +10,7 @@
   --rgba-primary-3: rgba(35, 98, 121, 1);
   --rgba-primary-4: rgba(78, 86, 88, 1);
   --rgba-primary-4-transpar: rgba(78, 86, 88, 0.8);
+  --rgba-primary-4-transpar2: rgba(78, 86, 88, 0.3);
 
   /* Color secundario 1 */
 
@@ -33,17 +34,34 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-#layout {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 15% 80%;
-  gap: 5% 0%;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "header header"
-    "infoutil form";
-  width: 100%;
-  height: 110vh;
+@media screen and (max-width: 850px) {
+  #layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 80%;
+    gap: 5% 0%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header"
+      "formresp formresp";
+    width: 100%;
+    height: 110vh;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 80%;
+    gap: 5% 0%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header"
+      "infoutil form";
+    width: 100%;
+    height: 110vh;
+  }
 }
 
 /* El truco para centrar el contenido después de haber hecho un grid consiste en entender estos conceptos:
@@ -52,10 +70,18 @@ body {
   - Para centrar el contenido que tienen los hijos en sí, hay que usar flex dentro de ellos, y allí ya se puede
   hacer un justify-content o align-items. */
 
-#infoutil {
-  grid-area: infoutil;
-  border-right: solid 1px lightgray;
-  margin-left: 15%;
+@media screen and (max-width: 849px) {
+  #infoutil {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #infoutil {
+    grid-area: infoutil;
+    border-right: solid 1px lightgray;
+    margin-left: 15%;
+  }
 }
 
 #infoutil div {
@@ -87,19 +113,28 @@ header a img {
 
 /* Formulario */
 
-#formlogin,
-#formSignUp {
-  grid-area: form;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  margin-right: 15%;
-  margin-left: 5%;
+@media screen and (max-width: 850px) {
+  #formlogin,
+  #formSignUp {
+    grid-area: formresp;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 }
 
-#formlogin h1,
-#formSignUp h1 {
-  margin-bottom: 7%;
+@media screen and (min-width: 850px) {
+  #formlogin,
+  #formSignUp {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-right: 15%;
+    margin-left: 5%;
+  }
 }
 
 .valido {
@@ -131,14 +166,14 @@ input:focus {
 
 .button {
   display: flex;
-  width: 14em;
+  justify-content: center;
+  align-items: center;
+  color: white;
   height: 2.2em;
+  width: 70%;
   font-size: 1.2em;
   border-radius: 8px;
   padding: 1%;
-  color: white; /* Depende de si al final dejamos los botones como links tipo 'a' o no */
-  justify-content: center;
-  align-items: center;
 }
 
 #formlogin div,
@@ -183,9 +218,17 @@ form {
   justify-content: center;
 }
 
-span.ver {
-  display: flex;
+.ver {
+  position: relative;
   z-index: 1;
-  margin-top: -4vh;
-  margin-left: 25vw;
+  bottom: 2.6em;
+  left: 30%;
+  transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
+  padding: 0.5em;
+  margin-bottom: -2em;
+}
+
+.ver:hover {
+  background-color: var(--rgba-primary-4-transpar2);
 }

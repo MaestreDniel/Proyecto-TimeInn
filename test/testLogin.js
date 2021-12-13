@@ -6,7 +6,7 @@ import { validarName } from "../src/js/validaciones.mjs";
 
 describe("Test validar Login funcion validarName()", function ()
 {
-    it("Usario valido", () =>{
+    it("Usuario valido", () =>{
         assert.equal(validarName("mateo"),true);
         assert.equal(validarName("soydanielmaestre"),false);
     })
