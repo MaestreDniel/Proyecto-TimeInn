@@ -2,12 +2,8 @@
 
 
 import {
-  loginValido, mostrarPassword, paginaSignUp, validarName, validarPassword,
+  loginValido, mostrarPassword, paginaSignUp, validarPassword, ocultarPasswordLogin
 } from "./validaciones.mjs";
-
-document.getElementById("user").addEventListener("blur", function () {
-  validarName();
-})
 
 document.getElementById("password").addEventListener("blur", function () {
   validarPassword();
@@ -16,7 +12,7 @@ document.getElementById("password").addEventListener("blur", function () {
 document.getElementById("verPassword").addEventListener("mousedown", function () {
   mostrarPassword();
 }) 
-  
+
 document.getElementById("verPassword").addEventListener("mouseup", function () {
   mostrarPassword();
 })
@@ -27,6 +23,10 @@ document.getElementById("loginButton").addEventListener("click", function () {
 
 document.getElementById("signUpButton").addEventListener("click", function () {
   paginaSignUp();
+})
+
+document.getElementsByTagName("body")[0].addEventListener("mousemove", function () {
+  ocultarPasswordLogin();
 })
 
 // TODO:COOKIE User Login

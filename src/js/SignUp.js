@@ -6,30 +6,38 @@
 
 import {
   validarEmail, validarName, validarPassword, validarConfPassword,
-  mostrarPassword, mostrarPasswordConf, paginaLogin, SignUpValido
+  mostrarPassword, mostrarPasswordConf, paginaLogin, SignUpValido, ocultarPassword
 } from "./validaciones.mjs"
 
-document.getElementById("email").addEventListener("click", function () {
+document.getElementById("email").addEventListener("blur", function () {
   validarEmail();
 })
 
-document.getElementById("user").addEventListener("click", function () {
+document.getElementById("user").addEventListener("blur", function () {
   validarName();
 })
 
-document.getElementById("password").addEventListener("click", function () {
+document.getElementById("password").addEventListener("blur", function () {
   validarPassword();
 })
 
-document.getElementById("confirmP").addEventListener("click", function () {
+document.getElementById("confirmP").addEventListener("blur", function () {
   validarConfPassword();
 })
 
-document.getElementById("verPassword").addEventListener("click", function () {
+document.getElementById("verPassword").addEventListener("mousedown", function () {
   mostrarPassword();
 })
 
-document.getElementById("verPassword").addEventListener("click", function () {
+document.getElementById("verPassword").addEventListener("mouseup", function () {
+  mostrarPassword();
+})
+
+document.getElementById("verPassword2").addEventListener("mousedown", function () {
+  mostrarPasswordConf();
+})
+
+document.getElementById("verPassword2").addEventListener("mouseup", function () {
   mostrarPasswordConf();
 })
 
@@ -40,34 +48,7 @@ document.getElementById("loginButton").addEventListener("click", function () {
 document.getElementById("signUpButton").addEventListener("click", function () {
   SignUpValido();
 })
-/*   mostrarPasswordConf()
-}) */
 
-
-var emails = [];
-
-function existeEmail() {
-  let correo = document.getElementById("email").value;
-  for (let i = 0; i < emails.length; i++) {
-    if (correo = emails[i]) {
-      return false;
-    } else {
-      return true
-    }
-
-  }
-}
-
-var users = [];
-
-function existeUser() {
-  let usuario = document.getElementById("user").value;
-  for (let i = 0; i < users.length; i++) {
-    if (usuario = users[i]) {
-      return false;
-    } else {
-      return true
-    }
-
-  }
-}
+document.getElementsByTagName("body")[0].addEventListener("mousemove", function () {
+  ocultarPassword();
+})

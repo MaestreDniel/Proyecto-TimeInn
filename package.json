@@ -1,6 +1,6 @@
 {
+  "type": "module",
   "scripts": {
-    "type": "module",
     "test": "mocha test",
     "build": "gulp build"
   },
