@@ -373,7 +373,7 @@ function getCookie(cname) {
 function checkCookie() {
   let user = getCookie("timeinn");
   if (user != "") {
-    // console.log("object");
+    // alert("bienvenido aqui " + nickname);
   } else {
     setCookie("timeinn", "user", 7); // El 7 hará que tenga una duración de una semana
     setTimeout(function muestraFormSub() {
@@ -384,6 +384,17 @@ function checkCookie() {
 }
 
 checkCookie();
+
+function checkCookieUser() {
+  document.getElementById("logueado").innerHTML = getCookie("user");
+  //alert("bienvenido aqui " + getCookie("user"));
+  
+}
+
+document.getElementsByTagName("body")[0].addEventListener("load", function () {
+  checkCookieUser();
+})
+
 
 document.getElementById("diauno").addEventListener("click", function () {
   location.href = 'Conciertos.html'; // Añade el enlace clicable a todo el contenedor
