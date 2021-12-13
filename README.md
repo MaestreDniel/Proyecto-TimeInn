@@ -1,5 +1,26 @@
 # MUSIC4EVENTS (Proyecto TimeInn)
 
+# P3 Indicaciones
+
+Hemos añadido dos formularios, uno de login y otro de suscripción. Cada uno de sus campos pasa por un proceso de validación.
+
+- Hay tres emails y usuarios predeterminados:
+  - Los emails son: dmaestre@cifpfbmoll.com, jmateo@cifpfbmoll.com y classicoman@gmail.net
+  - Los usuarios son: Maestre, JMateo y Classicoman
+
+Es importante tenerlos en cuenta porque los usuarios ya existentes no pasarán el proceso de validación en la página de registro, pero sirven para la página de login.
+
+Criterios de validación:
+- Nombre de usuario: El nombre debe estar compuesto de carácteres alfanuméricos y tener un máximo de 20 caracteres.
+- Contraseña: La contraseña debe tener un mínimo de 8 caracteres. Primero hay que poner (como mínimo) 7 caracteres cualquiera. Luego hay que poner un caracter especial distinto al guión bajo. A partir de aquí se puede añadir cualquier caracter.
+- Email: El email debe seguir este formato: aaaaaaaaaa@bbbbbbbb.ccc Teniendo en cuenta que:
+  - aaaaaaaaa está en minúsculas, salvo la primera letra que opcionalmente puede ser mayúscula
+  - bbbbbbbb tiene entre 5 y 10 letras minúsculas
+  - ccc solo puede valer: com, net o gov
+  - Que solo hay 1 arroba y 1 punto (y la arroba va antes que el punto)
+
+Cuando se hace un login correcto, se redirige al usuario a la página de inicio y encima del calendario se muestra el nombre del usuario logueado, ya que este se queda guardado en una cookie.
+
 ## <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Wireframe_logo.png/640px-Wireframe_logo.png">
 
 - LINK: https://balsamiq.cloud/s93gm7i/pd0tzro/r1337
