@@ -55,11 +55,12 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  let user = getCookie(user);
+  let nickname = document.getElementById("user").value;
+  let user = getCookie(nickname);
   if (user != "") {
     // console.log("object");
   } else {
-    setCookie(user, "user", 7); // El 7 hará que tenga una duración de una semana
+    setCookie(user, nickname, 7); // El 7 hará que tenga una duración de una semana
     setTimeout(function muestraFormSub() {
       let formlogin = document.getElementById("formlogin  ");
       formlogin.style.display = "block";
