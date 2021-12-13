@@ -256,6 +256,7 @@ const festivalDest = [{
 }];
 
 
+
 // TODO: Imprimir Festival destacado
 function festivalDestacado() {
   let txt = "";
@@ -372,7 +373,7 @@ function getCookie(cname) {
 function checkCookie() {
   let user = getCookie("timeinn");
   if (user != "") {
-    // console.log("object");
+    //
   } else {
     setCookie("timeinn", "user", 7); // El 7 hará que tenga una duración de una semana
     setTimeout(function muestraFormSub() {
@@ -383,6 +384,13 @@ function checkCookie() {
 }
 
 checkCookie();
+
+function checkCookieUser() {
+  let usuariologueado = getCookie("user");
+  document.getElementById("logueado").innerHTML = usuariologueado.toLocaleUpperCase()
+}
+
+checkCookieUser();
 
 document.getElementById("diauno").addEventListener("click", function () {
   location.href = 'Conciertos.html'; // Añade el enlace clicable a todo el contenedor

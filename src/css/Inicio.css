@@ -116,11 +116,21 @@ nav#hamburger div:hover {
   background-color: var(--rgba-primary-4);
 }
 
-nav i {
+#usertimeinn {
   font-size: 100%;
   background-color: white;
   padding: 1% 1% 1% 1%;
   margin-left: 2vw;
+  cursor: pointer;
+  color: black;
+}
+
+#usertimeinn:hover {
+  background-color: var(--rgba-secondary-1-2);
+}
+
+#usertimeinn:active {
+  background-color: var(--rgba-secondary-1-3);
 }
 
 a {
@@ -168,6 +178,18 @@ button#buscar {
   background-size: contain;
 }
 
+
+div#logueado{
+  display: flex;
+    background: var(--rgba-primary-0);
+    color: var(--rgba-secondary-1-3);
+    height: 8vh;
+    font-size: 7vh;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
 /*FIN HEADER*/
 
 /*CUERPO*/
@@ -277,6 +299,18 @@ div.festivalDes {
   align-items: center;
   width: 22vw;
   margin-left: 14vh;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  height: 30vw;
+  border-radius: 2vh;
+}
+
+div#festivalDestacado {
+  background-image: url("../images/Logo\ Music4Events.png");
+  background-size: contain;
+  height: 75vh;
+  width: 70vh;
   text-align: center;
 }
 
