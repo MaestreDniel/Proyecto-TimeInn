@@ -2,7 +2,7 @@
 
 
 import {
-  loginValido, mostrarPassword, paginaSignUp, validarPassword, ocultarPasswordLogin
+  loginValido, mostrarPassword, paginaSignUp, validarPassword, ocultarPasswordLogin , SignUpValido
 } from "./validaciones.mjs";
 
 document.getElementById("password").addEventListener("blur", function () {
@@ -29,6 +29,8 @@ document.getElementById("signUpButton").addEventListener("click", function () {
 document.getElementsByTagName("body")[0].addEventListener("mousemove", function () {
   ocultarPasswordLogin();
 })
+
+
 
 
 
@@ -61,8 +63,11 @@ function checkCookie() {
   let nickname = document.getElementById("user").value;
   let user = getCookie(nickname);
   if (user != "") {
-    alert("bienvenido aqui " + nickname)
+    
   } else {
     setCookie("user", nickname, 7); // El 7 hará que tenga una duración de una semana
   }
+}
+if (SignUpValido()) {
+  document.getElementById("suscrito").innerHTML = "Te has suscrito a Music4Events";  
 }
