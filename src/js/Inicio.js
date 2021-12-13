@@ -386,13 +386,11 @@ function checkCookie() {
 checkCookie();
 
 function checkCookieUser() {
-  document.getElementById("logueado").innerHTML = getCookie("user");
-  //alert("bienvenido aqui " + getCookie("user"));
-  
+  document.getElementById("logueado").innerHTML = `¡Bienvenido/a ${getCookie("user")}!`;
 }
 
-document.getElementsByTagName("body")[0].addEventListener("load", function () {
-  checkCookieUser();
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(checkCookieUser(), 2000);
 })
 
 
