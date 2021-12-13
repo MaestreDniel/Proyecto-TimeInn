@@ -2,7 +2,7 @@
 
 # P3 Indicaciones
 
-Hemos añadido dos formularios, uno de login y otro de suscripción. Cada uno de sus campos pasa por un proceso de validación.
+Hemos añadido dos formularios, uno de login y otro de suscripción. Cada uno de sus campos pasa por un proceso de validación. <b>Para entrar a los formularios desde la página principal hay que dar clic al icono de la persona, a la derecha del header.</b>
 
 - Hay tres emails y usuarios predeterminados:
   - Los emails son: dmaestre@cifpfbmoll.com, jmateo@cifpfbmoll.com y classicoman@gmail.net
