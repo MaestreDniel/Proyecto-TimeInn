@@ -61,11 +61,7 @@ function checkCookie() {
     // console.log("object");
   } else {
     setCookie(user, nickname, 7); // El 7 hará que tenga una duración de una semana
-    setTimeout(function muestraFormSub() {
-      let formlogin = document.getElementById("formlogin  ");
-      formlogin.style.display = "block";
-    }, 3000);
   }
 }
 
-// checkCookie();
+ checkCookie();
