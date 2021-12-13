@@ -10,8 +10,12 @@ export function validarEmail() {
     return false;
 //Si no sigue el siguiente patron el email es incorrecto
   } else if (!/^[A-Za-z]{1}[a-z]{0,20}@[a-z]{5,10}.(net|com|gov)/.test(email)) {
-    document.getElementById("errorEmail").innerHTML =
-     `El email debe seguir este formato:aaaaaaaaaa@bbbbbbbb.ccc <br> Teniendo en cuenta que: <br>`;
+    document.getElementById("errorEmail").innerHTML = `El email debe seguir este formato:
+    aaaaaaaaaa@bbbbbbbb.ccc <br> Teniendo en cuenta que: <br>
+    - aaaaaaaaa está en minúsculas, salvo la primera letra que opcionalmente puede ser mayúscula <br>
+    - bbbbbbbb tiene entre 5 y 10 letras minúsculas <br>
+    - ccc solo puede valer: com, net o gov <br>
+    - Que solo hay 1 arroba y 1 punto (y la arroba va antes que el punto)`;
     toggleInputFalse("email");
     return false;
     //Si email coincide con alguno del array de emails registrados tambien da error
@@ -104,9 +108,12 @@ export function validarPassword() {
     return false;
   } 
   //Si no cumple el patrón salta el error y retorna falso
-  else if (!/^.{7,}\W{1,}/.test(password)) {
+  else if (!/^.{7,}\W{1}.{0,}/.test(password)) {
     document.getElementById("errorPassword").innerHTML =
-      "Minimo de 8 caracteres e incluir algun . , ; ,";
+      `La contraseña debe tener un mínimo de 8 caracteres <br>
+      Primero hay que poner (como mínimo) 7 caracteres cualquiera. <br>
+      Luego hay que poner un caracter especial distinto al guión bajo <br>
+      A partir de aquí se puede añadir cualquier caracter.`
     toggleInputFalse("password");
     return false;
   }
