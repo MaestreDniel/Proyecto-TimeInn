@@ -1,0 +1,21 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "nombre": "Mallorca Live Festival",
+      "descripcion": "Venid al gran festival de la musica en Mallorca",
+      "fechaI": "2022/06/22",
+      "fechaF": "2022/06/26"
+    }
+  ],
+  "news": [],
+  "concerts": [
+    {
+      "id": 1,
+      "titulo": "Concierto Scorpions",
+      "grupo": "Scorpions",
+      "fecha": "2022-06-24",
+      "lugar": ""
+    }
+  ]
+}
